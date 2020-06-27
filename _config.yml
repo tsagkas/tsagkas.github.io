@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Nikolas Tsagkas"
-  avatar           : "images/bio-photo-2.jpg.jpg"
+  avatar           : "https://github.com/tsagkas/tsagkas.github.io/blob/master/images/avatar2.jpg"
   bio              : "Electrical and Computer Engineer"
   location         : 
   employer         :
