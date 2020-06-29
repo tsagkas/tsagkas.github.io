@@ -1,12 +1,11 @@
 ---
 permalink: /
-title: "About Me"
-excerpt: "About me"
+title: "Welcome1"
+excerpt: "Welcome2"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is my personal web-page.
-
+I am a prospective postgraduate student at the University of Edinburgh (Artificial intelligence MSc - School of Informatics). In 2019, I was awarded with a Diploma of Electrical and Computer Engineering, from the University of Patras, in Greece (graduated 4th in my class – GPA: 8.11 out of 10). 
