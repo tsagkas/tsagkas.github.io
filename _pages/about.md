@@ -21,5 +21,9 @@ As a student I conducted research for using Deep CNNs in hand-gesture recognitio
 </p>
 
 <p style="text-align:justify">
+Moreover, working under the supervision of Prof. Konstantinos Moustakas and the <a href="http://www.vvr.ece.upatras.gr/">VVR group</a>, I studied the use of Haptics in Human-Computer Interaction, by taking part in the 2nd Student Challenge in Automotive Haptics, at the <a href="http://www.worldhaptics2019.org/">World Haptics Conference</a>, Tokyo, Japan, in 2019, where our team received the "Best Student Innovation Challenge Award".
+</p>
+
+<p style="text-align:justify">
 Until June 2020, I worked as a Data Scientist at EY, Greece. Before that, I worked as a Laboratory Assistant at the Digital Signal and Image Processing Laboratoty, at the University of Patras.  
 </p>
