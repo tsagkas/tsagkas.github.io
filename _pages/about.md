@@ -13,3 +13,6 @@ I am a prospective postgraduate student at the **University of Edinburgh** (Arti
 In 2019, I was awarded with a Diploma of Electrical and Computer Engineering, from the **University of Patras**, in Greece (graduated 4th in my class – GPA: 8.11 out of 10). 
 
 ___
+
+
+<center>This is a test, my name is nikolas tsagkas and Ill be studying... n 2019, I was awarded with a Diploma of Electrical and Computer Engineering, from the **University of Patras**, in Greece (graduated 4th in my class – GPA: 8.11 out of 10). </center>
