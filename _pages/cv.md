@@ -20,6 +20,8 @@ redirect_from:
 
 </dl>
 
+<hr>
+
 <h2>Work Experience:</h2>
 
 <dl>
@@ -30,6 +32,8 @@ redirect_from:
     <dd> Laboratory of Digital Signal Processing, Department of Electrical and Computer Engineering, University of Patras, Patras, Greece</dd>
 
 </dl>
+
+<hr>
 
 <h2>Projects:</h2>
 
