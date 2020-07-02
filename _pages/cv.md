@@ -23,10 +23,27 @@ redirect_from:
 <h2>Work Experience:</h2>
 
 <dl>
-    <dt><h3>- Data Scientist, EY (Ernst and Young), Athens, Greece  (Nov 2019 - Jun 2020)</h3></dt>
+    <dt><h3>- Data Scientist, EY (Ernst and Young), Athens, Greece (Nov 2019 - Jun 2020)</h3></dt>
     <dd> </dd>
 
     <dt><h3>- Laboratory Assistant at the DSIP Lab, Patras, Greece (Sep 2018 - Feb 2019)</h3></dt>
     <dd> Laboratory of Digital Signal Processing, Department of Electrical and Computer Engineering, University of Patras, Patras, Greece</dd>
+
+</dl>
+
+<h2>Projects:</h2>
+
+<dl>
+    <dt><h3>- Gamified Haptic UI (Feb 2019 - Jul 2020)</h3></dt>
+    <dd> Received the “Best Student Innovation Challenge Award” (along with 1000 USD) in the 2nd Student Challenge in Automotive Haptics, World Haptics Conference, Tokyo, Japan, 2019, by IEEE and Hyundai Motors</dd>
+  
+    <dt><h3>- Hand Gesture Recognition from sEMG Recordings with Deep Learning (May 2018 - Jul 2019)</h3></dt>
+    <dd> ECE Diploma Thesis (Supervisor: Professor Athanassios Skodras): </dd>
+    
+    <dt><h3>- MyoUP sEMG dataset (Dec 2018)</h3></dt>
+    <dd> Development of the MyoUP sEMG dataset with the Myo Armband, for the Digital Signal & Image Processing Laboratory, University of Patras </dd>
+    
+    <dt><h3>- Algorithmic Processing of 3D Meshes(Apr 2018 - Jul 2018)</h3></dt>
+    <dd> Laplacian Contraction, Salient Point Detection, Protrusion Map Extraction and Segmentation of a 3D Mesh </dd>
 
 </dl>
