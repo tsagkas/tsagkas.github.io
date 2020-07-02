@@ -26,10 +26,10 @@ Work experience
 * Sep 2018 - Feb 2019:    Laboratory Assistant at the Laboratory of Digital Signal Processing, Department of Electrical and Computer Engineering, University of Patras, Patras, Greece
   
 
-<p>Educational Background:</p>
+<h2>Educational Background:</h2>
 
 <dl>
-    <dt>Artificial Inteligence MSc, University of Edinburgh (Sep 2020 - Aug 2021)</dt>
+    <dt><h3>Artificial Inteligence MSc</h3>, University of Edinburgh (Sep 2020 - Aug 2021)</dt>
     <dd>I am a prospective postgraduate student at the University of Edinburgh (Artificial intelligence MSc - School of Informatics).</dd>
 
     <dt>Diploma of Electrical & Computer Engineering, University of Patras (Sep 2014 - Aug 2019)</dt>
