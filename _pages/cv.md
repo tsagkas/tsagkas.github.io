@@ -20,7 +20,7 @@ redirect_from:
 
 </dl>
 
-<hr style="height:4px;border-width:0;color:gray;background-color:gray">
+<hr style="height:3px;border-width:0;color:gray;background-color:gray">
 
 <h2>Work Experience:</h2>
 
@@ -33,7 +33,7 @@ redirect_from:
 
 </dl>
 
-<hr style="height:4px;border-width:0;color:gray;background-color:gray">
+<hr style="height:3px;border-width:0;color:gray;background-color:gray">
 
 <h2>Projects:</h2>
 
