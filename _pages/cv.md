@@ -20,7 +20,7 @@ redirect_from:
 
 </dl>
 
-<hr style="height:1px;border-width:0;color:gray;background-color:gray">
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
 <h2>Work Experience:</h2>
 
@@ -33,7 +33,7 @@ redirect_from:
 
 </dl>
 
-<hr style="height:1px;border-width:0;color:gray;background-color:gray">
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
 <h2>Projects:</h2>
 
@@ -52,11 +52,11 @@ redirect_from:
 
 </dl>
 
-<hr style="height:1px;border-width:0;color:gray;background-color:gray">
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
 <h2>Publications:</h2>
 
 <dl>
     <dt><h3>- On the Use of Deeper CNNs in Hand Gesture Recognition Based on sEMG Signals, 2019</h3></dt>
-    <dd> Presented at the <a href="http://iisa2019.upatras.gr/">IISA 2019</a> conference. Authors: Nikolaos Tsagkas, Panagiotis Tsinganos, Athanassios Skodras[<a href="http://www.ece.upatras.gr/skodras/data/uploads/pubs/ans-c117-prepress.pdf">pdf</a>] </dd>
+    <dd> Presented at the <a href="http://iisa2019.upatras.gr/">IISA 2019</a> conference. <i> Authors: Nikolaos Tsagkas, Panagiotis Tsinganos, Athanassios Skodras </i> [<a href="http://www.ece.upatras.gr/skodras/data/uploads/pubs/ans-c117-prepress.pdf">pdf</a>] </dd>
 </dl>
