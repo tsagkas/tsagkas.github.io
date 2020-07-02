@@ -60,3 +60,17 @@ redirect_from:
     <dt><h3>- On the Use of Deeper CNNs in Hand Gesture Recognition Based on sEMG Signals, 2019</h3></dt>
     <dd> Presented at the <a href="http://iisa2019.upatras.gr/">IISA 2019</a> conference. <i> Authors: Nikolaos Tsagkas, Panagiotis Tsinganos, Athanassios Skodras </i> [<a href="http://www.ece.upatras.gr/skodras/data/uploads/pubs/ans-c117-prepress.pdf">pdf</a>] </dd>
 </dl>
+
+
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+<h2>Skills:</h2>
+
+<dl>
+    <dt><h3>- Programming:</h3></dt>
+    <dd> Good knowledge of Python and C++, has programmed the TI C6713 DSP in C and assembly, experienced MATLAB user </dd>
+  
+    <dt><h3>- Language Skills:</h3></dt>
+    <dd> Greek (Native), English (IELTS - Overall: 8/9 and ECPE), German (A2) </dd>
+</dl>
+
