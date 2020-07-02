@@ -62,15 +62,3 @@ redirect_from:
 </dl>
 
 
-<hr style="height:2px;border-width:0;color:gray;background-color:gray">
-
-<h2>Skills:</h2>
-
-<dl>
-    <dt><h3>- Programming:</h3></dt>
-    <dd> Good knowledge of Python and C++, has programmed the TI C6713 DSP in C and assembly, experienced MATLAB user </dd>
-  
-    <dt><h3>- Language Skills:</h3></dt>
-    <dd> Greek (Native), English (IELTS - Overall: 8/9 and ECPE), German (A2) </dd>
-</dl>
-
