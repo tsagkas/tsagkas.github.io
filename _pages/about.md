@@ -17,11 +17,11 @@ In 2019, I was awarded with a Diploma of Electrical and Computer Engineering, fr
 </p>
   
 <p style="text-align:justify">
-As a student I conducted research for using deep CNNs in hand-gesture recognition via sEMG signals, which led to the development of a real-time hand-gesture recognition software for the Myo Armband and the recording of the MyoUP sEMG dataset (Supervised by <a href="http://www.ece.upatras.gr/skodras/">Prof. Athanassios Skodras</a>).
+As a student I conducted research for using deep CNNs in hand-gesture recognition via sEMG signals, which led to the development of a real-time hand-gesture recognition software for the Myo Armband (<a href="https://youtu.be/w98PkUeSu20">demo</a>) and the recording of the <a href="https://github.com/tsagkas/MyoUP_dataset">MyoUP sEMG dataset</a> (Supervised by <a href="http://www.ece.upatras.gr/skodras/">Prof. Athanassios Skodras</a>).
 </p>
 
 <p style="text-align:justify">
-Moreover, working under the supervision of Prof. Konstantinos Moustakas and the <a href="http://www.vvr.ece.upatras.gr/">VVR group</a>, I studied the use of Haptics in Human-Computer Interaction, by taking part in the 2nd Student Challenge in Automotive Haptics, at the <a href="http://www.worldhaptics2019.org/">World Haptics Conference</a>, Tokyo, Japan, in 2019, where our team received the <b>"Best Student Innovation Challenge Award"</b>.
+Moreover, working under the supervision of Prof. Konstantinos Moustakas and the <a href="http://www.vvr.ece.upatras.gr/">VVR group</a>, I studied the use of Haptics in Human-Computer Interaction, by taking part in the <a href="http://www.worldhaptics2019.org/program/sicmobil">2nd Student Challenge in Automotive Haptics</a>, at the <a href="http://www.worldhaptics2019.org/">World Haptics Conference</a>, Tokyo, Japan, in 2019, where our team received the <b>"Best Student Innovation Challenge Award"</b>.
 </p>
 
 <p style="text-align:justify">
