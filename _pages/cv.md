@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-<h2><u>Educational Background:</u></h2>
+<h2>Educational Background:</h2>
 
 <dl>
     <dt><h3>- Artificial Inteligence MSc, University of Edinburgh (Sep 2020 - Aug 2021)</h3></dt>
@@ -20,7 +20,7 @@ redirect_from:
 
 </dl>
 
-<h2><u>Work Experience:</u></h2>
+<h2>Work Experience:</h2>
 
 <dl>
     <dt><h3>- Data Scientist, EY (Ernst and Young), Athens, Greece  (Nov 2019 - Jun 2020)</h3></dt>
