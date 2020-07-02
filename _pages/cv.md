@@ -9,30 +9,24 @@ redirect_from:
 
 {% include base_path %}
 
-# Educational Background
-
-
-
-* Sep 2020 - Sep 2021:    Artificial Inteligence MSc, University of Edinburgh, Edinburgh, UK
-
-* Sep 2014 - Aug 2019:    Diploma of Electrical & Computer Engineering (5-year Integrated MSc degree), Department of Electrical and Computer Engineering, University       of Patras, Patras, Greece (GPA: 8.11/10 – Graduated 4th out of 202 students)
-
-* 2008 - 2014:            Secondary Education: Gymnasium & Lyceum, Moraitis School of Athens
-(GPA: 19.2/20.0)
-
-Work experience
-======
-* Nov 2019 - June 2020:   Data Scientist at “Ernst and Young”, Athens, Greece – working for the EMEIA region
-* Sep 2018 - Feb 2019:    Laboratory Assistant at the Laboratory of Digital Signal Processing, Department of Electrical and Computer Engineering, University of Patras, Patras, Greece
-  
-
-<h2>Educational Background:</h2>
+<h2><u>Educational Background:</u></h2>
 
 <dl>
-    <dt><h3>Artificial Inteligence MSc</h3>, University of Edinburgh (Sep 2020 - Aug 2021)</dt>
-    <dd>I am a prospective postgraduate student at the University of Edinburgh (Artificial intelligence MSc - School of Informatics).</dd>
+    <dt><h3>- Artificial Inteligence MSc, University of Edinburgh (Sep 2020 - Aug 2021)</h3></dt>
+    <dd>Prospective postgraduate student at the School of Informatics, University of Edinburgh.</dd>
 
-    <dt>Diploma of Electrical & Computer Engineering, University of Patras (Sep 2014 - Aug 2019)</dt>
-    <dd>(5-year Integrated MSc degree), Department of Electrical and Computer Engineering, University       of Patras, Patras, Greece (GPA: 8.11/10 – Graduated 4th out of 202 students).</dd>
+    <dt><h3>- Diploma of Electrical & Computer Engineering, University of Patras (Sep 2014 - Aug 2019)</h3></dt>
+    <dd>5-year Integrated MSc degree, Department of Electrical and Computer Engineering, University of Patras (GPA: 8.11/10 – Graduated 4th out of 202 students).</dd>
+
+</dl>
+
+<h2><u>Work Experience:</u></h2>
+
+<dl>
+    <dt><h3>- Data Scientist, EY (Ernst and Young), Athens, Greece  (Nov 2019 - Jun 2020)</h3></dt>
+    <dd> </dd>
+
+    <dt><h3>- Laboratory Assistant at the DSIP Lab, Patras, Greece (Sep 2018 - Feb 2019)</h3></dt>
+    <dd> Laboratory of Digital Signal Processing, Department of Electrical and Computer Engineering, University of Patras, Patras, Greece</dd>
 
 </dl>
