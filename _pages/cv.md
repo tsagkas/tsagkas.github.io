@@ -20,7 +20,7 @@ redirect_from:
 
 </dl>
 
-<hr style="height:3px;border-width:0;color:gray;background-color:gray">
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
 <h2>Work Experience:</h2>
 
@@ -33,21 +33,21 @@ redirect_from:
 
 </dl>
 
-<hr style="height:3px;border-width:0;color:gray;background-color:gray">
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
 <h2>Projects:</h2>
 
 <dl>
     <dt><h3>- Gamified Haptic UI (Feb 2019 - Jul 2020)</h3></dt>
-    <dd> Received the “Best Student Innovation Challenge Award” (along with 1000 USD) in the 2nd Student Challenge in Automotive Haptics, World Haptics Conference, Tokyo, Japan, 2019, by IEEE and Hyundai Motors</dd>
+    <dd> Received the “Best Student Innovation Challenge Award” (along with 1000 USD) in the 2nd Student Challenge in Automotive Haptics, World Haptics Conference, Tokyo, Japan, 2019, by IEEE and Hyundai Motors. [<a href="https://www.youtube.com/watch?v=cFYEqrC9by4">video</a>][<a href="http://www.vvr.ece.upatras.gr/news/ieee-worldhaptics-2019-tokyo-best-student-innovation-challenge-award/">award</a>]</dd>
   
     <dt><h3>- Hand Gesture Recognition from sEMG Recordings with Deep Learning (May 2018 - Jul 2019)</h3></dt>
-    <dd> ECE Diploma Thesis (Supervisor: Professor Athanassios Skodras): </dd>
+    <dd> <b>ECE Diploma Thesis</b> (Supervisor: <a href="http://www.ece.upatras.gr/skodras/">Prof. Athanassios Skodras</a>): Development of a real-time hand-gesture recognition software, by using the <a href="https://github.com/tsagkas/MyoUP_dataset">MyoUP sEMG dataset</a> and for training a deep CNN. [<a href="https://youtu.be/w98PkUeSu20"">video</a>][<a href="https://github.com/tsagkas/sEMG-HandGestureRecognition">download</a>] </dd>
     
     <dt><h3>- MyoUP sEMG dataset (Dec 2018)</h3></dt>
-    <dd> Development of the MyoUP sEMG dataset with the Myo Armband, for the Digital Signal & Image Processing Laboratory, University of Patras </dd>
+    <dd> Development of the MyoUP sEMG dataset with the Myo Armband, for the Digital Signal & Image Processing Laboratory, University of Patras. [<a href="https://youtu.be/4tdu-ReCUEI">video 1</a>] [<a href="https://youtu.be/iJyF1SP5_r4">video 2</a>][<a href="https://github.com/tsagkas/MyoUP_dataset">download</a>]</dd>
     
     <dt><h3>- Algorithmic Processing of 3D Meshes(Apr 2018 - Jul 2018)</h3></dt>
-    <dd> Laplacian Contraction, Salient Point Detection, Protrusion Map Extraction and Segmentation of a 3D Mesh </dd>
+    <dd> Laplacian Contraction, Salient Point Detection, Protrusion Map Extraction and Segmentation of a 3D Mesh. </dd>
 
 </dl>
