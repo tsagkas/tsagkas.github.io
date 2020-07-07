@@ -47,7 +47,7 @@ redirect_from:
     <dt><h3>- MyoUP sEMG dataset (Dec 2018)</h3></dt>
     <dd> Development of the MyoUP sEMG dataset with the Myo Armband, for the Digital Signal & Image Processing Laboratory, University of Patras. [<a href="https://youtu.be/4tdu-ReCUEI">video 1</a>] [<a href="https://youtu.be/iJyF1SP5_r4">video 2</a>][<a href="https://github.com/tsagkas/MyoUP_dataset">download</a>]</dd>
     
-    <dt><h3>- Algorithmic Processing of 3D Meshes(Apr 2018 - Jul 2018)</h3></dt>
+    <dt><h3>- Algorithmic Processing of 3D Meshes (Apr 2018 - Jul 2018)</h3></dt>
     <dd> Laplacian Contraction, Salient Point Detection, Protrusion Map Extraction and Segmentation of a 3D Mesh. </dd>
 
 </dl>
@@ -61,4 +61,39 @@ redirect_from:
     <dd> Presented at the <a href="http://iisa2019.upatras.gr/">IISA 2019</a> conference. <i> Authors: Nikolaos Tsagkas, Panagiotis Tsinganos, Athanassios Skodras </i> [<a href="http://www.ece.upatras.gr/skodras/data/uploads/pubs/ans-c117-prepress.pdf">pdf</a>] </dd>
 </dl>
 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="column">
+    <h2>Prof. Athanassios Skodras</h2>
+    <p>Some text..</p>
+  </div>
+  <div class="column">
+    <h2>Associate Prof. Konstantinos Moustakas</h2>
+    <p>Some text..</p>
+  </div>
+</div>
 
