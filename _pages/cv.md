@@ -88,17 +88,18 @@ redirect_from:
 
 <div class="row">
   <div class="column">
-    <h3>Prof. Athanassios Skodras</h3>
+    <a href="http://www.ece.upatras.gr/skodras/">Prof. Athanassios Skodras</a>
     <p>Director of the Digital Signal & Image Processing Lab<br/>
     Dept of Electrical and Computer Engineering<br/>
     Faculty of Engineering, University of Patras, Greece<br/>
-    e-mail: skodras@upatras.gr<br/>
-    web:    http://www.ece.upatras.gr/skodras/<br/>
-    Tel:    +30 2610996167 (Office)</p>
+    e-mail: skodras@upatras.gr</p>
   </div>
   <div class="column">
-    <h3>Associate Prof. Konstantinos Moustakas</h3>
-    <p>Some text..</p>
+    <a href="http://www.vvr.ece.upatras.gr/members/konstantinos-moustakas/">Associate Prof. Konstantinos Moustakas</a>
+    <p>Head of the Visualization and Virtual Reality Group<br/>
+    Dept of Electrical and Computer Engineering<br/>
+    Faculty of Engineering, University of Patras, Greece<br/>
+    e-mail: moustakas@ece.upatras.gr</p>
   </div>
 </div>
 
