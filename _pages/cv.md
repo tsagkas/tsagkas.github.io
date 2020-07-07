@@ -84,7 +84,6 @@ redirect_from:
   clear: both;
 }
 </style>
-</head>
 <body>
 
 <div class="row">
