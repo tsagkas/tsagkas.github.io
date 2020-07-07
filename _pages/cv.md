@@ -39,7 +39,8 @@ redirect_from:
 
 <dl>
     <dt><h3>- Gamified Haptic UI (Feb 2019 - Jul 2020)</h3></dt>
-    <dd> Received the “Best Student Innovation Challenge Award” (along with 1000 USD) in the 2nd Student Challenge in Automotive Haptics, World Haptics Conference, Tokyo, Japan, 2019, by IEEE and Hyundai Motors. [<a href="https://www.youtube.com/watch?v=cFYEqrC9by4">video</a>][<a href="http://www.vvr.ece.upatras.gr/news/ieee-worldhaptics-2019-tokyo-best-student-innovation-challenge-award/">award</a>]</dd>
+    <dd> <p style="text-align:justify">
+      Received the “Best Student Innovation Challenge Award” (along with 1000 USD) in the 2nd Student Challenge in Automotive Haptics, World Haptics Conference, Tokyo, Japan, 2019, by IEEE and Hyundai Motors. </p>[<a href="https://www.youtube.com/watch?v=cFYEqrC9by4">video</a>][<a href="http://www.vvr.ece.upatras.gr/news/ieee-worldhaptics-2019-tokyo-best-student-innovation-challenge-award/">award</a>]</dd>
   
     <dt><h3>- Hand Gesture Recognition from sEMG Recordings with Deep Learning (May 2018 - Jul 2019)</h3></dt>
     <dd> <b>ECE Diploma Thesis</b> (Supervisor: <a href="http://www.ece.upatras.gr/skodras/">Prof. Athanassios Skodras</a>): Development of a real-time hand-gesture recognition software, by using the <a href="https://github.com/tsagkas/MyoUP_dataset">MyoUP sEMG dataset</a> and for training a deep CNN. [<a href="https://youtu.be/w98PkUeSu20">video</a>][<a href="https://github.com/tsagkas/sEMG-HandGestureRecognition">download</a>] </dd>
