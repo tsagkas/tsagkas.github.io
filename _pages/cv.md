@@ -54,6 +54,14 @@ redirect_from:
 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
+<h2>Skills:</h2>
++ Programming: Good knowledge of **Python** and **C++**, has programmed the **TI C6713** DSP in **C** and **assembly**, experienced **MATLAB** user
++ Software: 
++ OS: Ubuntu Linux, Windows 10, Mac OS X
++ Languages: 
+
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
 <h2>Publications:</h2>
 
 <dl>
