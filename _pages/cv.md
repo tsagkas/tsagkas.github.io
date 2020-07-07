@@ -46,7 +46,7 @@ redirect_from:
     <dd> <p style="text-align:justify"><b>ECE Diploma Thesis</b> (Supervisor: <a href="http://www.ece.upatras.gr/skodras/">Prof. Athanassios Skodras</a>): Development of a real-time hand-gesture recognition software, by using the <a href="https://github.com/tsagkas/MyoUP_dataset">MyoUP sEMG dataset</a> and for training a deep CNN. [<a href="https://youtu.be/w98PkUeSu20">video</a>][<a href="https://github.com/tsagkas/sEMG-HandGestureRecognition">download</a>] </p></dd>
     
     <dt><h3>- MyoUP sEMG dataset (Dec 2018)</h3></dt>
-    <dd> <p style="text-align:justify">Development of the MyoUP sEMG dataset with the Myo Armband, for the Digital Signal & Image Processing Laboratory, University of Patras.[<a href="https://youtu.be/4tdu-ReCUEI">video 1</a>] [<a href="https://youtu.be/iJyF1SP5_r4">video 2</a>][<a href="https://github.com/tsagkas/MyoUP_dataset">download</a>]</p></dd>
+    <dd> <p style="text-align:justify">Development of the MyoUP sEMG dataset with the Myo Armband, for the Digital Signal & Image Processing Laboratory, University of Patras. [<a href="https://youtu.be/4tdu-ReCUEI">video 1</a>] [<a href="https://youtu.be/iJyF1SP5_r4">video 2</a>][<a href="https://github.com/tsagkas/MyoUP_dataset">download</a>]</p></dd>
     
     <dt><h3>- Algorithmic Processing of 3D Meshes (Apr 2018 - Jul 2018)</h3></dt>
     <dd><p style="text-align:justify"> Laplacian Contraction, Salient Point Detection, Protrusion Map Extraction and Segmentation of a 3D Mesh. </p></dd>
@@ -56,10 +56,8 @@ redirect_from:
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
 <h2>Skills:</h2>
-+ Programming: &nbsp;&nbsp;&nbsp;&nbsp; Good knowledge of **Python** and **C++**, has programmed the **TI C6713** DSP in **C** and **assembly**, experienced **MATLAB** user
-+ Software: &nbsp;&nbsp;&nbsp;&nbsp; **Tensorflow**, **ROS**, **Unity** 
-+ OS: &nbsp;&nbsp;&nbsp;&nbsp; **Ubuntu Linux**, **Windows 10**, **Mac OS X**
-+ Languages: &nbsp;&nbsp;&nbsp;&nbsp; **Greek** (Native), **English** (IELTS - Overall: 8/9 and ECPE), **German** (A2)
++ Programming: > Good knowledge of **Python** and **C++**, has programmed the **TI C6713** DSP in **C** and **assembly**, experienced **MATLAB** user
++ Languages: > **Greek** (Native), **English** (IELTS - Overall: 8/9 and ECPE), **German** (A2)
 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
