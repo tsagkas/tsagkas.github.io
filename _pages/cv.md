@@ -90,12 +90,12 @@ redirect_from:
 <div class="row">
   <div class="column">
     <h3>Prof. Athanassios Skodras</h3>
-    <p>Director of the Digital Signal & Image Processing Lab</p>
-    <p>Dept of Electrical and Computer Engineering</p>
-    <p>Faculty of Engineering, University of Patras, Greece</p>
-    <p>e-mail: skodras@upatras.gr</p>
-    <p>web:    http://www.ece.upatras.gr/skodras/</p>
-    <p>Tel:    +30 2610996167 (Office)</p>
+    <p>Director of the Digital Signal & Image Processing Lab<br/>
+    Dept of Electrical and Computer Engineering<br/>
+    Faculty of Engineering, University of Patras, Greece<br/>
+    e-mail: skodras@upatras.gr<br/>
+    web:    http://www.ece.upatras.gr/skodras/<br/>
+    Tel:    +30 2610996167 (Office)</p>
   </div>
   <div class="column">
     <h3>Associate Prof. Konstantinos Moustakas</h3>
