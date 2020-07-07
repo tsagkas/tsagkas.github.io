@@ -13,10 +13,10 @@ redirect_from:
 
 <dl>
     <dt><h3>- Artificial Inteligence MSc, University of Edinburgh (Sep 2020 - Aug 2021)</h3></dt>
-    <dd>Prospective postgraduate student at the School of Informatics, University of Edinburgh.</dd>
+    <dd><p style="text-align:justify">Prospective postgraduate student at the School of Informatics, University of Edinburgh.</p></dd>
 
     <dt><h3>- Electrical & Computer Engineering Diploma, University of Patras (Sep 2014 - Aug 2019)</h3></dt>
-    <dd>5-year Integrated MSc degree, Department of Electrical and Computer Engineering, University of Patras (GPA: 8.11/10 – Graduated 4th out of 202 students).</dd>
+    <dd><p style="text-align:justify">5-year Integrated MSc degree, Department of Electrical and Computer Engineering, University of Patras (GPA: 8.11/10 – Graduated 4th out of 202 students).</p></dd>
 
 </dl>
 
@@ -29,7 +29,7 @@ redirect_from:
     <dd> </dd>
 
     <dt><h3>- Laboratory Assistant at the DSIP Lab, Patras, Greece (Sep 2018 - Feb 2019)</h3></dt>
-    <dd> Laboratory of Digital Signal Processing, Department of Electrical and Computer Engineering, University of Patras, Patras, Greece</dd>
+    <dd> <p style="text-align:justify"> Laboratory of Digital Signal Processing, Department of Electrical and Computer Engineering, University of Patras, Patras, Greece </p></dd>
 
 </dl>
 
@@ -43,13 +43,13 @@ redirect_from:
       Received the “Best Student Innovation Challenge Award” (along with 1000 USD) in the 2nd Student Challenge in Automotive Haptics, World Haptics Conference, Tokyo, Japan, 2019, by IEEE and Hyundai Motors. </p>[<a href="https://www.youtube.com/watch?v=cFYEqrC9by4">video</a>][<a href="http://www.vvr.ece.upatras.gr/news/ieee-worldhaptics-2019-tokyo-best-student-innovation-challenge-award/">award</a>]</dd>
   
     <dt><h3>- Hand Gesture Recognition from sEMG Recordings with Deep Learning (May 2018 - Jul 2019)</h3></dt>
-    <dd> <b>ECE Diploma Thesis</b> (Supervisor: <a href="http://www.ece.upatras.gr/skodras/">Prof. Athanassios Skodras</a>): Development of a real-time hand-gesture recognition software, by using the <a href="https://github.com/tsagkas/MyoUP_dataset">MyoUP sEMG dataset</a> and for training a deep CNN. [<a href="https://youtu.be/w98PkUeSu20">video</a>][<a href="https://github.com/tsagkas/sEMG-HandGestureRecognition">download</a>] </dd>
+    <dd> <p style="text-align:justify"><b>ECE Diploma Thesis</b> (Supervisor: <a href="http://www.ece.upatras.gr/skodras/">Prof. Athanassios Skodras</a>): Development of a real-time hand-gesture recognition software, by using the <a href="https://github.com/tsagkas/MyoUP_dataset">MyoUP sEMG dataset</a> and for training a deep CNN. [<a href="https://youtu.be/w98PkUeSu20">video</a>][<a href="https://github.com/tsagkas/sEMG-HandGestureRecognition">download</a>] </p></dd>
     
     <dt><h3>- MyoUP sEMG dataset (Dec 2018)</h3></dt>
-    <dd> Development of the MyoUP sEMG dataset with the Myo Armband, for the Digital Signal & Image Processing Laboratory, University of Patras. [<a href="https://youtu.be/4tdu-ReCUEI">video 1</a>] [<a href="https://youtu.be/iJyF1SP5_r4">video 2</a>][<a href="https://github.com/tsagkas/MyoUP_dataset">download</a>]</dd>
+    <dd> <p style="text-align:justify">Development of the MyoUP sEMG dataset with the Myo Armband, for the Digital Signal & Image Processing Laboratory, University of Patras.</p> [<a href="https://youtu.be/4tdu-ReCUEI">video 1</a>] [<a href="https://youtu.be/iJyF1SP5_r4">video 2</a>][<a href="https://github.com/tsagkas/MyoUP_dataset">download</a>]</dd>
     
     <dt><h3>- Algorithmic Processing of 3D Meshes (Apr 2018 - Jul 2018)</h3></dt>
-    <dd> Laplacian Contraction, Salient Point Detection, Protrusion Map Extraction and Segmentation of a 3D Mesh. </dd>
+    <dd><p style="text-align:justify"> Laplacian Contraction, Salient Point Detection, Protrusion Map Extraction and Segmentation of a 3D Mesh. </p></dd>
 
 </dl>
 
