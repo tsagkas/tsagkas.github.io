@@ -61,14 +61,16 @@ redirect_from:
     <dd> Presented at the <a href="http://iisa2019.upatras.gr/">IISA 2019</a> conference. <i> Authors: Nikolaos Tsagkas, Panagiotis Tsinganos, Athanassios Skodras </i> [<a href="http://www.ece.upatras.gr/skodras/data/uploads/pubs/ans-c117-prepress.pdf">pdf</a>] </dd>
 </dl>
 
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+<h2>References:</h2>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
   box-sizing: border-box;
 }
-
-/* Create two equal columns that floats next to each other */
+  
 .column {
   float: left;
   width: 50%;
@@ -76,7 +78,6 @@ redirect_from:
 
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
@@ -88,11 +89,16 @@ redirect_from:
 
 <div class="row">
   <div class="column">
-    <h2>Prof. Athanassios Skodras</h2>
-    <p>Some text..</p>
+    <h3>Prof. Athanassios Skodras</h3>
+    <p>Director of the Digital Signal & Image Processing Lab</p>
+    <p>Dept of Electrical and Computer Engineering</p>
+    <p>Faculty of Engineering, University of Patras, Greece</p>
+    <p>e-mail: skodras@upatras.gr</p>
+    <p>web:    http://www.ece.upatras.gr/skodras/</p>
+    <p>Tel:    +30 2610996167 (Office)</p>
   </div>
   <div class="column">
-    <h2>Associate Prof. Konstantinos Moustakas</h2>
+    <h3>Associate Prof. Konstantinos Moustakas</h3>
     <p>Some text..</p>
   </div>
 </div>
