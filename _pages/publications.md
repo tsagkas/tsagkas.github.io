@@ -5,6 +5,18 @@ permalink: /publications/
 author_profile: true
 ---
 
+{% if author.googlescholar %}
+  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
+{% endif %}
+
+{% include base_path %}
+
+{% for post in site.publications reversed %}
+  {% include archive-single.html %}
+{% endfor %}
+
+
+
 <h3>On the Use of Deeper CNNs in Hand Gesture Recognition Based on sEMG Signals</h3>
 > Authors: N. Tsagkas, P. Tsinganos and A. Skodras
 >
