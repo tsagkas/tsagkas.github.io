@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-<embed src="files/CV_Nikolaos_Tsagkas.pdf" type="application/pdf" width="100%" height="600px" />
+<embed src="CV_Nikolaos_Tsagkas.pdf" type="application/pdf" width="100%" height="600px" />
 
 
 <h2>Educational Background:</h2>
