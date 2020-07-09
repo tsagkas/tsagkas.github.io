@@ -1,7 +1,7 @@
 ---
 title: "On the Use of Deeper CNNs in Hand Gesture Recognition Based on sEMG Signals"
 collection: publications
-permalink: /publication/2010-10-01-paper-title-number-2
+permalink: /publication/sEMG-IISA-2019
 excerpt: 'In  line  with  latest works in the field, the objective of our work is the construction of a novel Convolutional Neural Network architecture, for the classification  of  hand-gestures.  Our  model,  while  avoiding overfitting, did not perform significantly better compared to a much shallower network. The results suggest that the lack of diversity in the sEMG recordings between certain hand-gestures limits the performance of the model. In addition, the classification accuracy on a database we developed using a commercial device (Myo Armband) was substantially higher (approximately  24%)  than  a  similar  benchmark  dataset recorded with the same device.'
 date: 2019-07-01
 venue: '10th International Conference on Information, Intelligence, Systems and Applications (IISA)'
