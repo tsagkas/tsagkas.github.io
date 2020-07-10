@@ -63,7 +63,7 @@ By training our CNN with sEMG recordings from the MyoUP dataset, we managed to d
 <h3> YouTube Demo: </h3>
 [![](http://img.youtube.com/vi/w98PkUeSu20/0.jpg)](http://www.youtube.com/watch?v=w98PkUeSu20)
 
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"> 
+<hr style="height:2px;border-width:0;color:gray;background-color:black"> 
 
 <h2> Citation </h2>
 N. Tsagkas, P. Tsinganos and A. Skodras, "On the Use of Deeper CNNs in Hand Gesture Recognition Based on sEMG Signals," 2019 10th International Conference on Information, Intelligence, Systems and Applications (IISA), PATRAS, Greece, 2019, pp. 1-4.
