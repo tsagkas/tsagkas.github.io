@@ -1,6 +1,6 @@
 ---
 title: "Hand Gesture Recognition via sEMG signals with CNNs"
-excerpt: "Electrical & Computer Engineering Diploma Thesis.<br/><img src='/images/Hand-Gesture-Recognition.png'>"
+excerpt: "Electrical & Computer Engineering Diploma Thesis<br/><img src='/images/Hand-Gesture-Recognition.png'>"
 collection: portfolio
 ---
 <h2> Abstract </h2>
@@ -51,13 +51,11 @@ would be placed in a comfortable position for the subject
 and the device would detect the sEMG signals accurately.
 The sEMG was visible to the subject on a screen along with
 a picture of the hand-gesture that had to be performed.
-
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"> 
  
 <h3> Download from: </h3>
 https://github.com/tsagkas/MyoUP_dataset
 
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"> 
+<hr style="height:1px;border-width:0;color:gray;background-color:black"> 
 
 <h2> Real-time Hand Gesture Recognition </h2>
 By training our CNN with sEMG recordings from the MyoUP dataset, we managed to develop a real-time hand gesture recognition software. 
