@@ -4,12 +4,11 @@ excerpt: "A custom sEMG Dataset, developed with the Myo Armband<br/><img src='/i
 collection: portfolio
 ---
 
-<img align="right" width="90" height="110" src="https://github.com/TheCodeChugger/MyoUP_dataset/blob/master/Pictures/lab/DSIP-logo.png"><br />
-
 ## Abstract
 
 <p style="text-align:justify">
-In order to contribute to the acquisition of sEMG data, particularly from devices that do not require professional calibration, we developed a sizeable sEMG database. Our database, MyoUP, was inspired by the Ninapro database and all of the recorded hand-gestures, presented in: https://github.com/tsagkas/MyoUP_dataset/blob/master/MyoUP_hand-gestures.pdf, are identical to some of the Ninapro (http://ninaweb.hevs.ch/). The recording device we used was the Myo Armband, by Thalmic labs. The Myo Armband is a relatively cheap and easy-to-wear device, with a sampling frequency of 200Hz and 8 dry sEMG channels that has been widely adopted in scientific research.
+In order to contribute to the acquisition of sEMG data, particularly from devices that do not require professional calibration, we developed a sizeable sEMG database. Our database, MyoUP, was inspired by the Ninapro database and all of the recorded hand-gestures, presented in: 
+<a href="https://github.com/tsagkas/MyoUP_dataset/blob/master/MyoUP_hand-gestures.pdf">here</a>, are identical to some of the <a href="http://ninaweb.hevs.ch/">Ninapro</a>. The recording device we used was the Myo Armband, by Thalmic labs. The Myo Armband is a relatively cheap and easy-to-wear device, with a sampling frequency of 200Hz and 8 dry sEMG channels that has been widely adopted in scientific research.
 </p>
 
 ![](https://github.com/tsagkas/MyoUP_dataset/blob/master/Pictures/sEMG.png)
@@ -33,7 +32,7 @@ The MyoUP database contains recordings from 8 intact subjects (3 females, 5 male
 
 ## Hand Gesture Recognition via sEMG signals 
 <p style="text-align:justify">
-Since the results of this research where rather promising, a real-time hand gesture recognition model was developed, by designing a CNN and training it with the MyoUP dataset. More information regarding the implementation can be found here: https://github.com/tsagkas/sEMG-HandGestureRecognition
+Since the results of this research where rather promising, a real-time hand gesture recognition model was developed, by designing a CNN and training it with the MyoUP dataset. More information regarding the implementation can be found here: <a href="https://github.com/tsagkas/sEMG-HandGestureRecognition">here</a>
 </p>
 
 ### YouTube Demo
