@@ -73,6 +73,7 @@ By training our CNN with sEMG recordings from the MyoUP dataset, we managed to d
 <p/>
 
 ### YouTube Demo
+
 [![](http://img.youtube.com/vi/w98PkUeSu20/0.jpg)](http://www.youtube.com/watch?v=w98PkUeSu20)
 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"> 
