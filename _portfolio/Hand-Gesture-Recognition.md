@@ -36,7 +36,7 @@ particularly from devices that do not require professional
 calibration, we developed a sizeable sEMG dataset. Our
 dataset, MyoUP, was inspired by the Ninapro dataset and
 all of the recorded hand-gestures, are
-identical to some of the Ninapro (http://ninaweb.hevs.ch). The recording device
+identical to some of the <a href="http://ninaweb.hevs.ch">Ninapro</a>. The recording device
 we used was the Myo Armband, by Thalmic labs. The Myo
 Armband is a relatively cheap and easy-to-wear device, with
 a sampling frequency of 200Hz and 8 dry sEMG channels
@@ -62,7 +62,7 @@ a picture of the hand-gesture that had to be performed.
 </p>
 
 <h3> Download from: </h3>
-https://github.com/tsagkas/MyoUP_dataset
+<a href="https://github.com/tsagkas/MyoUP_dataset">MyoUP Dataset</a>
 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"> 
 
@@ -83,5 +83,5 @@ By training our CNN with sEMG recordings from the MyoUP dataset, we managed to d
 N. Tsagkas, P. Tsinganos and A. Skodras, "On the Use of Deeper CNNs in Hand Gesture Recognition Based on sEMG Signals," 2019 10th International Conference on Information, Intelligence, Systems and Applications (IISA), PATRAS, Greece, 2019, pp. 1-4.
 doi: 10.1109/IISA.2019.8900709
 </p>
-URL: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8900709&isnumber=8900660
+URL: [<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8900709&isnumber=8900660">IEEE Xplore</a>][<a href="http://www.ece.upatras.gr/skodras/data/uploads/pubs/ans-c117-prepress.pdf">pdf</a>]
 
