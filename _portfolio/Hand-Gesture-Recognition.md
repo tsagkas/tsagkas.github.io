@@ -72,9 +72,10 @@ a picture of the hand-gesture that had to be performed.
 By training our CNN with sEMG recordings from the MyoUP dataset, we managed to develop a real-time hand gesture recognition software. 
 <p/>
 
-### YouTube Demo
+<h3>YouTube Demo</h3>
+<iframe width="420" height="345" src="http://www.youtube.com/watch?v=w98PkUeSu20">
+</iframe>
 
-[![](http://img.youtube.com/vi/w98PkUeSu20/0.jpg)](http://www.youtube.com/watch?v=w98PkUeSu20)
 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"> 
 
