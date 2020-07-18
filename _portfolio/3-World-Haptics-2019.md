@@ -28,3 +28,7 @@ alt="Hand_Gesture_Rec" width="500" height="300" border="10" /></a>
 ![WHC](/images/WHC4.jpg)<br/><br/>
 ![WHC](/images/WHC5.jpg)<br/><br/>
 ![WHC](/images/WHC6.jpg)<br/><br/>
+![WHC](/images/WHC7.jpg)<br/><br/>
+![WHC](/images/WHC8.jpg)<br/><br/>
+![WHC](/images/WHC9.jpg)<br/><br/>
+![WHC](/images/WHC10.jpg)<br/><br/>
