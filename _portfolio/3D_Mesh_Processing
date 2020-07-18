@@ -1,0 +1,28 @@
+---
+title: "Algorithmic Processing of 3D Meshes"
+excerpt: "Computational Geometry and 3D Modeling Project<br/><img src='/images/VVR_Project.jpg'>"
+collection: portfolio
+---
+<h2> Abstract </h2>
+
+<p style="text-align:justify">
+Algorithmic Processing of 3D Meshes (Supervisor: Assoc. Prof. Konstantinos Moustakas): 
+Laplacian Contraction, Salient Point Detection, Protrusion Map Extraction and Segmentation of a 3D Mesh. 
+The project was implemented in C++.
+</p>
+
+<h2> Laplacian Contraction </h2>
+
+![](https://github.com/tsagkas/tsagkas.github.io/Laplacian_Contraction_1.png)
+![](https://github.com/tsagkas/tsagkas.github.io/Laplacian_Contraction_2.png)
+![](https://github.com/tsagkas/tsagkas.github.io/Laplacian_Contraction_3.png)
+
+<h2> Protrusion Map Extraction </h2>
+![](https://github.com/tsagkas/MyoUP_dataset/blob/master/Pictures/sEMG.png)
+
+<h2> Salient Point Detection </h2>
+![](https://github.com/tsagkas/MyoUP_dataset/blob/master/Pictures/sEMG.png)
+
+
+
+
