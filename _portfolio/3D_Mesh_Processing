@@ -13,9 +13,9 @@ The project was implemented in C++.
 
 <h2> Laplacian Contraction </h2>
 
-![](images/Laplacian_Contraction_1.png)
-![](https://github.com/tsagkas/tsagkas.github.io/blob/master/images/Laplacian_Contraction_2.png)
-![](https://github.com/tsagkas/tsagkas.github.io/blob/master/images/Laplacian_Contraction_3.png)
+![Laplacian_Contraction_1](/images/Laplacian_Contraction_1.png)
+![Laplacian_Contraction_2](/images/Laplacian_Contraction_1.png)
+![Laplacian_Contraction_3](/images/Laplacian_Contraction_1.png)
 
 <h2> Protrusion Map Extraction </h2>
 ![](https://github.com/tsagkas/MyoUP_dataset/blob/master/Pictures/sEMG.png)
