@@ -22,9 +22,9 @@ alt="Hand_Gesture_Rec" width="500" height="300" border="10" /></a>
 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"> 
 
-![](https://github.com/tsagkas/MyoUP_dataset/blob/master/Pictures/WHC1.png)<br/><br/>
-![](https://github.com/tsagkas/MyoUP_dataset/blob/master/Pictures/WHC2.png)<br/><br/>
-![](https://github.com/tsagkas/MyoUP_dataset/blob/master/Pictures/WHC3.png)<br/><br/>
-![](https://github.com/tsagkas/MyoUP_dataset/blob/master/Pictures/WHC4.png)<br/><br/>
-![](https://github.com/tsagkas/MyoUP_dataset/blob/master/Pictures/WHC5.png)<br/><br/>
-![](https://github.com/tsagkas/MyoUP_dataset/blob/master/Pictures/WHC6.png)<br/><br/>
+![WHC](/images/WHC1.jpg)<br/><br/>
+![WHC](/images/WHC2.jpg)<br/><br/>
+![WHC](/images/WHC3.jpg)<br/><br/>
+![WHC](/images/WHC4.jpg)<br/><br/>
+![WHC](/images/WHC5.jpg)<br/><br/>
+![WHC](/images/WHC6.jpg)<br/><br/>
