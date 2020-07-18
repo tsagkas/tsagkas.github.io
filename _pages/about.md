@@ -25,5 +25,5 @@ Moreover, working under the supervision of <a href="http://www.vvr.ece.upatras.g
 </p>
 
 <p style="text-align:justify">
-  Until June 2020, I worked as a Data Scientist at <b>Ernst & Young</b>, Greece. Before that, I worked as a Laboratory Assistant at the Digital Signal and Image Processing Laboratoty, at the University of Patras.  
+  Until June 2020, I worked as a Data Scientist at <b>Ernst & Young</b>, Greece. Before that, I worked as a Laboratory Assistant at the <b>Digital Signal and Image Processing Laboratory</b>, at the University of Patras.  
 </p>
