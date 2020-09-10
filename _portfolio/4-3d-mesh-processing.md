@@ -13,19 +13,19 @@ The project was implemented in C++.
 
 ## Laplacian Contraction
 
-![Laplacian_Contraction_1](/images/Laplacian_Contraction_1.png)<br/><br/>
-![Laplacian_Contraction_2](/images/Laplacian_Contraction_2.png)<br/><br/>
-![Laplacian_Contraction_3](/images/Laplacian_Contraction_3.png)<br/><br/>
+![Laplacian_Contraction_1](/images/MeshProcessing/Laplacian_Contraction_1.png)<br/><br/>
+![Laplacian_Contraction_2](/images/MeshProcessing/Laplacian_Contraction_2.png)<br/><br/>
+![Laplacian_Contraction_3](/images/MeshProcessing/Laplacian_Contraction_3.png)<br/><br/>
 
 ## Protrusion Map Extraction 
-![Protrusion_map_1](/images/Protrusion_map_1.png)<br/><br/>
-![Protrusion_map_2](/images/Protrusion_map_2.png)<br/><br/>
-![Protrusion_map_3](/images/Protrusion_map_3.png)<br/><br/>
+![Protrusion_map_1](/images/MeshProcessing/Protrusion_map_1.png)<br/><br/>
+![Protrusion_map_2](/images/MeshProcessing/Protrusion_map_2.png)<br/><br/>
+![Protrusion_map_3](/images/MeshProcessing/Protrusion_map_3.png)<br/><br/>
 
 ## Salient Point Detection 
-![Salient_Points_1](/images/Salient_Points_1.png)<br/><br/>
-![Salient_Points_2](/images/Salient_Points_2.png)<br/><br/>
-![Salient_Points_3](/images/Salient_Points_3.png)<br/><br/>
+![Salient_Points_1](/images/MeshProcessing/Salient_Points_1.png)<br/><br/>
+![Salient_Points_2](/images/MeshProcessing/Salient_Points_2.png)<br/><br/>
+![Salient_Points_3](/images/MeshProcessing/Salient_Points_3.png)<br/><br/>
 
 
 
