@@ -22,7 +22,7 @@ alt="Hand_Gesture_Rec" width="500" height="300" border="10" /></a>
 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"> 
 
-![WHC](/images/WHC1.jpg)<br/><br/>
+![WHC](/images/WHC/WHC1.jpg)<br/><br/>
 ![WHC](/images/WHC2.jpg)<br/><br/>
 ![WHC](/images/WHC3.jpg)<br/><br/>
 ![WHC](/images/WHC4.jpg)<br/><br/>
