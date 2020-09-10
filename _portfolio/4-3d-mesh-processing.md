@@ -1,6 +1,6 @@
 ---
 title: "Algorithmic Processing of 3D Meshes"
-excerpt: "Computational Geometry and 3D Modeling Project<br/><img src='/images/VVR_project_2.jpg'>"
+excerpt: "Computational Geometry and 3D Modeling Project<br/><img src='/images/MeshProcessing/VVR_project_2.jpg'>"
 collection: portfolio
 ---
 ## Abstract
