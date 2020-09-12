@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 <p style="text-align:justify">
-I am a prospective postgraduate student at the <b>University of Edinburgh</b> (Artificial intelligence MSc - School of Informatics). 
+I am a postgraduate student at the <b>University of Edinburgh</b> (Artificial intelligence MSc - School of Informatics). 
 </p>
 
 <p style="text-align:justify">
