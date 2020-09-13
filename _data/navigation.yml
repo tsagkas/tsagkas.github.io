@@ -1,19 +1,18 @@
 # main links links
 main:
   - title: "Projects"
-    url: /portfolio/
+    url: /projects/
   
   - title: "Publications"
     url: /publications/
 
-  - title: "Photos"
-    url: /year-archive/ 
-    
+  - title: "Photo Gallery"
+    url: /photos/ 
+   
   - title: "CV"
     url: /cv/
 
-  - title: "Test"
-    url: /test/ 
+
 
 #   - title: "Talks"
 #     url: /talks/ 
