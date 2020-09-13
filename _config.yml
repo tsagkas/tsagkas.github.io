@@ -184,7 +184,7 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
-  photos:
+  photo_gallery:
     output: true
     permalink: /:photos/:path/
 #   talks:
