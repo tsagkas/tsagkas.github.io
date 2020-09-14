@@ -33,5 +33,8 @@ author_profile: true
 ## 2019-04-19 | Pavlopoulou, Emmanouilidis, Boussias, Tsagkas, Moulagianni, Lampropoulou @ECESCON11, Aristotle University of Thessaloniki, Greece
 ![ECESCON11](/images/Media/2019-04-19-Androniki-Nektarios-Nikos-Tsagkas-Aspasia-Nikoleta@ECESCON-Thessaloniki.JPG)<br/><br/>
 
-## 2018-10-11 | Prof. SKodras with DSIP Lab students @DSIP Lab, University of Patras, Greece
+## 2018-12-10 | Tsagkas with VVR Lab students, recording the MyoUP dataset @VVR Lab, University of Patras, Greece
+![DSIP_Lab](/images/Media/2018-12-10-Tsagkas-VVR-Lab-stufents@VVR-Lab.PNG)<br/><br/>
+
+## 2018-10-11 | Prof. Skodras with DSIP Lab students @DSIP Lab, University of Patras, Greece
 ![DSIP_Lab](/images/Media/2018-10-11-Prof-Skodras-Prof-Berberidis@DSIP-Lab-ECE-Upatras.JPG)<br/><br/>
