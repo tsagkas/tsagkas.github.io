@@ -13,10 +13,11 @@ author_profile: true
 
 ![WH_Conf](/images/Media/2019-07-12-Ioannis-Prof-Moustakas-Tsagkas@WorldHapticsConference-Tokyo.jpg)<br/><br/>
 
-
-![DSIP_Lab](/images/Media/2019-07-03-Prof-Skodras-Prof-Sgarbas-Students@DSIP_Lab.jpg)<br/><br/>
+![WH_Conf](/images/Media/2019-07-09-Tsagkas-Ioannis@WorldHapticsConference-Tokyo.jpg)<br/><br/>
 
 ![VVR_Lab](/images/Media/2019-06-10-Tsagkas-George-@VVR-Lab-UPatras.jpg)<br/><br/>
+
+![DSIP_Lab](/images/Media/2019-07-03-Prof-Skodras-Prof-Sgarbas-Students@DSIP_Lab.jpg)<br/><br/>
 
 ![ECESCON11](/images/Media/2019-04-19-Tsagkas@ECESCON-Thessaloniki.jpg)<br/><br/>
 
