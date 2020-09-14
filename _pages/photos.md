@@ -6,3 +6,6 @@ author_profile: true
 ---
 
  <img src="https://github.com/tsagkas/tsagkas.github.io/blob/master/images/Media/2019-10-20-Tsagkas-Thodoris-Kelly-Leoni-Antonis-Jack-Angelos@EY-Athens.jpg"> 
+
+
+<p style="text-align:center;"> <img src="https://github.com/tsagkas/tsagkas.github.io/blob/master/images/Media/2019-10-20-Tsagkas-Thodoris-Kelly-Leoni-Antonis-Jack-Angelos@EY-Athens.jpg"> </p>
