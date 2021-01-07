@@ -25,9 +25,15 @@ commercial device (Myo Armband) was substantially higher
 recorded with the same device.
 </p>
 
- <iframe width="420" height="315"
-src="http://www.youtube.com/watch?feature=player_embedded&v=w98PkUeSu20?autoplay=1&mute=1">
-</iframe> 
+
+
+<hr/>
+<video width="100%" id="dollyzoom" autoplay="" controls="" muted="" loop="" height="100%">
+    <source src="http://www.youtube.com/watch?feature=player_embedded&v=w98PkUeSu20">
+</video>
+
+<i>The result that got me hooked on wanting to know everything about NeRF :-).</i>
+<hr/>
 
 <h2> MyoUP dataset </h2>
 
