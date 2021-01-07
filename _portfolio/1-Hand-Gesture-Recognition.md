@@ -26,11 +26,15 @@ recorded with the same device.
 </p>
 
 
-<iframe width="1280" height="720" src="http://www.youtube.com/watch?feature=player_embedded&v=w98PkUeSu20" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<iframe src="https://youtu.be/w98PkUeSu20" frameborder="0" 
-    allowfullscreen> 
-
+<div class="embed-container">
+  <iframe
+      src="https://youtu.be/w98PkUeSu20"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
 <p style="text-align:justify">
 In order to contribute to the acquisition of sEMG data,
 particularly from devices that do not require professional
