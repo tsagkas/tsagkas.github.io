@@ -3,7 +3,6 @@ title: "Hand Gesture Recognition via sEMG signals with CNNs"
 excerpt: "Electrical & Computer Engineering Diploma Thesis<br/><img src='/images/Hand-Gesture-Recognition.png'>"
 collection: portfolio
 ---
-<h2> Abstract </h2>
 
 <p style="text-align:justify">
 In the past few years, a great interest for the
@@ -26,7 +25,9 @@ commercial device (Myo Armband) was substantially higher
 recorded with the same device.
 </p>
 
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"> 
+ <iframe width="420" height="315"
+src="http://www.youtube.com/watch?feature=player_embedded&v=w98PkUeSu20?autoplay=1&mute=1">
+</iframe> 
 
 <h2> MyoUP dataset </h2>
 
