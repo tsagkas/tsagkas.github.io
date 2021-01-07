@@ -28,6 +28,9 @@ recorded with the same device.
 
 <iframe width="1280" height="720" src="http://www.youtube.com/watch?feature=player_embedded&v=w98PkUeSu20" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<iframe src="https://youtu.be/w98PkUeSu20" frameborder="0" 
+    allowfullscreen> 
+
 <p style="text-align:justify">
 In order to contribute to the acquisition of sEMG data,
 particularly from devices that do not require professional
