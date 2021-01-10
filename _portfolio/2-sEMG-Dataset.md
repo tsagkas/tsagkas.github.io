@@ -11,7 +11,7 @@ In order to contribute to the acquisition of sEMG data, particularly from device
 [[here](https://github.com/tsagkas/MyoUP_dataset/blob/master/MyoUP_hand-gestures.pdf)]. The recording device we used was the Myo Armband, by Thalmic labs. The Myo Armband is a relatively cheap and easy-to-wear device, with a sampling frequency of 200Hz and 8 dry sEMG channels that has been widely adopted in scientific research.
 
 
-![](https://github.com/tsagkas/MyoUP_dataset/blob/master/Pictures/sEMG.png)
+![](https://github.com/tsagkas/tsagkas.github.io/blob/master/images/MyoUP.jpg)
 
 
 ## Dataset Info
