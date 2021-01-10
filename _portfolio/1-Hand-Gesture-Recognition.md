@@ -66,6 +66,7 @@ pages={1-4},
 doi={10.1109/IISA.2019.8900709}}
 }
 ```
+
 [[PDF](http://www.ece.upatras.gr/skodras/data/uploads/pubs/ans-c117-prepress.pdf)] [[IEEE Xplore]](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8900709&isnumber=8900660)]
 
 
