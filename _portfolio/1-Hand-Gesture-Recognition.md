@@ -25,7 +25,7 @@ commercial device (Myo Armband) was substantially higher
 recorded with the same device.
 </p>
 
-<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/LgWX2sPZQsE/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+<iframe id="video" width="560" height="315" src="https://youtu.be/w98PkUeSu20" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
 
 
 <p style="text-align:justify">
