@@ -28,7 +28,7 @@ recorded with the same device.
 
 <div class="embed-container">
   <iframe
-      src="https://youtu.be/w98PkUeSu20"
+      src="https://drive.google.com/file/d/1xOFMKDCE9CwlCsySEKqLwxsTNaKUcj37/view?usp=sharing"
       width="700"
       height="480"
       frameborder="0"
