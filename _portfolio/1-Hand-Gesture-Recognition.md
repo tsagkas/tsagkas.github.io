@@ -12,8 +12,6 @@ works in the field, the objective of our work is to train
 a novel CNN architecture, for the real-time
 classification of hand-gestures. 
 
-
-
 The classification accuracy on the MyoUP dataset, which we developed using a
 commercial device (Myo Armband), was substantially higher
 (approximately 24%) than on the Ninapro benchmark dataset
@@ -33,8 +31,6 @@ we used was the Myo Armband, by Thalmic labs. The Myo
 Armband is a relatively cheap and easy-to-wear device, with
 a sampling frequency of 200Hz and 8 dry sEMG channels
 that has been widely adopted in scientific research.
-
-
 
 The MyoUP dataset contains recordings from 8 intact
 subjects (3 females, 5 males; 1 left handed, 7 right handed;
@@ -71,6 +67,6 @@ pages={1-4},
 doi={10.1109/IISA.2019.8900709}}
 }
 ```
+[PDF](http://www.ece.upatras.gr/skodras/data/uploads/pubs/ans-c117-prepress.pdf) [IEEE Xplore](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8900709&isnumber=8900660)
 
-URL: [<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8900709&isnumber=8900660">IEEE Xplore</a>][<a href="http://www.ece.upatras.gr/skodras/data/uploads/pubs/ans-c117-prepress.pdf">pdf</a>]
 
