@@ -54,7 +54,7 @@ a picture of the hand-gesture that had to be performed.
 
 ## Citation 
 
-```
+```latex
 @INPROCEEDINGS{8900709,
 author={N. {Tsagkas} and P. {Tsinganos} and A. {Skodras}},
 booktitle={2019 10th International Conference on Information, Intelligence, Systems and Applications (IISA)}, 
