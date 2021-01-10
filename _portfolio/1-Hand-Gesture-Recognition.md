@@ -25,16 +25,9 @@ commercial device (Myo Armband) was substantially higher
 recorded with the same device.
 </p>
 
+<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/LgWX2sPZQsE/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
 
-<div class="embed-container">
-  <iframe
-      src="https://drive.google.com/file/d/1xOFMKDCE9CwlCsySEKqLwxsTNaKUcj37/view?usp=sharing"
-      width="700"
-      height="480"
-      frameborder="0"
-      allowfullscreen="">
-  </iframe>
-</div>
+
 <p style="text-align:justify">
 In order to contribute to the acquisition of sEMG data,
 particularly from devices that do not require professional
