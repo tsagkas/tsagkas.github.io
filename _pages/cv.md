@@ -9,6 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-<embed src="https://tsagkas.github.io/files/CV_Nikolaos_Tsagkas.pdf" type="application/pdf" width="100%" height="135%" />
+<embed src="https://tsagkas.github.io/files/CV_Nikolaos_Tsagkas.pdf" type="application/pdf" width="100%" height="130%" />
 
 
