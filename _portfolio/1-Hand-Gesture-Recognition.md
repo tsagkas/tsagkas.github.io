@@ -61,12 +61,6 @@ a picture of the hand-gesture that had to be performed.
 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray"> 
 
-<h2> Real-time Hand Gesture Recognition </h2>
-
-<p style="text-align:justify">
-By training our CNN with sEMG recordings from the MyoUP dataset, we managed to develop a real-time hand gesture recognition software. 
-<p/>
-
 
 
 <h2> Citation </h2>
