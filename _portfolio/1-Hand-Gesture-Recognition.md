@@ -9,24 +9,21 @@ In the past few years, a great interest for the
 classification of hand gestures with Deep Learning methods
 based on surface electromyography (sEMG) signals has been
 developed in the scientific community. In line with latest
-works in the field, the objective of our work is to design
-a novel Convolutional Neural Network architecture, for the
-classification of hand-gestures. Our model, while avoiding
-overfitting, did not perform significantly better compared to
-a much shallower network. The results suggest that the lack
-of diversity in the sEMG recordings between certain hand-gestures 
-limits the performance of ML models. 
+works in the field, the objective of our work is to train
+a novel CNN architecture, for the real-time
+classification of hand-gestures. 
 </p>
 
 <p style="text-align:justify">
-However, the classification accuracy on a dataset we developed using a
-commercial device (Myo Armband) was substantially higher
-(approximately 24%) than a similar benchmark dataset
+The classification accuracy on the MyoUP dataset, which we developed using a
+commercial device (Myo Armband), was substantially higher
+(approximately 24%) than on the Ninapro benchmark dataset
 recorded with the same device.
 </p>
 
 <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/w98PkUeSu20?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allow="encrypted-media" allowfullscreen=""></iframe>
 
+<br>
 
 <p style="text-align:justify">
 In order to contribute to the acquisition of sEMG data,
@@ -70,18 +67,22 @@ a picture of the hand-gesture that had to be performed.
 By training our CNN with sEMG recordings from the MyoUP dataset, we managed to develop a real-time hand gesture recognition software. 
 <p/>
 
-<h3> YouTube Demo </h3>
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=w98PkUeSu20" target="_blank"><img src="http://img.youtube.com/vi/w98PkUeSu20/0.jpg" 
-alt="Hand_Gesture_Rec" width="500" height="300" border="10" /></a>
-
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"> 
 
 <h2> Citation </h2>
 
-<p style="text-align:justify">
-N. Tsagkas, P. Tsinganos and A. Skodras, "On the Use of Deeper CNNs in Hand Gesture Recognition Based on sEMG Signals," 2019 10th International Conference on Information, Intelligence, Systems and Applications (IISA), PATRAS, Greece, 2019, pp. 1-4.
-doi: 10.1109/IISA.2019.8900709
-</p>
+```
+@INPROCEEDINGS{8900709,
+author={N. {Tsagkas} and P. {Tsinganos} and A. {Skodras}},
+booktitle={2019 10th International Conference on Information, Intelligence, Systems and Applications (IISA)}, 
+title={On the Use of Deeper CNNs in Hand Gesture Recognition Based on sEMG Signals}, 
+year={2019},
+volume={},
+number={},
+pages={1-4},
+doi={10.1109/IISA.2019.8900709}}
+}
+```
+
 URL: [<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8900709&isnumber=8900660">IEEE Xplore</a>][<a href="http://www.ece.upatras.gr/skodras/data/uploads/pubs/ans-c117-prepress.pdf">pdf</a>]
 
