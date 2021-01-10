@@ -21,8 +21,6 @@ The MyoUP database contains recordings from 8 intact subjects (3 females, 5 male
 
 ## Acquisition of sEMG recordings
 
-<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/4tdu-ReCUEI?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allow="encrypted-media" allowfullscreen=""></iframe>
-
 <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/iJyF1SP5_r4?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allow="encrypted-media" allowfullscreen=""></iframe>
 
 ## Hand Gesture Recognition via sEMG signals 
