@@ -54,7 +54,7 @@ a picture of the hand-gesture that had to be performed.
 
 ## Citation 
 
-```latex
+`
 @INPROCEEDINGS{8900709,
 author={N. {Tsagkas} and P. {Tsinganos} and A. {Skodras}},
 booktitle={2019 10th International Conference on Information, Intelligence, Systems and Applications (IISA)}, 
@@ -65,7 +65,21 @@ number={},
 pages={1-4},
 doi={10.1109/IISA.2019.8900709}}
 }
-```
+`
+
+``
+@INPROCEEDINGS{8900709,
+author={N. {Tsagkas} and P. {Tsinganos} and A. {Skodras}},
+booktitle={2019 10th International Conference on Information, Intelligence, Systems and Applications (IISA)}, 
+title={On the Use of Deeper CNNs in Hand Gesture Recognition Based on sEMG Signals}, 
+year={2019},
+volume={},
+number={},
+pages={1-4},
+doi={10.1109/IISA.2019.8900709}}
+}
+``
+
 <code>
 @INPROCEEDINGS{8900709,
   
