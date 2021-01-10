@@ -4,7 +4,6 @@ excerpt: "Electrical & Computer Engineering Diploma Thesis<br/><img src='/images
 collection: portfolio
 ---
 
-<p style="text-align:justify">
 In the past few years, a great interest for the
 classification of hand gestures with Deep Learning methods
 based on surface electromyography (sEMG) signals has been
@@ -12,20 +11,18 @@ developed in the scientific community. In line with latest
 works in the field, the objective of our work is to train
 a novel CNN architecture, for the real-time
 classification of hand-gestures. 
-</p>
 
-<p style="text-align:justify">
+
+
 The classification accuracy on the MyoUP dataset, which we developed using a
 commercial device (Myo Armband), was substantially higher
 (approximately 24%) than on the Ninapro benchmark dataset
 recorded with the same device.
-</p>
+
 
 <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/w98PkUeSu20?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allow="encrypted-media" allowfullscreen=""></iframe>
 
-<br>
 
-<p style="text-align:justify">
 In order to contribute to the acquisition of sEMG data,
 particularly from devices that do not require professional
 calibration, we developed a sizeable sEMG dataset. Our
@@ -36,9 +33,9 @@ we used was the Myo Armband, by Thalmic labs. The Myo
 Armband is a relatively cheap and easy-to-wear device, with
 a sampling frequency of 200Hz and 8 dry sEMG channels
 that has been widely adopted in scientific research.
-</p>
 
-<p style="text-align:justify">
+
+
 The MyoUP dataset contains recordings from 8 intact
 subjects (3 females, 5 males; 1 left handed, 7 right handed;
 age 22.38 ± 1.06 years). The acquisition process was
@@ -54,16 +51,13 @@ would be placed in a comfortable position for the subject
 and the device would detect the sEMG signals accurately.
 The sEMG was visible to the subject on a screen along with
 a picture of the hand-gesture that had to be performed.
-</p>
 
-<h3> Download from: </h3>
+
+### Download from:
 <a href="https://github.com/tsagkas/MyoUP_dataset">MyoUP Dataset</a>
 
-<hr style="height:2px;border-width:0;color:gray;background-color:gray"> 
 
-
-
-<h2> Citation </h2>
+## Citation 
 
 ```
 @INPROCEEDINGS{8900709,
