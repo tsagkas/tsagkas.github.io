@@ -26,7 +26,7 @@ particularly from devices that do not require professional
 calibration, we developed a sizeable sEMG dataset. Our
 dataset, MyoUP, was inspired by the Ninapro dataset and
 all of the recorded hand-gestures, are
-identical to some of the <a href="http://ninaweb.hevs.ch">Ninapro</a>. The recording device
+identical to some of the [[Ninapro](http://ninaweb.hevs.ch)]. The recording device
 we used was the Myo Armband, by Thalmic labs. The Myo
 Armband is a relatively cheap and easy-to-wear device, with
 a sampling frequency of 200Hz and 8 dry sEMG channels
@@ -50,8 +50,7 @@ a picture of the hand-gesture that had to be performed.
 
 
 ### Download from:
-<a href="https://github.com/tsagkas/MyoUP_dataset">MyoUP Dataset</a>
-
+[[MyoUP Dataset](https://github.com/tsagkas/MyoUP_dataset)]
 
 ## Citation 
 
@@ -67,6 +66,6 @@ pages={1-4},
 doi={10.1109/IISA.2019.8900709}}
 }
 ```
-[[PDF]](http://www.ece.upatras.gr/skodras/data/uploads/pubs/ans-c117-prepress.pdf) [[IEEE Xplore]](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8900709&isnumber=8900660)
+[[PDF](http://www.ece.upatras.gr/skodras/data/uploads/pubs/ans-c117-prepress.pdf)] [[IEEE Xplore]](http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8900709&isnumber=8900660)]
 
 
