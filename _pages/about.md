@@ -25,5 +25,5 @@ Moreover, working under the supervision of <a href="http://www.vvr.ece.upatras.g
 </p>
 
 <p style="text-align:justify">
-Currently, I am a member of the <a href="https://eufs.eusa.ed.ac.uk/ai">UEFS</a> - AI Perception team, solving Computer Vision related problems. Until June 2020, I worked as a Data Scientist at <a href="https://www.ey.com/en_gr">Ernst & Young</a>, where I worked on projects of the shipping, tobacco and betting industry. Before that I worked as a Laboratory Assistant at the <a href="http://dsip.ece.upatras.gr/">DSIP</a> lab, at the University of Patras.  
+Currently, I am a member of the <a href="https://eufs.eusa.ed.ac.uk/ai">UEFS</a> - AI Perception team, solving Computer Vision related problems. Until June 2020, I worked as a Data Scientist at <a href="https://www.ey.com/en_gr">Ernst & Young</a>, where I participated in projects of the shipping, tobacco and betting industry. Before that I worked as a Laboratory Assistant at the <a href="http://dsip.ece.upatras.gr/">DSIP</a> lab, at the University of Patras.  
 </p>
