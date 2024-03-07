@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="VL-Fields: Towards Language-Grounded Neural Implicit Spatial Representations.">
+  <meta name="keywords" content="NeRF, CLIP">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>VL-Fields</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/logo.jpg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://tsagkas.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div> -->
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">VL-Fields: Towards Language-Grounded Neural Implicit Spatial Representations</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://tsagkas.github.io">Nikolaos Tsagkas</a>,</span>
+            <span class="author-block">
+              <a href="https://homepages.inf.ed.ac.uk/omacaod/">Oisin Mac Aodha</a>,</span>
+            <span class="author-block">
+              <a href="https://christopherlu.github.io/">Chris Xiaoxuan Lu</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">University of Edinburgh</span>
+            <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2305.12427.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2305.12427"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="./static/pdfs/Poster-RAP4Robots@ICRA23.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Poster</span>
+                  </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div> -->
+
+          </div>
+
+
+
+
+        </div>
+
+        <div class="is-size-5 publication-authors">
+          <span class="author-block"> <mark><b>Spotlight Talk + Poster</b>:</mark>
+            
+            workshop on effective Representations, Abstractions, and Priors for Robot Learning @ICRA 2023 [<a href="https://sites.google.com/view/rap4robots">link</a>]</span>
+          <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABSTRACT -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present Visual-Language Fields (VL-Fields), a neural implicit spatial 
+            representation that enables open-vocabulary semantic queries. Our model encodes 
+            and fuses the geometry of a scene with vision-language trained latent features by 
+            distilling information from a language-driven segmentation model. VL-Fields is trained 
+            without requiring any prior knowledge of the scene object classes, which makes it a
+            promising representation for the field of robotics. Our model
+            outperformed the similar CLIP-Fields model in the task of
+            semantic segmentation by almost 10%.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<!-- OPEN VOC QUERIES -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="item item-chair-tp">
+        <center>
+            <h2 class="title is-3">Open-Vocabulary Queries</h2>
+            <img src="./static/images/open_voc.png" alt="semantic segmentation" width="60%" height="60%">
+          </center>
+        </div>
+    </div>
+
+
+  </div>   
+</div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <center>
+    <h2 class="title is-3">Demo</h2>
+    </center>
+    <br>
+    <div class="columns is-centered">
+
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <!-- <h2 class="title is-3">Dust the Blinds:</h2> -->
+          <center>
+          <p>
+            Dust the Blinds:
+          </p>
+            </center>
+
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/query_demo_blinds.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column">
+        <!-- <h2 class="title is-3"></h2> -->          
+        <center>
+          <p>
+            Clean the Table:
+          </p>
+            </center>
+        <div class="columns is-centered">
+          
+          <div class="column content">
+            <!-- <p>
+              As a byproduct of our method, we can also solve the matting problem by ignoring
+              samples that fall outside of a bounding box during rendering.
+            </p> -->
+            <video id="matting-video" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/query_demo_table.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Matting. -->
+
+
+  </section>
+
+
+
+
+
+<!-- SEMANTIC SEGMENTATION -->
+<section class="hero is-light  is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="item item-chair-tp">
+        <center>
+            <h2 class="title is-3">Semantic segmentation</h2>
+            <img src="./static/images/semantic_segmentation.png" width="70%" height="70%">
+          </center>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- PIPELINE -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+        <div class="item item-chair-tp">
+          <center>
+            <h2 class="title is-3">Training Pipeline</h2>
+            <img src="./static/images/pipeline.png" width="70%" height="70%">
+          </center>
+        </div>
+
+      <!-- </div> -->
+    </div>
+  </div>
+</section>
+
+<!-- RENDERING -->
+<section class="hero is-light is-smal">
+  <div class="hero-body">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <!-- <div class="column is-full-width"> -->
+        <center>
+
+          <h2 class="title is-3">Encoding the scene photometry and geometry</h2>
+          
+          <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <div class="content has-text-justified">
+                  <p>
+                    VL-Fields jointly encodes the geometry and appearance of a scene, along with the visual-language features. 
+                    This allows us rely only on the neural-fields for re-rendering the input video, without the need of a stored point-cloud (like in CLIP-Fields).
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--/ Abstract. -->
+          </div>
+          <br>
+          <!-- Re-rendering. -->
+          <div class="content has-text-centered">
+            <video id="replay-video"
+            controls
+            muted
+            preload
+            playsinline
+            autoplay
+            loop
+            width="100%">
+            <source src="./static/videos/room_0.mp4"
+            type="video/mp4">
+          </video>
+        </center>
+        </div>
+        <script>
+          var video = document.getElementById('replay-video');
+          video.playbackRate = 0.4; // Set the playback speed to 2x
+        </script>
+        <!--/ Re-rendering. -->
+
+      <!-- </div> -->
+    </div>
+    <!--/ Animation. -->
+
+
+
+  </div>
+</section>
+
+<!-- RELATED WORK -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        
+        <div class="content has-text-justified">
+          <center>
+            <h2 class="title is-3">Related Work</h2>
+          </center>
+          <p>
+            There's a lot of excellent work for grounding language into neural implicit representations.
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2205.15585">DFF</a> introduced the idea of distilling knowledge from large language-vision models, for the purpose of grounding language into neural-fields.
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2210.05663">CLIP-Fields</a> demonstrated how such models can be used in the field of mobile robotics, for the purpose of commanding robots with natural language queries.
+          </p>
+          <p>
+            More recently, <a href="https://arxiv.org/abs/2303.09553">LERF</a> addressed the limitations in utilizing fine-tuned VL models (e.g., LSeg), by directly extracting vision-language features from CLIP.</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <!-- <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre> -->
+<pre><code>@article{tsagkas2023vlfields,
+  title   =  {VL-Fields: Towards Language-Grounded Neural Implicit Spatial Representations},
+  author  =  {Tsagkas, Nikolaos and Mac Aodha, Oisin and Lu, Chris Xiaoxuan},
+  journal =  {arXiv preprint arXiv:2305.12427},
+  year    =  {2023}
+}</code></pre>
+
+
+
+
+  </div>
+</section>
+
+
+
+<head>
+  <style>
+      /* CSS to center the images */
+      .image-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      
+      .image-container img {
+          max-width: 100%;
+          max-height: 50vh; /* Adjust the value as needed */
+      }
+  </style>
+</head>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <!-- <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p> -->
+          <p>
+            This website is a modified version of <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
