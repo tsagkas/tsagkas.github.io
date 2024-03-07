@@ -2,24 +2,27 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: PhD candidate @ <a href="http://web.inf.ed.ac.uk/ipab" target="_blank">University of Edinburgh</a>, <a href="https://www.edinburgh-robotics.org/" target="_blank">Edinburgh Centre for Robotics</a>
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic_2.JPG
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Informatics Forum,</p>
+    <p>10 Crichton Street,</p>
+    <p>Edinburgh, EH8 9AB</p>
 
-news: true # includes a list of news items
+news: false # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a 2nd year PhD candidate, at the [School of Informatics - University of Edinburgh](http://web.inf.ed.ac.uk/ipab), sponsored by the [Edinburgh Centre for Robotics](https://www.edinburgh-robotics.org/). I am supervised by [Prof. Chris Xiaoxuan Lu](https://christopherlu.github.io/) (UCL) and [Prof. Oisin Mac Aodha](https://homepages.inf.ed.ac.uk/omacaod/) (UoE). My research interests revolve around spatial representations aimed at addressing challenges in robotics. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+In November 2021, I completed with distinction the Artificial Intelligence master's programme at the University of Edinburgh, where I worked under the supervision of [Prof. Chris Williams](https://homepages.inf.ed.ac.uk/ckiw/) on the topic of inference and learning for [generative capsule models](https://github.com/tsagkas/capsules). In August 2019, I was awarded the Diploma of Electrical and Computer Engineering from the University of Patras, in Greece (graduated 4th in my class out of 202 students – GPA: 8.11 out of 10). I completed my ECE Diploma thesis under the supervision of [Prof. Athanassios Skodras](http://www.ece.upatras.gr/skodras/), researching [real-time hand-gesture recognition](/projects/2_project/) via sEMG signals.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+<!-- objective is to ground language into neural implicit spatial representations, for the purpose of enabling open vocabulary queries in mobile robotics.  
+
+In November 2021, I completed with distinction the Artificial Intelligence master's programme at the University of Edinburgh, where I worked under the supervision of [Prof. Chris Williams](https://homepages.inf.ed.ac.uk/ckiw/) on a novel inference and learning algorithm for [generative capsule models](https://github.com/tsagkas/capsules). In August 2019, I was awarded the Diploma of Electrical and Computer Engineering from the University of Patras, in Greece (graduated 4th in my class out of 202 students – GPA: 8.11 out of 10). I completed my ECE Diploma thesis under the supervision of [Prof. Athanassios Skodras](http://www.ece.upatras.gr/skodras/), researching the use of CNNs for [real-time hand-gesture recognition](/projects/2_project/) via sEMG signals. -->
+
