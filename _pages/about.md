@@ -6,7 +6,7 @@ subtitle: PhD candidate @ <a href="http://web.inf.ed.ac.uk/ipab" target="_blank"
 
 profile:
   align: right
-  image: prof_pic_2.JPG
+  image: prof_pic_2_25.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Informatics Forum,</p>
