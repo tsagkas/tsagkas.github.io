@@ -9,19 +9,14 @@
 
   <title>Click to Grasp</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV4ZJ9PVSV"></script>  
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-PYVRSFMDRL');
-  </script> -->
+    gtag('config', 'G-FV4ZJ9PVSV');
+  </script>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -42,129 +37,499 @@
   <script src="./static/js/index.js"></script>
 </head>
 <body>
+<body onload="updateInteractive();"> 
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://tsagkas.github.io">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
-
     </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://tsagkas.github.io">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://tsagkas.github.io/vl-fields/">
+              VL-Fields
+            </a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </nav>
 
+
+
+  <section class="hero">
+<div class="hero-body">
+<div class="container is-fullhd">
+<div class="columns is-centered">
+<div class="column has-text-centered">
+  <h1 class="title is-1 publication-title">Click to Grasp: Zero-Shot Precise Manipulation<br>via Visual Diffusion Descriptors</h1>
+  <!-- <h3 class="title is-4 conference-authors"><a target="_blank" href="https://www.corl2023.org/">CoRL 2023 (Oral)</a></h3> -->
+  <div class="is-size-5 publication-authors">
+    <span class="author-block">
+      <a target="_blank" href="https://tsagkas.github.io/">Nikolaos Tsagkas</a><sup>1,2</sup>,
+    </span>
+    <span class="author-block">
+      <a target="_blank" href="https://rad.inf.ed.ac.uk/">Jack Rome</a><sup>1</sup>,
+    </span>
+    <span class="author-block">
+      <a target="_blank" href="https://rad.inf.ed.ac.uk/">Subramanian Ramamoorthy</a><sup>1,2</sup>,
+    </span>
+    <span class="author-block">
+      <a target="_blank" href="https://homepages.inf.ed.ac.uk/omacaod/">Oisin Mac Aodha</a><sup>1</sup>,
+    </span>
+    <span class="author-block">
+      <a target="_blank" href="https://christopherlu.github.io/">Chris Xiaoxuan Lu</a><sup>3</sup>
+    </span>
   </div>
-</nav>
+
+  <div class="is-size-5 publication-authors">
+    <span class="author-block"><sup>1</sup>University of Edinburgh,</span>
+    <span class="author-block"><sup>2</sup>Edinburgh Centre for Robotics,</span>
+    <span class="author-block"><sup>3</sup>UCL</span>
+  </div>
+
+  <div class="column has-text-centered">
+    <div class="publication-links">
+      <!-- PDF Link. -->
+      <span class="link-block">
+        <a target="_blank" href="click2grasp.pdf"
+           class="external-link button is-normal is-rounded is-dark">
+          <span class="icon">
+              <i class="fas fa-file-pdf"></i>
+          </span>
+          <span>Paper</span>
+        </a>
+      </span>
+
+    <!-- Arxiv Link. -->
+    <span class="link-block">
+      <a target="_blank" href="https://arxiv.org/abs/2403.14526"
+         class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+            <i class="fas fa-file"></i>
+        </span>
+        <span>ArXiv</span>
+      </a>
+    </span>
+
+    <!-- Video Link. href="https://tsagkas.github.io/click2grasp/" -->
+    <span class="link-block">
+      <a target="_blank" 
+         class="external-link button is-normal is-rounded is-dark"
+         disabled>
+        <span class="icon">
+            <i class="fab fa-youtube"></i>
+        </span>
+        <span>Video</span>
+      </a>
+    </span>
+
+    <!-- Code Link. -->
+    <span class="link-block">
+      <a target="_blank" 
+         class="external-link button is-normal is-rounded is-dark" 
+         disabled>
+        <span class="icon">
+          <i class="fab fa-github"></i>
+        </span>
+        <span>Code</span>
+      </a>
+    </span>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-fullhd">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered  is-centered">
+            <video id="teaser" autoplay muted loop height="70%" width="70%">
+              <source src="media/videos/c2g.mp4"
+                      type="video/mp4">
+            </video>
+            </br>
+          </div>
+          <br>
+          <h2 class="subtitle has-text-centered">
+            <!-- <span class="dperact">Click to Grasp</span> leverages web-trained text-to-image diffusion-based generative models to extract fine-grained part descriptors, <br> enabling <b>zero-shot</b> synthesis of gripper poses for precise manipulation tasks in diverse tabletop scenarios. -->
+            <span class="dperact">Click to Grasp</span> takes calibrated RGB-D images of a tabletop and user-defined part instances in diverse source images as input, and produces gripper poses for interaction, effectively disambiguating between visually similar but semantically different concepts (e.g., left vs right arms).
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
-<section class="hero">
+
+  <section class="hero is-light is-small">
+  <!-- <h2 class="title is-3">Real-World Results</h2> -->
   <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Click to Grasp</h1>
-          <div class="is-size-5 publication-authors">
-            <!-- <span class="author-block">
-              <a href="https://tsagkas.github.io">Nikolaos Tsagkas</a>,</span>
-            <span class="author-block">
-              <a href="https://homepages.inf.ed.ac.uk/omacaod/">Oisin Mac Aodha</a>,</span>
-            <span class="author-block">
-              <a href="https://christopherlu.github.io/">Chris Xiaoxuan Lu</a>
-            </span> -->
-          </div>
+    <div class="container">
+      <!-- <h4 class="title">Left Arm</h4> -->
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/left/toys_brownie_15_left.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">Check back again! Page under development..</span>
-            <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
-          </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/left/toys_dolly_16_left.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/pdf/2305.12427.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2305.12427"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Code Link. -->
-              <!--
-              <span class="link-block">
-                <a href="./static/pdfs/Poster-RAP4Robots@ICRA23.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Poster</span>
-                  </a>
-              </span> -->
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span> -->
-              <!-- Code Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span> -->
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
-            </div> -->
-
-          </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/left/toys_goldie_18_left.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
 
 
+
+
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/left/toys_dolly_15_left.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/left/toys_goldie_16_left.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/left/toys_brownie_18_left.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/left/toys_goldie_15_left.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/left/toys_brownie_16_left.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/left/toys_dolly_18_left.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        Grasping from the <b>left</b> arm of a <b>stuffed-toy</b>.
+      </h2>
+    </div>
+  </div>
+
+  <div class="hero-body">
+    <div class="container">
+      <!-- <h4 class="title">Left Arm</h4> -->
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/shoes/left/shoes_blundies_08_left.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item"> 
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/shoes/left/shoes_nf_09_left.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/shoes/left/shoes_timbs_10_left.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/shoes/left/shoes_blundies_09_left.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/shoes/left/shoes_timbs_08_left.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/shoes/left/shoes_nf_10_left.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+
+        <div class="item">
+           <video poster="" autoplay muted loop height="100%">
+             <source src="media/videos/robot/shoes/left/shoes_nf_08_left.mp4"
+                     type="video/mp4">
+           </video>
+         </div>
+         <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/shoes/left/shoes_blundies_10_left.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
 
 
         </div>
-
-        <!-- <div class="is-size-5 publication-authors">
-          <span class="author-block"> <mark><b>Spotlight Talk + Poster</b>:</mark>
-            
-            workshop on effective Representations, Abstractions, and Priors for Robot Learning @ICRA 2023 [<a href="https://sites.google.com/view/rap4robots">link</a>]</span>
-        </div> -->
       </div>
+      <h2 class="subtitle has-text-centered">
+        Grasping from the opening of the <b>left</b> <b>shoe</b>.
+      </h2>
+    </div>
+  </div>
+
+  <div class="hero-body">
+    <div class="container">
+      <!-- <h4 class="title">Left Arm</h4> -->
+      <div id="results-carousel" class="carousel results-carousel">
+        <!-- <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/right/toys_brownie_15_right.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
+
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/right/toys_dolly_16_right.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/right/toys_goldie_18_right.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+
+
+
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/right/toys_dolly_15_right.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/right/toys_goldie_16_right.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/right/toys_brownie_18_right.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/right/toys_goldie_15_right.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/right/toys_brownie_16_right.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/toys/right/toys_dolly_18_right.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        Grasping from the <b>right</b> arm of a <b>stuffed-toy</b>.
+      </h2>
+    </div>
+  </div>
+
+  <div class="hero-body">
+    <div class="container">
+      <!-- <h4 class="title">Left Arm</h4> -->
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/shoes/right/shoes_blunds_08_right.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item"> 
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/shoes/right/shoes_nf_09_right.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/shoes/right/shoes_<footer class="footer">
+              <div class="container">
+                <div class="columns is-centered">
+                  <div class="column">
+                    <div class="content has-text-centered">
+                      <p>
+                        Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a href="https://peract.github.io/">PerAct</a>. 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </footer>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/shoes/right/shoes_timbs_08_right.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/shoes/right/shoes_nf_10_right.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+
+        <div class="item">
+           <video poster="" autoplay muted loop height="100%">
+             <source src="media/videos/robot/shoes/right/shoes_nf_08_right.mp4"
+                     type="video/mp4">
+           </video>
+         </div>
+         <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/robot/shoes/right/shoes_timbs_09_right.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        Grasping from the opening of the <b>right</b> <b>shoe</b>.
+      </h2>
     </div>
   </div>
 </section>
 
+
+<h2 class="subtitle has-text-centered">
+</br>
+<span class="dperact">Click to Grasp</span> leverages web-trained text-to-image diffusion-based generative models to extract fine-grained part descriptors, <br> enabling <b>zero-shot</b> synthesis of gripper poses for precise manipulation tasks in diverse tabletop scenarios.
+
+</h2>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Precise manipulation that is generalizable across scenes and objects remains a persistent challenge in robotics. Current approaches for this task heavily depend on having a significant number of training instances to handle objects with pronounced visual and/or geometric part ambiguities. Our work explores the grounding of fine-grained part descriptors for precise manipulation in a zero-shot setting by utilizing web-trained text-to-image diffusion-based generative models. We tackle the problem by framing it as a dense semantic part correspondence task. Our model returns a gripper pose for manipulating a specific part, using as reference a user-defined click from a source image of a visually different instance of the same object. We require no manual grasping demonstrations as we leverage the intrinsic object geometry and features. Practical experiments in a real-world tabletop scenario validate the efficacy of our approach, demonstrating its potential for advancing semantic-aware robotics manipulation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+
+  <!-- Paper video. -->
+  <!-- <br>
+  <br>
+
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+      <h2 class="title is-3">Video</h2>
+      <div class="publication-video">
+        <iframe src="https://www.youtube.com/embed/Yvn4eR05A3M"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div> -->
+
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-widescreen content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{tsagkas2024click,
+      title={Click to Grasp: Zero-Shot Precise Manipulation via Visual Diffusion Descriptors},
+      author={Tsagkas, Nikolaos and Rome, Jack and Ramamoorthy, Subramanian and Mac Aodha, Oisin and Lu, Chris Xiaoxuan},
+      journal={arXiv preprint arXiv:2403.14526},
+      year={2024}
+    }</code></pre>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <p>
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>, <a href="https://peract.github.io/">PerAct</a>, <a href="https://voxposer.github.io/">VoxPoser</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
