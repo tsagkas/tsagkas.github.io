@@ -255,7 +255,7 @@
               style="margin-bottom: 3px;"
             ></span>
           {% endif %}
-          {% if site.enable_publication_badges.google_scholar and entry_has_google_scholar_badge %}
+          {% if site.enable_publication_badges.google_scholar and entry_has_google_scholar_badge and false %}
             <a
               href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.scholar_userid }}&citation_for_view={{ site.scholar_userid }}:{{ entry.google_scholar_id }}"
               aria-label="Google Scholar link"
