@@ -22,8 +22,35 @@ I am a 2nd year PhD candidate, at the [School of Informatics - University of Edi
 
 In November 2021, I completed with distinction the Artificial Intelligence master's programme at the University of Edinburgh, where I worked under the supervision of [Prof. Chris Williams](https://homepages.inf.ed.ac.uk/ckiw/) on the topic of inference and learning for [generative capsule models](https://arxiv.org/abs/2209.03115). Before that, I worked for a year as a Data Scientist at *Ernst & Young*. In August 2019, I was awarded the Diploma of Electrical and Computer Engineering from the University of Patras, in Greece (graduated 4th in my class out of 202 students – GPA: 8.11 out of 10). I completed my ECE Diploma thesis under the supervision of [Prof. Athanassios Skodras](http://www.ece.upatras.gr/skodras/), researching [real-time hand-gesture recognition](https://ieeexplore.ieee.org/document/8900709) via sEMG signals.
 
-**Connect**:<br>
+<style>
+    .icon {
+        color: #000; /* black color */
+        font-size: 27px; /* larger size */
+    }
+</style>
+
+<!-- **Connect**:<br> -->
+<a href="mailto:n.tsagkas@ed.ac.uk"><i class="fas fa-envelope icon"></i></a>
+<a href="https://github.com/tsagkas"><i class="fab fa-github icon"></i></a>
+<a href="https://scholar.google.com/citations?user=cZgkD_oAAAAJ"><i class="ai ai-google-scholar-square ai-24x icon"></i></a>
+<a href="https://twitter.com/NikolasTsagkas"><i class="fa-brands fa-x-twitter icon"></i></a>
+<a href="https://www.linkedin.com/in/nikolas-tsagkas/"><i class="fab fa-linkedin icon"></i></a>
+
+<!-- Make sure you include Font Awesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+
+<!-- **Connect**:<br>
 n (dot) tsagkas (at) ed.ac.uk<br>
-[[GitHub](https://github.com/tsagkas)] [[G. Scholar](https://scholar.google.com/citations?user=cZgkD_oAAAAJ)] [[X](https://twitter.com/NikolasTsagkas)] [[LinkedIn](https://www.linkedin.com/in/nikolas-tsagkas/)]<br>
+<a href="https://github.com/tsagkas"><img src="https://image.flaticon.com/icons/svg/25/25231.svg" alt="GitHub" width="20" height="20"></a>
+<a href="https://scholar.google.com/citations?user=cZgkD_oAAAAJ"><img src="https://image.flaticon.com/icons/svg/25/25239.svg" alt="Google Scholar" width="20" height="20"></a>
+<a href="https://twitter.com/NikolasTsagkas"><img src="https://image.flaticon.com/icons/svg/25/25236.svg" alt="Twitter" width="20" height="20"></a>
+<a href="https://www.linkedin.com/in/nikolas-tsagkas/"><img src="https://image.flaticon.com/icons/svg/25/25225.svg" alt="LinkedIn" width="20" height="20"></a>
+ -->
+
+<!-- **Connect**:<br>
+n (dot) tsagkas (at) ed.ac.uk<br>
+[[GitHub](https://github.com/tsagkas)] [[G. Scholar](https://scholar.google.com/citations?user=cZgkD_oAAAAJ)] [[X](https://twitter.com/NikolasTsagkas)] [[LinkedIn](https://www.linkedin.com/in/nikolas-tsagkas/)]<br> -->
 <!-- **Code**: https://github.com/tsagkas<br>
 **X**: https://twitter.com/NikolasTsagkas<br> -->
