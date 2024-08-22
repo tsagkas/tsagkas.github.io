@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Learning Precise Affordances from Egocentric Videos for Robotic Manipulation">
+  <meta name="keywords" content="Affordance learning, Egocentric videos, Human-object interaction, Robotic
+  manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aff-Grasp</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" target="_blank" href="https://tsagkas.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" target="_blank" href="https://tsagkas.github.io/click2grasp/">
+            Click to Grasp
+          </a>
+          <a class="navbar-item" target="_blank" href="https://tsagkas.github.io/vl-fields/">
+            VL-Fields
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Learning Precise Affordances from Egocentric Videos for Robotic Manipulation</h1>
+          <!-- <h3 class="title is-4 conference-authors"><a target="_blank" href="https://www.robot-learning.org/">CoRL 2022</a></h3> -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a target="_blank" href="http://reagan1311.github.io/">Gen Li</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a target="_blank" href="https://tsagkas.github.io/">Nikolaos Tsagkas</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a target="_blank" href="https://scholar.google.com/citations?user=9a1PjCIAAAAJ&hl=en">Jifei Song</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a target="_blank" href="https://www.edinburgh-robotics.org/students/ruaridh-mon-williams">Ruaridh Mon-Williams</a><sup>1</sup>,</span>
+            <br><span class="author-block">
+              <a target="_blank" href="https://homepages.inf.ed.ac.uk/svijayak/">Sethu Vijayakumar</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a target="_blank" href="https://scholar.google.com/citations?user=4CNMLWAAAAAJ&hl=zh-CN">Kun Shao</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a target="_blank" href="https://laurasevilla.me/">Laura Sevilla-Lara</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Edinbugh,</span>
+            <span class="author-block"><sup>2</sup>Huawei Noah’s Ark Lab</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a target="_blank" href="paper/AffGrasp.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+            <!-- Arxiv Link. -->
+            <span class="link-block">
+              <a target="_blank" href="https://arxiv.org/abs/2408.10123"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file"></i>
+                </span>
+                <span>ArXiv</span>
+              </a>
+            </span>
+
+            <!-- Video Link. -->
+            <!-- <span class="link-block">
+              <a target="_blank" href="https://www.youtube.com/watch?v=TB0g52N-3_Y"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                </span>
+                <span>Video</span>
+              </a>
+            </span> -->
+
+            <!-- Talk Link. -->
+            <!-- <span class="link-block">
+              <a target="_blank" href="https://youtu.be/QcuXwmQgurE"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </span>
+                <span>Talk</span>
+              </a>
+            </span> -->
+
+
+            <!-- Colab Link. -->
+            <!-- <span class="link-block">
+              <a target="_blank" href="https://colab.research.google.com/drive/1HAqemP4cE81SQ6QO1-N85j5bF4C0qLs0?usp=sharing"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                </span>
+                <span>Colab</span>
+                </a>
+            </span> -->
+
+            <!-- Code Link. -->
+            <!-- <span class="link-block">
+              <a target="_blank" href="https://reagan1311.github.io/affgrasp"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+                </a>
+            </span> -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-fullhd">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered  is-centered">
+          <!-- <video id="teaser" autoplay muted loop height="100%"> -->
+            <!-- <source src="intro-gif.gif" -->
+                    <!-- type="video/mp4"> -->
+          <!-- </video> -->
+          <img src="media/figures/intro-gif.gif" class="interpolation-image" 
+          alt="Interpolate start reference image." />
+          </br>
+        </div>
+        <br>
+        <h2 class="subtitle has-text-centered">
+          We present a streamlined affordance learning system that encompasses data collection (from egocentric videos), 
+          <br>effective model training, and robot deployment for manipulation tasks.
+          <!-- <span class="dperact">PerAct</span> is an end-to-end behavior-cloning agent that can learn <br><b>a single language-conditioned policy</b> for 18 RLBench tasks with <b>249 unique task variations</b> -->
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/stick.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/screw-handover.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/stir.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/cut-handover.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/pour.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<h2 class="subtitle has-text-centered">
+</br>
+  Given a task and a cluttered scene, the robot can select the object that possesses the related affordance,
+  grasp the correct part, <br>and apply the functional part to the target object to perform desired actions.
+</h2>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Affordance, defined as the potential actions that an object offers, is crucial for robotic
+            manipulation tasks. A deep understanding of affordance can lead to more intelligent AI
+            systems. For example, such knowledge directs an agent to grasp a knife by the handle
+            for cutting and by the blade when passing it to someone.           
+          </p>
+            
+            <p>            
+              In this paper, we present a streamlined affordance learning system that encompasses data collection, effective
+              model training, and robot deployment. First, we collect training data from egocentric
+              videos in an automatic manner. Different from previous methods that focus only on the
+              object graspable affordance and represent it as coarse heatmaps, we cover both
+              graspable (e.g., object handles) and functional affordances (e.g., knife blades, hammer
+              heads) and extract data with precise segmentation masks. We then propose an
+              effective model, termed Geometry-guided Affordance Transformer (GKT), to train on
+              the collected data. GKT integrates an innovative Depth Feature Injector (DFI) to
+              incorporate 3D shape and geometric priors, enhancing the model's understanding of
+              affordances. To enable affordance-oriented manipulation, we further introduce Aff-Grasp, a framework that combines GKT with a grasp generation model. 
+            </p>
+
+            <p> 
+              For comprehensive evaluation, we create an affordance evaluation dataset with pixel-wise
+              annotations, and design real-world tasks for robot experiments. The results show that
+              GKT surpasses the state-of-the-art by 15.9% in mIoU, and Aff-Grasp achieves high
+              success rates of 95.5% in affordance prediction and 77.1% in successful grasping
+              among 179 trials, including evaluations with seen, unseen objects, and cluttered scenes.
+            </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+
+    <!-- Animation. -->
+    <div class="rows is-centered ">
+      <div class="row is-full-width">
+        <!-- <h2 class="title is-3"><span class="dperact">PerAct</span></h2> -->
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Geometry-guided Affordance Transformer (GAT)</h3>
+        <img src="media/figures/model-fig.png" class="interpolation-image" width="90%" style="display: block; margin: auto;"
+        alt="Interpolate start reference image." />
+        <p>
+          The architecture of GAT. It consists of a DINOv2 image encoder, a depth feature injector, an embedder, and LoRA layers. The model performs segmentation by computing cosine similarity between upsampled features and learnable or CLIP text embeddings.
+        </p>
+        <br>
+        <br>
+        <h3 class="title is-4">Aff-Grasp</h3>  
+        <img src="media/figures/grasp-pipeline.png" class="interpolation-image" width="80%" style="display: block; margin: auto;"
+        alt="Interpolate start reference image." />
+        <br>
+          <p>
+            The framework of Aff-Grasp. It first employs an open-vocabulary detector to locate all objects within the scene, which are then sent to GAT to dertermine if they possess corresponding affordance required for the task. Afterwards, a 6 DoF grasp generation model, utilizing both the object’s graspable affordance and the depth map, estimates the potential grasp poses. Finally, the robot executes affordance-specific sequential motion primitives to apply the functional part to the target.
+          </p>
+        <br>
+        <br>
+        <!-- <h3 class="title is-4"></h3> -->
+          <!-- <p class="justify">
+             The input grid is 100&times;100&times;100 = 1 million voxels. After extracting 5&times;5&times;5 patches, the input is 20&times;20&times;20 = 8000 embeddings long. Despite this long sequence, Perceiver uses a small set of latent vectors to encode the input. These latent vectors are randomly initialized and trained end-to-end. This approach decouples the depth of the Transformer self-attention layers from the dimensionality of the input space, which allows us train <span class="dperact">PerAct</span> on very large input voxel grids. Perceiver has been deployed in several domains like <a target="_blank" href="https://www.deepmind.com/publications/perceiver-ar-general-purpose-long-context-autoregressive-generation">long-context auto-regressive generation</a>, <a target="_blank" href="https://arxiv.org/abs/2204.14198">vision-language models for few-shot learning</a>, <a target="_blank" href="https://arxiv.org/abs/2107.14795">image and audio classification, and optical flow prediction.</a>
+          </p> -->
+        <!-- <br/> -->
+        <!-- <br/> -->
+                <!-- Paper video. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-3">Video for Robot Experiments</h2>
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/zEXrEH3I3Pc?rel=0&amp;showinfo=0"
+                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <!-- <iframe src="https://www.youtube.com/embed/PqBYFl3gmyY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+              <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/zEXrEH3I3Pc?si=jvNwoxk4DZ2EEdCF" title="YouTube video player"  -->
+                <!-- frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-widescreen content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{li2024affgrasp,
+  title     = {Learning Precise Affordances from Egocentric Videos for Robotic Manipulation}, 
+  author    = {Li, Gen and Tsagkas, Nikolaos and Song, Jifei and Mon-Williams, Ruaridh and Vijayakumar, Sethu and Shao, Kun and Sevilla-Lara, Laura},
+  journal   = {arxiv preprint arXiv:2408.10123},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <p>
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a href="https://peract.github.io/">PerAct</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
