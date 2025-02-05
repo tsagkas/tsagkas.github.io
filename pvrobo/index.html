@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="PVRobotics">
+  <meta name="keywords" content="Manipulation, Semantic Correspondence">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>PVRobotics</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/3398643.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+<body onload="updateInteractive();"> 
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://tsagkas.github.io">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://tsagkas.github.io/click2grasp//">
+              Click2Grasp
+            </a>
+            <a class="navbar-item" target="_blank" href="https://tsagkas.github.io/affgrasp/">
+              AffGrasp
+            </a>
+            <a class="navbar-item" href="https://tsagkas.github.io/vl-fields/">
+              VL-Fields
+            </a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </nav>
+
+
+
+  <section class="hero">
+<div class="hero-body">
+<div class="container is-fullhd">
+<div class="columns is-centered">
+<div class="column has-text-centered">
+  <h1 class="title is-1 publication-title">When Pre-trained Visual Representations Fall Short: Limitations in Visuo-Motor Robot Learning</h1>
+  <!-- <h3 class="title is-4 conference-authors"><a target="_blank" href="https://www.corl2023.org/">CoRL 2023 (Oral)</a></h3> -->
+  <div class="is-size-5 publication-authors">
+    <span class="author-block">
+      <a target="_blank" href="https://tsagkas.github.io/">Nikolaos Tsagkas</a><sup>1,2</sup>,
+    </span>
+    <span class="author-block">
+      <a target="_blank" href="https://www.linkedin.com/in/andreas-sochopoulos-abab5417a/?originalSubdomain=uk">Andreas Sochopoulos</a><sup>1</sup>,
+    </span>
+    <span class="author-block">
+      <a target="_blank" href="https://danier97.github.io/">Duolikun Danier</a><sup>1</sup>,
+    </span>
+    <span class="author-block">
+      <a target="_blank" href="https://christopherlu.github.io/">Chris Xiaoxuan Lu</a><sup>3</sup>
+    </span>
+    <span class="author-block">
+      <a target="_blank" href="https://homepages.inf.ed.ac.uk/omacaod/">Oisin Mac Aodha</a><sup>1</sup>,
+    </span>
+  </div>
+
+  <div class="is-size-5 publication-authors">
+    <span class="author-block"><sup>1</sup>University of Edinburgh,</span>
+    <span class="author-block"><sup>2</sup>Edinburgh Centre for Robotics,</span>
+    <span class="author-block"><sup>3</sup>UCL</span>
+  </div>
+
+  <div class="column has-text-centered">
+    <div class="publication-links">
+      <!-- PDF Link. -->
+      <span class="link-block">
+        <a target="_blank"
+           class="external-link button is-normal is-rounded is-dark"
+           disabled>
+          <span class="icon">
+              <i class="fas fa-file-pdf"></i>
+          </span>
+          <span>Paper</span>
+        </a>
+      </span>
+
+    <!-- Arxiv Link. -->
+    <span class="link-block">
+      <a target="_blank"
+         class="external-link button is-normal is-rounded is-dark"
+         disabled>
+        <span class="icon">
+            <i class="fas fa-file"></i>
+        </span>
+        <span>ArXiv</span>
+      </a>
+    </span>
+
+    <!-- Video Link. href="https://tsagkas.github.io/click2grasp/" -->
+    <span class="link-block">
+      <a target="_blank" 
+         class="external-link button is-normal is-rounded is-dark"
+         disabled>
+        <span class="icon">
+            <i class="fab fa-youtube"></i>
+        </span>
+        <span>Video</span>
+      </a>
+    </span>
+
+    <!-- Code Link. -->
+    <span class="link-block">
+      <a target="_blank" disabled
+         class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+            <i class="fab fa-github"></i>
+        </span>
+        <span>Code</span>
+        </a>
+    </span>
+    </div>
+
+    <!-- <div class="is-size-5 publication-authors"> -->
+      <!-- <span class="author-block"> <mark><b>Oral Pitch + Poster</b>:</mark> -->
+        
+        <!-- IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024) [<a href="https://iros2024-abudhabi.org/">link</a>]</span> -->
+      <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
+    <!-- </div> -->
+  </div>
+</div>
+</div>
+</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The integration of pre-trained visual representations (PVRs) into visuo-motor robot learning has emerged as a promising alternative to training visual encoders from scratch. 
+However, PVRs face critical challenges in the context of policy learning, including temporal entanglement and an inability to generalise even in the presence of minor scene perturbations. 
+These limitations hinder performance in tasks requiring temporal awareness and robustness to scene changes. 
+This work identifies these shortcomings and proposes solutions to address them. 
+First, we augment PVR features with temporal perception and a sense of task completion, effectively disentangling them in time.  
+Second, we introduce a module that learns to selectively attend to task-relevant local features, enhancing robustness when evaluated on out-of-distribution scenes. 
+Our experiments demonstrate significant performance improvements, particularly in PVRs trained with masking objectives, and validate the effectiveness of our enhancements in addressing PVR-specific limitations. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Grid</title>
+  <style>
+      .grid-container {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 10px;
+          padding: 20px;
+      }
+      .grid-container-small {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+          padding: 20px;
+
+      }
+      video {
+          width: 100%;
+          height: auto;
+      }
+  </style>
+</head>
+
+<style>
+  .video-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+  }
+  .row-title {
+      width: 30px; /* Adjust as needed */
+      font-weight: bold;
+      text-align: center;
+      padding-right: 10px;
+      transform: rotate(-90deg); /* Rotate text */
+      white-space: nowrap; /* Prevents text from wrapping */
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Ensures the text is centered vertically and horizontally */
+  }
+  .video-container {
+      display: flex;
+      gap: 10px;
+  }
+  .video-item {
+      flex: 1;
+  }
+</style>
+
+
+
+
+<section class="section">
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Expert Demonstrations</h2>
+          <div class="content has-text-justified">
+            <p>
+              Below we present the 10 tasks selected from Metaworld that we train visuo-motor policies to solve in our experiments. We extract 25 expert demonstrations from each, with random initial conditions (e.g., position of objects).
+            </p>
+          </div>
+      <body>
+        <div class="grid-container">
+          <div class="video-item"><h3>Assembly</h3><video src="static/videos/demos/assembly-v2.mp4" autoplay loop muted></video></div>
+          <div class="video-item"><h3>Coffee Pull</h3><video src="static/videos/demos/coffee-pull-v2.mp4" autoplay loop muted></video></div>
+          <div class="video-item"><h3>Button Press</h3><video src="static/videos/demos/button-press-wall-v2.mp4" autoplay loop muted></video></div>
+          <div class="video-item"><h3>Pick and Place</h3><video src="static/videos/demos/pick-place-wall-v2.mp4" autoplay loop muted></video></div>
+          <div class="video-item"><h3>Bin Picking</h3><video src="static/videos/demos/bin-picking-v2.mp4" autoplay loop muted></video></div>
+          <div class="video-item"><h3>Drawer Open</h3><video src="static/videos/demos/drawer-open-v2.mp4" autoplay loop muted></video></div>
+          <div class="video-item"><h3>Peg Insert</h3><video src="static/videos/demos/peg-insert-side-v2.mp4" autoplay loop muted></video></div>
+          <div class="video-item"><h3>Shelf Place</h3><video src="static/videos/demos/shelf-place-v2.mp4" autoplay loop muted></video></div>
+          <div class="video-item"><h3>Disassemble</h3><video src="static/videos/demos/disassemble-v2.mp4" autoplay loop muted></video></div>
+          <div class="video-item"><h3>Box Close</h3><video src="static/videos/demos/box-close-v2.mp4" autoplay loop muted></video></div>
+        </div>
+      </body>
+  
+    </div>
+  </div>
+  
+  </div>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Scenes Under Visual Perturbations</h2>
+        <div class="content has-text-justified">
+          <p>
+            Below, we present the same 10 tasks but with visually perturbed scenes. First, we introduce random variations in the tabletop texture, often incorporating patterns that may serve as semantic visual distractors (e.g., flowers, numbers, etc.). Second, we modify the lighting conditions by adjusting brightness, position, and orientation, which affects most pixels in the scene (e.g., by casting new shadows).
+          </p>
+        </div>
+        <h3 class="title is-4">Tabletop Texture</h3>
+    <body>
+      <div class="grid-container">
+        <div class="video-item"><h3>Assembly</h3><video src="static/videos/texture/assembly-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Coffee Pull</h3><video src="static/videos/texture/coffee-pull-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Button Press</h3><video src="static/videos/texture/button-press-wall-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Pick and Place</h3><video src="static/videos/texture/pick-place-wall-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Bin Picking</h3><video src="static/videos/texture/bin-picking-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Drawer Open</h3><video src="static/videos/texture/drawer-open-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Peg Insert</h3><video src="static/videos/texture/peg-insert-side-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Shelf Place</h3><video src="static/videos/texture/shelf-place-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Disassemble</h3><video src="static/videos/texture/disassemble-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Box Close</h3><video src="static/videos/texture/box-close-v2.mp4" autoplay loop muted></video></div>
+      </div>
+    </body>
+      <h3 class="title is-4">Light Brightness, Position, Orientation</h3>
+
+    <body>
+      <div class="grid-container">
+        <div class="video-item"><h3>Assembly</h3><video src="static/videos/light/assembly-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Coffee Pull</h3><video src="static/videos/light/coffee-pull-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Button Press</h3><video src="static/videos/light/button-press-wall-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Pick and Place</h3><video src="static/videos/light/pick-place-wall-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Bin Picking</h3><video src="static/videos/light/bin-picking-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Drawer Open</h3><video src="static/videos/light/drawer-open-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Peg Insert</h3><video src="static/videos/light/peg-insert-side-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Shelf Place</h3><video src="static/videos/light/shelf-place-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Disassemble</h3><video src="static/videos/light/disassemble-v2.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><h3>Box Close</h3><video src="static/videos/light/box-close-v2.mp4" autoplay loop muted></video></div>
+      </div>
+    </body>
+
+</section>
+  
+
+<div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+    <section class="section">
+    <h2 class="title is-3">PVR vs PVR+AFA (Ours)</h2>
+        <div class="content has-text-justified">
+          <p>
+            The following videos present how policies that have been trained on raw PVR features fail to perform well when visual perturbations are introduced in the scene. In contrast, policies trained with our PVR+AFA are more robust to these changes, as they can focus on the important parts of the scene for the task.
+          </p>
+        </div>
+        <h3 class="title is-4">Comparison Under Light Changes</h3>
+    <div class="video-row">
+    <div class="row-title">PVR Failure</div>
+    <div class="video-container">
+        <div class="video-item"><video src="static/videos/failures_light/bin_cls.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><video src="static/videos/failures_light/drawer_cls.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><video src="static/videos/failures_light/assembly_cls.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><video src="static/videos/failures_light/peg_cls.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><video src="static/videos/failures_light/box_cls.mp4" autoplay loop muted></video></div>
+    </div>
+</div>
+
+<div class="video-row">
+    <div class="row-title">AFA Success</div>
+    <div class="video-container">
+        <div class="video-item"><video src="static/videos/failures_light/bin_afa.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><video src="static/videos/failures_light/drawer_afa.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><video src="static/videos/failures_light/assembly_afa.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><video src="static/videos/failures_light/peg_afa.mp4" autoplay loop muted></video></div>
+        <div class="video-item"><video src="static/videos/failures_light/box_afa.mp4" autoplay loop muted></video></div>
+    </div>
+</div>
+<h3 class="title is-4">Comparison Under Texture Changes</h3>
+<div class="video-row">
+<div class="row-title">PVR Failure</div>
+<div class="video-container">
+    <div class="video-item"><video src="static/videos/failures_texture/pick_cls.mp4" autoplay loop muted></video></div>
+    <div class="video-item"><video src="static/videos/failures_texture/dis_cls.mp4" autoplay loop muted></video></div>
+    <div class="video-item"><video src="static/videos/failures_texture/coffee_cls.mp4" autoplay loop muted></video></div>
+    <div class="video-item"><video src="static/videos/failures_texture/box_cls.mp4" autoplay loop muted></video></div>
+    <div class="video-item"><video src="static/videos/failures_texture/bin_cls.mp4" autoplay loop muted></video></div>
+</div>
+</div>
+
+
+<div class="video-row">
+<div class="row-title">AFA Success</div>
+<div class="video-container">
+    <div class="video-item"><video src="static/videos/failures_texture/pick_afa.mp4" autoplay loop muted></video></div>
+    <div class="video-item"><video src="static/videos/failures_texture/dis_afa.mp4" autoplay loop muted></video></div>
+    <div class="video-item"><video src="static/videos/failures_texture/coffee_afa.mp4" autoplay loop muted></video></div>
+    <div class="video-item"><video src="static/videos/failures_texture/box_afa.mp4" autoplay loop muted></video></div>
+    <div class="video-item"><video src="static/videos/failures_texture/bin_afa.mp4" autoplay loop muted></video></div>
+</div>
+</div>
+<div class="content has-text-justified">
+  <p>Robustness evaluation of policies trained with PVR-extracted features temporally augmented with TE, and with features
+    processed using AFA and temporally augmented with TE. The evaluation is conducted under perturbed lighting conditions and tabletop
+    texture changes. Subplot (a) shows the average performance per task, while subplot (b) shows the average performance per model.
+  </p>
+</div>
+<p>
+</p>
+
+</body>
+
+
+  <embed src="static/images/afa_vs_pvr_ood.png"  width="100%" />
+
+  </div>
+</section>
+
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+    <!-- <section class="section"> -->
+    <h2 class="title is-3">Interpretting AFA from Attention Heatmaps</h2>
+        <div class="content has-text-justified">
+          <p>
+            These following videos illustrate how the CLS token attends to different patches compared to the trained query token of AFA,
+            offering a general sense of what the models prioritize. While this does not imply that trained AFAs are entirely robust to
+            visual changes in the scene (e.g., note that MAE+AFA still allocates some attention to patches containing the robot’s cast
+            shadow), we observe a consistent trend: the attention heatmaps become more focused, particularly on regions relevant to the
+            task.
+          </p>
+        </div>
+    
+        <body>
+          <div class="grid-container-small">
+            <div class="video-item"><h3>DINO: objects</h3><video src="static/videos/heatmaps/dino-obj-cls.mp4" autoplay loop muted></video></div>
+            <div class="video-item"><h3>MAE: light</h3><video src="static/videos/heatmaps/mae-light-cls.mp4" autoplay loop muted></video></div>
+            <div class="video-item"><h3>VC-1: texture</h3><video src="static/videos/heatmaps/vc1-tex-cls.mp4" autoplay loop muted></video></div>
+            <div class="video-item"><h3>DINO + AFA: objects</h3><video src="static/videos/heatmaps/dino-obj-afa.mp4" autoplay loop muted></video></div>
+            <div class="video-item"><h3>MAE + AFA: light</h3><video src="static/videos/heatmaps/mae-light-afa.mp4" autoplay loop muted></video></div>
+            <div class="video-item"><h3>VC-1 + AFA: texture</h3><video src="static/videos/heatmaps/vc1-tex-abc.mp4" autoplay loop muted></video></div>
+          </div>
+        </body>
+    </div>
+  </div>
+</div>
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{tsagkas2024click,
+      title={Click to Grasp: Zero-Shot Precise Manipulation via Visual Diffusion Descriptors},
+      author={Tsagkas, Nikolaos and Rome, Jack and Ramamoorthy, Subramanian and Mac Aodha, Oisin and Lu, Chris Xiaoxuan},
+      journal={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+      year={2024}
+    }</code></pre>
+  </div>
+</section> -->
+
+
+</body>
+</html>
