@@ -7,15 +7,11 @@ on:
       - main
     paths:
       - "assets/**"
-      - "_sass/**"
-      - "**.bib"
       - "**.html"
       - "**.js"
       - "**.liquid"
       - "**/*.md"
       - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/deploy-docker-tag.yml"
@@ -35,15 +31,11 @@ on:
       - main
     paths:
       - "assets/**"
-      - "_sass/**"
-      - "**.bib"
       - "**.html"
       - "**.js"
       - "**.liquid"
       - "**/*.md"
       - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/deploy-docker-tag.yml"
