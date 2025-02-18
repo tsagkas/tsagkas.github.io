@@ -87,4 +87,37 @@ layout: default
 
 
 
+  .profile-image {
+    transition: opacity 0.3s ease; /* Smooth transition */
+    position: relative; /* Context for z-index */
+    z-index: 1; /* Keep the original image on top */
+  }
+
+  .profile:hover .profile-image {
+    opacity: 0; /* Fade out the original image on hover */
+  }
+
+  .hover-image {
+    background-image: url('assets/img/20241024_232955.jpg'); /* New image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    position: absolute; /* Position it over the original image */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Stretch to the right */
+    bottom: 0; /* Stretch to the bottom */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    z-index: 0; /* Behind the original image */
+  }
+
+  .profile:hover .hover-image {
+    opacity: 1; /* Show the new image on hover */
+  }
+
+  .more-info {
+    position: relative; /* Ensure it stays on top */
+    z-index: 2; /* Bring it above both images */
+    margin-top: 10px; /* Add some space above */
+  }
 </style>
