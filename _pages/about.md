@@ -38,46 +38,47 @@ Prior to my PhD, I earned an MSc in Artificial Intelligence with distinction in 
 
 <!-- 🚨 -->
 
-<details class="news-section">
-  <summary>📢 Latest News</summary>
+<div class="news-section">
+  📢  <b>Latest News:</b>
   <ul>
-  <div style="text-align: center; position: relative; padding-bottom: 10px;">
-    <span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #f1f1f1; padding: 0 5px;">2025</span>
-    <hr style="border: 1px solid #000;">
-  </div>
     <li>
-      <b>Feb 2025</b>: 📜 New paper published on ArXiv! You can access it here: <a href="https://arxiv.org/abs/2502.03270" target="_blank">When Pre-trained Visual Representations Fall Short: Limitations in Visuo-Motor Robot Learning</a>.
+      <b>Feb 2025</b>: 📜 New paper published on ArXiv! You can access it here: 
+      <a href="https://arxiv.org/abs/2502.03270" target="_blank">When Pre-trained Visual Representations Fall Short: Limitations in Visuo-Motor Robot Learning</a>.
     </li>
-<div style="text-align: center; position: relative; padding-bottom: 10px;">
-  <span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #f1f1f1; padding: 0 5px;">2024</span>
-  <hr style="border: 1px solid #000;">
-</div>
-<!-- <div style="display: flex; align-items: center;">
-  <span style="padding-right: 10px;">2024</span>
-  <hr style="flex-grow: 1; border: 0; border-top: 1px solid #000;">
-</div> -->
-    <li>
-      <b>Oct 2024</b>: 🗣️ I will be presenting our paper, <a href="https://tsagkas.github.io/click2grasp/">Click to Grasp</a>, during the Robot Vision IV session from 09:00 to 10:00 on Fri 18 Oct at Room 4, IROS'24 in Abu Dhabi, UAE.
-    </li>
-    <li>
-      <b>Sep 2024</b>: 🗣️ Our paper, <a href="https://tsagkas.github.io/click2grasp/">Click to Grasp</a>, will be presented at the <a href="https://www.bmva.org/meetings/24-10-30-RobotWorldModels.html" target="_blank">BMVA Symposium: Robotics Foundation & World Models</a> in London.
-    </li>
-    <li>
-      <b>Aug 2024</b>: 📜 New paper published on ArXiv! You can access it here: <a href="https://arxiv.org/abs/2408.10123" target="_blank">Learning Precise Affordances from Egocentric Videos for Robotic Manipulation</a>.
-    </li>
-    <li>
-      <b>Jun 2024</b>: 🏆 Our paper, <a href="https://tsagkas.github.io/click2grasp/" target="_blank">Click to Grasp: Zero-Shot Precise Manipulation via Visual Diffusion Descriptors</a>, has been accepted at the 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).
-    </li>
-    <div style="text-align: center; position: relative; padding-bottom: 10px;">
-    <span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #f1f1f1; padding: 0 5px;">2023</span>
-    <hr style="border: 1px solid #000;">
-      </div>
-    <li>
-    <b>May 2023</b>: 🏆 Our paper, <a href="https://tsagkas.github.io/vl-fields/" target="_blank">VL-Fields: Towards Language-Grounded Neural Implicit Spatial Representations</a>, has been accepted (spotlight) at the <i>Workshop on Effective Representations, Abstractions, and Priors for Robot Learning</i>, ICRA 2023.
-  </li>
-
   </ul>
-</details>
+
+  <details>
+    <summary style="font-weight: normal; "> View older news</summary>
+    <ul>
+      <div style="text-align: center; position: relative; padding-bottom: 10px;">
+        <span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #f1f1f1; padding: 0 5px;">2024</span>
+        <hr style="border: 1px solid #000;">
+      </div>
+      <li>
+        <b>Oct 2024</b>: 🗣️ I will be presenting our paper, <a href="https://tsagkas.github.io/click2grasp/">Click to Grasp</a>, during the Robot Vision IV session from 09:00 to 10:00 on Fri 18 Oct at Room 4, IROS'24 in Abu Dhabi, UAE.
+      </li>
+      <li>
+        <b>Sep 2024</b>: 🗣️ Our paper, <a href="https://tsagkas.github.io/click2grasp/">Click to Grasp</a>, will be presented at the 
+        <a href="https://www.bmva.org/meetings/24-10-30-RobotWorldModels.html" target="_blank">BMVA Symposium: Robotics Foundation & World Models</a> in London.
+      </li>
+      <li>
+        <b>Aug 2024</b>: 📜 New paper published on ArXiv! You can access it here: 
+        <a href="https://arxiv.org/abs/2408.10123" target="_blank">Learning Precise Affordances from Egocentric Videos for Robotic Manipulation</a>.
+      </li>
+      <li>
+        <b>Jun 2024</b>: 🏆 Our paper, <a href="https://tsagkas.github.io/click2grasp/" target="_blank">Click to Grasp: Zero-Shot Precise Manipulation via Visual Diffusion Descriptors</a>, has been accepted at the 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).
+      </li>
+      <div style="text-align: center; position: relative; padding-bottom: 10px;">
+        <span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #f1f1f1; padding: 0 5px;">2023</span>
+        <hr style="border: 1px solid #000;">
+      </div>
+      <li>
+        <b>May 2023</b>: 🏆 Our paper, <a href="https://tsagkas.github.io/vl-fields/" target="_blank">VL-Fields: Towards Language-Grounded Neural Implicit Spatial Representations</a>, has been accepted (spotlight) at the 
+        <i>Workshop on Effective Representations, Abstractions, and Priors for Robot Learning</i>, ICRA 2023.
+      </li>
+    </ul>
+  </details>
+</div>
 
 <style>
     .icon {
@@ -92,6 +93,7 @@ Prior to my PhD, I earned an MSc in Artificial Intelligence with distinction in 
     margin: 20px 0;
     border-radius: 5px;
     font-size: 16px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15); /* Soft shadow effect */
   }
 
   .news-section summary {
