@@ -42,6 +42,10 @@ Prior to my PhD, I earned an MSc in Artificial Intelligence with distinction in 
   📢  <b>Latest News:</b>
   <ul>
     <li>
+      <b>May 2025</b>: 📜 New paper published on ArXiv! You can access it here: 
+      <a href="https://arxiv.org/abs/2505.01179" target="_blank">Fast Flow-based Visuomotor Policies via Conditional Optimal Transport Couplings</a>.
+    </li>
+    <li>
       <b>Feb 2025</b>: 📜 New paper published on ArXiv! You can access it here: 
       <a href="https://arxiv.org/abs/2502.03270" target="_blank">When Pre-trained Visual Representations Fall Short: Limitations in Visuo-Motor Robot Learning</a>.
     </li>
@@ -51,7 +55,7 @@ Prior to my PhD, I earned an MSc in Artificial Intelligence with distinction in 
     <summary style="font-weight: normal; "> View older news</summary>
     <ul>
       <div style="text-align: center; position: relative; padding-bottom: 10px;">
-        <span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #f1f1f1; padding: 0 5px;">2024</span>
+        <span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #000000; color: #ffffff; padding: 0 5px;font-weight: bold;">2024</span>
         <hr style="border: 1px solid #000;">
       </div>
       <li>
@@ -69,7 +73,7 @@ Prior to my PhD, I earned an MSc in Artificial Intelligence with distinction in 
         <b>Jun 2024</b>: 🏆 Our paper, <a href="https://tsagkas.github.io/click2grasp/" target="_blank">Click to Grasp: Zero-Shot Precise Manipulation via Visual Diffusion Descriptors</a>, has been accepted at the 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).
       </li>
       <div style="text-align: center; position: relative; padding-bottom: 10px;">
-        <span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #f1f1f1; padding: 0 5px;">2023</span>
+        <span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #000000; color: #ffffff; padding: 0 5px;font-weight: bold;">2023</span>
         <hr style="border: 1px solid #000;">
       </div>
       <li>
@@ -87,7 +91,7 @@ Prior to my PhD, I earned an MSc in Artificial Intelligence with distinction in 
     }
 
   .news-section {
-    background-color:rgb(241, 241, 241); /* Light gray background #f8f9fa*/
+    background-color:rgb(250, 250, 250); /*rgb(241, 241, 241); /* Light gray background #f8f9fa*/
     border-left: 4px solidrgb(2, 2, 2); /* Blue accent border #007bff */
     padding: 10px 15px;
     margin: 20px 0;
