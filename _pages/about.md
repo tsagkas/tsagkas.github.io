@@ -42,18 +42,20 @@ Prior to my PhD, I earned an MSc in Artificial Intelligence with distinction in 
   📢  <b>Latest News:</b>
   <ul>
     <li>
+    <b>June 2025</b>: 🏆 A short version of <a href="../pvrobo/" target="_blank">When Pre-trained Visual Representations Fall Short: Limitations in Visuo-Motor Robot Learning has been accepted</a> <b>for oral and poster presentation</b> at the <a href="https://embodied-ai.org/cvpr2025/" target="_blank">Embodied AI Workshop</a> at CVPR 2025. See you in Nashville, Tennessee! 👋 
+    </li>
+    <li>
       <b>May 2025</b>: 📜 New paper published on ArXiv! You can access it here: 
       <a href="https://arxiv.org/abs/2505.01179" target="_blank">Fast Flow-based Visuomotor Policies via Conditional Optimal Transport Couplings</a>.
     </li>
-    <li>
-      <b>Feb 2025</b>: 📜 New paper published on ArXiv! You can access it here: 
-      <a href="https://arxiv.org/abs/2502.03270" target="_blank">When Pre-trained Visual Representations Fall Short: Limitations in Visuo-Motor Robot Learning</a>.
-    </li>
   </ul>
-
   <details>
     <summary style="font-weight: normal; "> View older news</summary>
     <ul>
+        <li>
+      <b>Feb 2025</b>: 📜 New paper published on ArXiv! You can access it here: 
+      <a href="https://arxiv.org/abs/2502.03270" target="_blank">When Pre-trained Visual Representations Fall Short: Limitations in Visuo-Motor Robot Learning</a>.
+    </li>
       <div style="text-align: center; position: relative; padding-bottom: 10px;">
         <span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #000000; color: #ffffff; padding: 0 5px;font-weight: bold;">2024</span>
         <hr style="border: 1px solid #000;">
