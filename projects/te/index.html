@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8JK18X15P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-K8JK18X15P');
+  </script>
+  <base target="_blank">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/3398643.png">
+  <title>Temporal Trap</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- Set initial theme and update images before first paint to prevent flashing or mismatch images -->
+  <script>
+    (function () {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+    })();
+
+    (function () {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: light)').matches;
+      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+
+      // Update dark/light images immediately
+      window.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('img[data-dark-src]').forEach(img => {
+          const desiredSrc = img.getAttribute(prefersDark ? 'data-dark-src' : 'data-light-src');
+          img.src = desiredSrc;
+        });
+      });
+    })();
+  </script>
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <button class="button dark-mode-toggle is-medium" onclick="toggleDarkMode()">
+        <span class="icon">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </span>
+      </button>
+      <div class="content">
+        <!-- <div class="toc-container">
+          <div class="toc-content">
+            <aside class="menu compact-toc">
+              <p class="menu-label">
+                Table of Contents
+              </p>
+              <ul class="menu-list">
+                <li><a href="#real_world" target="_self">Real-World Experiments</a></li>
+                <ul>
+                  <li><a href="#real_id" target="_self">In-Domain</a></li>
+                  <li><a href="#real_distractors" target="_self">Scene Distractors</a></li>
+                  <li><a href="#real_light" target="_self">Lighting Changes</a></li>
+                  <li><a href="#real_cube" target="_self">Obj. Changes</a></li>
+                </ul>
+                <li><a href="#sim" target="_self">Simulation Experiments</a></li>
+                <ul>
+                  <li><a href="#sim_demos" target="_self">Task Demos</a></li>
+                  <li><a href="#sim_perturbations" target="_self">Perturbations</a></li>
+                  <li><a href="#sim_eval" target="_self">AFA Evaluation</a></li>
+                  <li><a href="#sim_heatmaps" target="_self">Interpreting AFA</a></li>
+                </ul>
+                <li><a href="#cite" target="_self">BibTeX</a></li>
+              </ul>
+            </aside>
+          </div>
+        </div> -->
+
+        <h1 class="title is-2 is-size-2-mobile mt-0"><b>The Temporal Trap</b>: Entanglement in Pre-Trained Visual
+          Representations for Visuomotor Policy Learning</h1>
+
+        <div class="author-info">
+          <p class="subtitle">
+          <div class="is-inline-block is-size-5"><a class="has-text-weight-semibold" href="../index.html">Nikolaos
+              Tsagkas</a><sup>1,2</sup>,</div>
+          <div class="is-inline-block is-size-5"><a class="has-text-weight-semibold"
+              href="https://www.linkedin.com/in/andreas-sochopoulos-abab5417a/?originalSubdomain=uk">Andreas
+              Sochopoulos</a><sup>1</sup>,</div>
+          <div class="is-inline-block is-size-5"><a class="has-text-weight-semibold"
+              href="https://danier97.github.io/">Duolikun Danier</a><sup>1</sup>,</div>
+          <div class="is-inline-block is-size-5"><a class="has-text-weight-semibold"
+              href="https://christopherlu.github.io/">Chris Xiaoxuan Lu</a><sup>3</sup>,</div>
+          <div class="is-inline-block is-size-5"><a class="has-text-weight-semibold"
+              href="https://homepages.inf.ed.ac.uk/omacaod/">Oisin Mac Aodha</a><sup>1</sup></div>
+          </p>
+          <p class="subtitle">
+          <div class="is-inline-block"><sup>1</sup><a href="https://informatics.ed.ac.uk/">University of Edinburgh</a>,
+          </div>
+          <div class="is-inline-block"><sup>2</sup><a href="https://www.edinburgh-robotics.org/">Edinburgh Centre for
+              Robotics</a>,</div>
+          <div class="is-inline-block"><sup>3</sup><a href="https://www.ucl.ac.uk/">UCL</a>
+          </div>
+          </p>
+          <p class="is-size-4 has-text-weight-bold mt-4" style="color: #b51f1f;">
+            Accepted at ICRA 2026
+          </p>
+        </div>
+
+        <div class="columns is-vcentered mt-1">
+          <div class="column is-narrow">
+            <a href="https://arxiv.org/pdf/2502.03270" class="button is-size-5 mr-1 mt-2">
+              <span class="icon">
+                <i class="fas fa-file-pdf"></i>
+              </span>
+              <span>PDF</span>
+            </a>
+
+            <!-- <a href="../pvrobo/assets/pdfs/WCVPR_2025.pdf" class="button is-size-5 mr-1 mt-2">
+                            <span class="icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </span>
+                            <span>EAI@CVPR-25 Paper</span>
+                        </a> -->
+            <!-- <a href="../pvrobo/assets/pdfs/EAI@CVPR25-poster.pdf" class="button is-size-5 mr-1 mt-2">
+                            <span class="icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </span>
+                            <span>EAI@CVPR-25 Poster</span>
+                        </a> -->
+            <a href="https://arxiv.org/abs/2502.03270" class="button is-size-5 mr-1 mt-2">
+              <span class="icon">
+                <i class="ai ai-arxiv"></i>
+              </span>
+              <span>arXiv</span>
+            </a>
+
+            <a href="https://github.com/tsagkas/pvrobo" class="button is-size-5 mr-1 mt-2">
+              <span class="icon">
+                <i class="fas fa-code"></i>
+              </span>
+              <span>Code</span>
+            </a>
+          </div>
+        </div>
+        <!-- <div class="notification is-info is-light mt-5 mb-4" style="background-color: var(--card-background); border-left: 4px solid #3273dc; padding: 1rem;">
+                <p style="font-size: 1rem; color: var(--text);">
+                    <strong>Update:</strong> A short version of this paper has been accepted for <mark style="background-color: #FBB5FF;"><strong>oral and poster presentation</strong></mark> at the <a href="https://embodied-ai.org/cvpr2025/" target="_blank">6th Embodied AI Workshop</a> at CVPR 2025. See you in Nashville, Tennessee! 👋 
+                </p>
+              </div> -->
+
+        <!-- <h2 id="abstract" class="title is-4 mb-2">Abstract</h2>
+                <p style="font-size: 0.95em">
+                    The integration of pre-trained visual representations (PVRs) into visuo-motor robot learning has emerged as a promising alternative to training visual encoders from scratch. 
+                    However, PVRs face critical challenges in the context of policy learning, including temporal entanglement and an inability to generalise even in the presence of minor scene perturbations. 
+                    These limitations hinder performance in tasks requiring temporal awareness and robustness to scene changes. 
+                    This work identifies these shortcomings and proposes solutions to address them. 
+                    First, we augment PVR features with temporal perception and a sense of task completion, effectively disentangling them in time.  
+                    Second, we introduce a module that learns to selectively attend to task-relevant local features, enhancing robustness when evaluated on out-of-distribution scenes. 
+                    We demonstrate significant performance improvements, particularly in PVRs trained with masking objectives, and validate the effectiveness of our enhancements in addressing PVR-specific limitations. 
+                </p> -->
+
+        <!-- <h2 id="real_world" class="title is-2">Paper Summary</h2>
+        <hr class="divider"> -->
+
+        <section>
+          <!-- <p>
+            <strong>The Discovery:</strong> We identify <em>Temporal Entanglement</em> as a critical flaw in Pre-Trained
+            Visual Representations (PVRs), where models fundamentally fail to perceive task progression, leading to poor
+            policy performance.
+          </p>
+          <p>
+            <strong>The Evidence:</strong> We show that traditional fixes—including frame stacking, latent flow (FLARE),
+            Causal Transformers, and even Video-PVRs—are insufficient to resolve this issue. By introducing a simple
+            timestamp baseline that drastically outperforms these sophisticated methods, we prove that current models
+            lack the essential temporal disentanglement required for robust robotic control.
+          </p> -->
+          <div class="box"
+            style="background-color: var(--card-background); border-left: 6px solid #3273dc; color: var(--text); margin-bottom: 2rem;">
+            <div class="is-flex is-align-items-center mb-2">
+              <span class="icon is-medium has-text-link mr-2">
+                <i class="fas fa-bolt fa-lg"></i>
+              </span>
+              <h3 class="title is-4 is-marginless has-text-link" style="letter-spacing: 1px;">TL;DR</h3>
+            </div>
+            <div class="content" style="font-size: 1.1em;">
+              <p>
+                <strong>The Discovery:</strong> We identify <em>Temporal Entanglement</em> as a critical flaw in
+                Pre-Trained Visual Representations (PVRs), where models fundamentally fail to perceive task progression,
+                leading to poor policy performance.
+              </p>
+              <p class="mb-0">
+                <strong>The Evidence:</strong> We show that traditional fixes (i.e., frame stacking, latent flow
+                (FLARE), Causal Transformers, and even Video-PVRs) are insufficient to resolve this issue. By
+                introducing
+                a simple timestamp baseline that drastically outperforms these sophisticated methods, we prove that
+                current models lack the essential temporal disentanglement required for robust robotic control.
+              </p>
+            </div>
+          </div>
+          <div class="columns is-centered is-multiline">
+            <div class="column is-two-thirds">
+              <div class="video-card box is-paddingless is-clipped">
+
+                <video controls playsinline loop muted autoplay style="width: 100%">
+                  <source src="assets/videos/output.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+
+              </div>
+
+
+            </div>
+          </div>
+        </section>
+
+        <h3 id="cite" class="title is-3">BibTex</h3>
+        <div class="is-relative">
+          <pre class="textarea is-family-code" readonly id="citation-text">@inproceedings{tsagkas2025temporaltrapentanglementpretrained,
+    title={The Temporal Trap: Entanglement in Pre-Trained Visual Representations for Visuomotor Policy Learning},
+    author={Tsagkas, Nikolaos and Sochopoulos, Andreas and Danier, Duolikun and Xiaoxuan Lu, Chris and Mac Aodha, Oisin},
+    booktitle={International Conference on Robotics and Automation (ICRA)},
+    year={2026}          
+    }</pre>
+          <button id="citation-copy-button" class="button is-small" onclick="copyCitation()">
+            <span class="icon">
+              <i class="fas fa-copy"></i>
+            </span>
+          </button>
+          <div id="toast" class="notification is-success is-light is-hidde">
+            Copied to clipboard!
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="level">
+          <div class="level-left">
+            <div class="level-item">
+              <a href="https://github.com/cutamp/cutamp.github.io" class="has-text-weight-light">
+                <span class="icon"><i class="fab fa-github"></i></span> Project page template borrowed from here!
+              </a>
+            </div>
+          </div>
+          <div class="level-right">
+            <div class="level-item">
+              <p class="has-text-weight-light">Updated December 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Handle copying citation text
+    const copyCitation = async () => {
+      try {
+        const citationText = document.getElementById('citation-text').innerText;
+        await navigator.clipboard.writeText(citationText);
+
+        const toast = document.getElementById('toast');
+        toast.classList.remove('is-hidden');
+        setTimeout(() => toast.classList.add('is-hidden'), 2000);
+      } catch (err) {
+        console.error('Failed to copy citation:', err);
+      }
+    };
+
+    // Handle dark/light theme toggling
+    const updateTheme = (isDark) => {
+      const html = document.documentElement;
+      const themeIcon = document.getElementById('theme-icon');
+
+      // Update theme
+      html.setAttribute('data-theme', isDark ? 'dark' : 'light');
+
+      // Update icon
+      themeIcon.classList.remove('fa-moon', 'fa-sun');
+      themeIcon.classList.add(isDark ? 'fa-sun' : 'fa-moon');
+
+      // Update images
+      document.querySelectorAll('img[data-dark-src]').forEach(img => {
+        const desiredSrc = img.getAttribute(isDark ? 'data-dark-src' : 'data-light-src');
+        if (!img.src.includes(desiredSrc)) {
+          img.src = desiredSrc;
+        } else {
+          // Force reload for Safari
+          img.src = desiredSrc + '?v=' + Date.now();
+        }
+      });
+    };
+
+    const toggleDarkMode = () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      updateTheme(!isDark);
+    };
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      updateTheme(e.matches);
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8JK18X15P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-K8JK18X15P');
+  </script>
+  <base target="_blank">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/3398643.png">
+  <title>AFA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <div class="toc-container">
+          <div class="toc-content">
+            <aside class="menu compact-toc">
+              <p class="menu-label">
+                Table of Contents
+              </p>
+              <ul class="menu-list">
+                <li><a href="index.html#real_world" target="_self">Real-World Experiments</a></li>
+                <ul>
+                  <li><a href="index.html#real_world_so101" target="_self">SO-101</a></li>
+                  <ul>
+                    <li><a href="index.html#so101_id_eval" target="_self">In-Domain</a></li>
+                    <li><a href="index.html#so101_ood_eval" target="_self">Out-of-Domain</a></li>
+                  </ul>
+                  <li><a href="index.html#real_world_kuka" target="_self">KUKA IIWA</a></li>
+                  <ul>
+                    <li><a href="index.html#real_id" target="_self">In-Domain</a></li>
+                    <li><a href="index.html#real_ood" target="_self">Out-of-Domain</a></li>
+                  </ul>
+                </ul>
+                <li><a href="index.html#sim" target="_self">Simulation Experiments</a></li>
+                <ul>
+                  <li><a href="index.html#sim_demos" target="_self">Task Demos</a></li>
+                  <li><a href="index.html#sim_perturbations" target="_self">Perturbations</a></li>
+                  <li><a href="index.html#sim_eval" target="_self">AFA Evaluation</a></li>
+                  <li><a href="index.html#sim_heatmaps" target="_self">Interpreting AFA</a></li>
+                </ul>
+                <li><a href="index.html#cite" target="_self">BibTeX</a></li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+
+        <h1 class="title is-2 is-size-2-mobile mt-0">Attentive Feature Aggregation, or:<br>How Policies Learn to Stop
+          Worrying about Robustness and Attend to Task-Relevant Visual Cues</h1>
+
+        <div class="author-info">
+          <p class="subtitle">
+          <div class="is-inline-block is-size-5"><a class="has-text-weight-semibold" href="../index.html">Nikolaos
+              Tsagkas</a><sup>1,2</sup>,</div>
+          <div class="is-inline-block is-size-5"><a class="has-text-weight-semibold"
+              href="https://www.linkedin.com/in/andreas-sochopoulos-abab5417a/?originalSubdomain=uk">Andreas
+              Sochopoulos</a><sup>1</sup>,</div>
+          <div class="is-inline-block is-size-5"><a class="has-text-weight-semibold"
+              href="https://danier97.github.io/">Duolikun Danier</a><sup>1</sup>,</div>
+          <div class="is-inline-block is-size-5"><a class="has-text-weight-semibold"
+              href="https://homepages.inf.ed.ac.uk/svijayak/">Sethu Vijayakumar</a><sup>1,2</sup>,</div></br>
+          <div class="is-inline-block is-size-5"><a class="has-text-weight-semibold">Alexandros Kouris</a><sup>4</sup>,
+          </div>
+          <div class="is-inline-block is-size-5"><a class="has-text-weight-semibold"
+              href="https://homepages.inf.ed.ac.uk/omacaod/">Oisin Mac Aodha</a><sup>1</sup>,</div>
+          <div class="is-inline-block is-size-5"><a class="has-text-weight-semibold"
+              href="https://christopherlu.github.io/">Chris Xiaoxuan Lu</a><sup>3</sup></div>
+          </p>
+          <p class="subtitle">
+          <div class="is-inline-block"><sup>1</sup><a href="https://informatics.ed.ac.uk/">University of Edinburgh</a>,
+          </div>
+          <div class="is-inline-block"><sup>2</sup><a href="https://www.edinburgh-robotics.org/">Edinburgh Centre for
+              Robotics</a>,</div>
+          <div class="is-inline-block"><sup>3</sup><a href="https://www.ucl.ac.uk/">UCL</a>,</div>
+          <div class="is-inline-block"><sup>4</sup><a href="https://research.samsung.com/aicenter_cambridge">Samsung AI
+              Center - Cambridge, UK</a>,</div>
+          </p>
+          <p class="is-size-4 has-text-weight-bold mt-4" style="color: #b51f1f;">
+            Under Review
+          </p>
+        </div>
+
+        <div class="columns is-vcentered mt-1">
+          <div class="column is-narrow">
+            <a href="https://arxiv.org/pdf/2511.10762" class="button is-size-5 mr-1 mt-2">
+              <span class="icon">
+                <i class="fas fa-file-pdf"></i>
+              </span>
+              <span>PDF</span>
+            </a>
+
+            <!-- <a href="../pvrobo/assets/pdfs/WCVPR_2025.pdf" class="button is-size-5 mr-1 mt-2">
+                            <span class="icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </span>
+                            <span>EAI@CVPR-25 Paper</span>
+                        </a> -->
+            <!-- <a href="../pvrobo/assets/pdfs/EAI@CVPR25-poster.pdf" class="button is-size-5 mr-1 mt-2">
+                            <span class="icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </span>
+                            <span>EAI@CVPR-25 Poster</span>
+                        </a> -->
+            <a href="https://arxiv.org/abs/2511.10762" class="button is-size-5 mr-1 mt-2">
+              <span class="icon">
+                <i class="ai ai-arxiv"></i>
+              </span>
+              <span>arXiv</span>
+            </a>
+
+            <a href="https://github.com/tsagkas/pvrobo" class="button is-size-5 mr-1 mt-2">
+              <span class="icon">
+                <i class="fas fa-code"></i>
+              </span>
+              <span>Code</span>
+            </a>
+          </div>
+        </div>
+
+
+
+        <div class="columns is-centered is-multiline">
+          <div class="column is-four-fifths">
+            <div class="video-card box is-paddingless is-clipped">
+
+              <video controls playsinline loop muted autoplay style="width: 100%">
+                <source src="assets/videos/AFA_demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+            </div>
+
+
+          </div>
+        </div>
+        <div class="box"
+          style="background-color: var(--card-background); border-left: 6px solid #3273dc; color: var(--text); margin-bottom: 2rem;">
+          <div class="is-flex is-align-items-center mb-2">
+            <span class="icon is-medium has-text-link mr-2">
+              <i class="fas fa-bolt fa-lg"></i>
+            </span>
+            <h3 class="title is-4 is-marginless has-text-link" style="letter-spacing: 1px;">TL;DR
+            </h3>
+          </div>
+          <div class="content" style="font-size: 1.1em;">
+            <p>
+              Standard pre-trained visual representations often encode irrelevant scene
+              information, causing robot policies to fail when facing visual perturbations. We propose Attentive Feature
+              Aggregation (AFA), a trainable pooling mechanism that learns to attend specifically to task-relevant
+              regions (like objects and grippers), significantly outperforming standard pooling methods in out-of-domain
+              scenarios without fine-tuning the vision backbone.
+            </p>
+          </div>
+        </div>
+
+        <h2 id="real_world" class="title is-2">Real-World Experiments</h2>
+        <hr class="divider">
+
+        <h3 id="real_world_so101" class="title is-3">Pick-and-Place with SO-101</h3>
+        <p>
+          We validated the efficacy of AFA in the real-world across different robot platforms and tasks.
+          Initially, we conducted experiments on the increasingly popular <strong>LeRobot SO-101</strong> robot
+          platform, utilizing the provided wrist camera and an additional external ZED2i from a top-down view.
+          The goal of the chosen task was picking a small, blue paper box and placing it inside a cylindrical tin can.
+        </p>
+        <p>
+          <strong>Experimental Setup:</strong> The initial position of the box varied, while the container was fixed at
+          a specific location for simplicity.
+          In total, 60 demonstrations were collected without any scene distractors.
+          To emphasize the lasting value of our findings, we trained the policy (with and without AFA) using features
+          collected from the recently released <strong>DINOv3</strong>.
+          During evaluation, we awarded 0.5 points for successfully picking the object and another 0.5 for placing it in
+          the can.
+
+          We mark the videos below with emojis to indicate the success of each rollout: ✅ for full success, 😐 for
+          partial success, and ❌ for failure.
+        </p>
+
+        <h4 id="so101_id_eval" class="title is-4 mt-5">In-Domain Evaluation</h4>
+        <p>
+          We evaluated the trained policy In-Domain (ID), conducting a total of 20 rollouts.
+          As shown below, the performance between the baseline (PVR) and our method (PVR+AFA) was comparable in this
+          setting, achieving success rates of <strong>87.5%</strong> and <strong>85.0%</strong> respectively.
+        </p>
+
+        <h5 id="so101_pvr_id" class="title is-5 mt-4">1. w/o AFA In-Domain</h5>
+        <div class="carousel-container mb-5">
+          <button class="carousel-btn prev" onclick="moveCarousel('track-cls-id', -1)"><i
+              class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn next" onclick="moveCarousel('track-cls-id', 1)"><i
+              class="fas fa-chevron-right"></i></button>
+          <div class="carousel-track" id="track-cls-id" data-src="cls_id"></div>
+        </div>
+
+        <h5 id="so101_afa_id" class="title is-5 mt-4">2. with AFA In-Domain</h5>
+        <div class="carousel-container mb-5">
+          <button class="carousel-btn prev" onclick="moveCarousel('track-afa-id', -1)"><i
+              class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn next" onclick="moveCarousel('track-afa-id', 1)"><i
+              class="fas fa-chevron-right"></i></button>
+          <div class="carousel-track" id="track-afa-id" data-src="afa_id"></div>
+        </div>
+
+        <hr class="divider" style="max-width: 100%; margin: 3rem auto;">
+
+        <h4 id="so101_ood_eval" class="title is-4 mt-5">Out-of-Distribution (OOD) Evaluation</h4>
+        <p>
+          To evaluate robustness, we introduced visual perturbations by placing <strong>20 everyday items</strong> as
+          distractors randomly in the scene at the beginning of each rollout.
+          Even though the ID performance was comparable, not using AFA in the OOD setting led to a catastrophic drop in
+          performance.
+          The success rate of the policy trained without AFA plummeted to <strong>17.5%</strong>, whereas utilizing AFA
+          allowed the policy to suffer only a minor performance drop, achieving a success rate of <strong>75%</strong>.
+        </p>
+        <p>
+          It is apparent that AFA manages to shift the attention mostly to task-relevant regions, whereas the attention
+          of the PVR focuses on every semantically rich object in the scene.
+        </p>
+
+        <h5 id="so101_pvr_ood" class="title is-5 mt-4">3. w.o AFA Out-of-Domain</h5>
+        <div class="carousel-container mb-5">
+          <button class="carousel-btn prev" onclick="moveCarousel('track-cls-ood', -1)"><i
+              class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn next" onclick="moveCarousel('track-cls-ood', 1)"><i
+              class="fas fa-chevron-right"></i></button>
+          <div class="carousel-track" id="track-cls-ood" data-src="cls_ood"></div>
+        </div>
+
+        <h5 id="so101_afa_ood" class="title is-5 mt-4">4. with AFA Out-of-Domain</h5>
+        <div class="carousel-container mb-6">
+          <button class="carousel-btn prev" onclick="moveCarousel('track-afa-ood', -1)"><i
+              class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn next" onclick="moveCarousel('track-afa-ood', 1)"><i
+              class="fas fa-chevron-right"></i></button>
+          <div class="carousel-track" id="track-afa-ood" data-src="afa_ood"></div>
+        </div>
+
+
+        <h3 id="real_world_kuka" class="title is-3 mt-6">Planar Pushing with KUKA IIWA</h3>
+        <hr class="divider">
+
+        <section>
+          <h2 id="real_id" class="title is-3">In-Domain Evaluation</h2>
+          <p>
+            Directly leveraging features from Pre-trained Visual Representations (PVRs) proves effective when deploying
+            the trained policy in in-domain scenes (i.e., those that closely match the expert demonstrations used during
+            behavior cloning).
+          </p>
+
+          <div class="columns is-multiline mt-4">
+            <div class="column is-half">
+              <h5 class="title is-6 has-text-centered">PVR (Baseline)</h5>
+              <div class="video-card">
+                <video controls loop muted playsinline preload="none" class="manual-obs">
+                  <source src="assets/videos/720/id/cls_id_x2_720.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="column is-half">
+              <h5 class="title is-6 has-text-centered">PVR + AFA (Ours)</h5>
+              <div class="video-card">
+                <video controls loop muted playsinline preload="none" class="manual-obs">
+                  <source src="assets/videos/720/id/afa_id_x2_720.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr class="divider">
+
+        <section>
+          <h2 id="real_ood" class="title is-3">Out-of-Domain Evaluation</h2>
+          <p>
+            We tested the policies against Scene Distractors, Lighting Perturbations, and Object Modifications.
+            Below we group the results into rollouts with and without AFA.
+          </p>
+
+          <h4 class="title is-5 mt-5">w/o AFA Out-of-Domain</h4>
+          <div class="carousel-container mb-5">
+            <button class="carousel-btn prev" onclick="moveCarousel('kuka-pvr-track', -1)"><i
+                class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn next" onclick="moveCarousel('kuka-pvr-track', 1)"><i
+                class="fas fa-chevron-right"></i></button>
+
+            <div class="carousel-track" id="kuka-pvr-track">
+              <div class="carousel-item">
+                <div class="video-card"><video loop muted playsinline preload="none" class="manual-obs">
+                    <source src="assets/videos/720/distractors/cls_distractors_1_x2_720.mp4" type="video/mp4">
+                  </video>
+                  <div class="video-card-content p-2 has-text-centered"><span class="tag is-light">Distractors: Scene
+                      1</span></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="video-card"><video loop muted playsinline preload="none" class="manual-obs">
+                    <source src="assets/videos/720/distractors/cls_distractors_2_x2_720.mp4" type="video/mp4">
+                  </video>
+                  <div class="video-card-content p-2 has-text-centered"><span class="tag is-light">Distractors: Scene
+                      2</span></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="video-card"><video loop muted playsinline preload="none" class="manual-obs">
+                    <source src="assets/videos/720/distractors/cls_distractors_3_x2_720.mp4" type="video/mp4">
+                  </video>
+                  <div class="video-card-content p-2 has-text-centered"><span class="tag is-light">Distractors: Scene
+                      3</span></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="video-card"><video loop muted playsinline preload="none" class="manual-obs">
+                    <source src="assets/videos/720/distractors/cls_distractors_4_x2_720.mp4" type="video/mp4">
+                  </video>
+                  <div class="video-card-content p-2 has-text-centered"><span class="tag is-light">Distractors: Scene
+                      4</span></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="video-card"><video loop muted playsinline preload="none" class="manual-obs">
+                    <source src="assets/videos/720/light/cls_light_1_x2_720.mp4" type="video/mp4">
+                  </video>
+                  <div class="video-card-content p-2 has-text-centered"><span class="tag is-light">Light: Dimmed +
+                      Lamp</span></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="video-card"><video loop muted playsinline preload="none" class="manual-obs">
+                    <source src="assets/videos/720/light/cls_light_2_x2_720.mp4" type="video/mp4">
+                  </video>
+                  <div class="video-card-content p-2 has-text-centered"><span class="tag is-light">Light: Off +
+                      Lamp</span></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="video-card"><video loop muted playsinline preload="none" class="manual-obs">
+                    <source src="assets/videos/720/light/cls_light_3_x2_720.mp4" type="video/mp4">
+                  </video>
+                  <div class="video-card-content p-2 has-text-centered"><span class="tag is-light">Light: Off</span>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="video-card"><video loop muted playsinline preload="none" class="manual-obs">
+                    <source src="assets/videos/720/cube/cls_cube_x2_720.mp4" type="video/mp4">
+                  </video>
+                  <div class="video-card-content p-2 has-text-centered"><span class="tag is-light">Object
+                      Modified</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="title is-5 mt-5">with AFA (Ours)</h4>
+          <div class="carousel-container mb-6">
+            <button class="carousel-btn prev" onclick="moveCarousel('kuka-afa-track', -1)"><i
+                class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn next" onclick="moveCarousel('kuka-afa-track', 1)"><i
+                class="fas fa-chevron-right"></i></button>
+
+            <div class="carousel-track" id="kuka-afa-track">
+              <div class="carousel-item">
+                <div class="video-card"><video loop muted playsinline preload="none" class="manual-obs">
+                    <source src="assets/videos/720/distractors/afa_distractors_1_x2_720.mp4" type="video/mp4">
+                  </video>
+                  <div class="video-card-content p-2 has-text-centered"><span class="tag is-light">Distractors: Scene
+                      1</span></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="video-card"><video loop muted playsinline preload="none" class="manual-obs">
+                    <source src="assets/videos/720/distractors/afa_distractors_2_x2_720.mp4" type="video/mp4">
+                  </video>
+                  <div class="video-card-content p-2 has-text-centered"><span class="tag is-light">Distractors: Scene
+                      2</span></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="video-card"><video loop muted playsinline preload="none" class="manual-obs">
+                    <source src="assets/videos/720/distractors/afa_distractors_3_x2_720.mp4" type="video/mp4">
+                  </video>
+                  <div class="video-card-content p-2 has-text-centered"><span class="tag is-light">Distractors: Scene
+                      3</span></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="video-card"><video loop muted playsinline preload="none" class="manual-obs">
+                    <source src="assets/videos/720/distractors/afa_distractors_4_x2_720.mp4" type="video/mp4">
+                  </video>
+                  <div class="video-card-content p-2 has-text-centered"><span class="tag is-light">Distractors: Scene
+                      4</span></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="video-card"><video loop muted playsinline preload="none" class="manual-obs">
+                    <source src="assets/videos/720/light/afa_light_1_x2_720.mp4" type="video/mp4">
+                  </video>
+                  <div class="video-card-content p-2 has-text-centered"><span class="tag is-light">Light: Dimmed +
+                      Lamp</span></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="video-card"><video loop muted playsinline preload="none" class="manual-obs">
+                    <source src="assets/videos/720/light/afa_light_2_x2_720.mp4" type="video/mp4">
+                  </video>
+                  <div class="video-card-content p-2 has-text-centered"><span class="tag is-light">Light: Off +
+                      Lamp</span></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="video-card"><video loop muted playsinline preload="none" class="manual-obs">
+                    <source src="assets/videos/720/light/afa_light_3_x2_720.mp4" type="video/mp4">
+                  </video>
+                  <div class="video-card-content p-2 has-text-centered"><span class="tag is-light">Light: Off</span>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="video-card"><video loop muted playsinline preload="none" class="manual-obs">
+                    <source src="assets/videos/720/cube/afa_cube_x2_720.mp4" type="video/mp4">
+                  </video>
+                  <div class="video-card-content p-2 has-text-centered"><span class="tag is-light">Object
+                      Modified</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <h2 id="sim" class="title is-2">Simulation Experiments</h2>
+        <hr class="divider">
+
+
+        <section>
+          <h2 id="sim_demos" class="title is-3">Expert Demonstrations</h2>
+          <p>
+            Below we present the 10 tasks selected from Metaworld that we train visuo-motor policies to solve in our
+            experiments.
+            We extract 25 expert demonstrations from each, with random initial conditions (e.g., position of objects).
+          </p>
+
+          <div class="columns is-multiline is-mobile">
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Assembly</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/demos/assembly-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Coffee Pull</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/demos/coffee-pull-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Button Press</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/demos/button-press-wall-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Pick and Place</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/demos/pick-place-wall-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Bin Picking</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/demos/bin-picking-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Drawer Open</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/demos/drawer-open-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Peg Insert</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/demos/peg-insert-side-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Shelf Place</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/demos/shelf-place-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Disassemble</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/demos/disassemble-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Box Close</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/demos/box-close-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <hr class="divider">
+          <h2 id="sim_perturbations" class="title is-3">Scenes Under Visual Perturbations</h2>
+          <p>
+            Below, we present the same 10 tasks but with visually perturbed scenes.
+            First, we introduce random variations in the tabletop texture, often incorporating patterns that may serve
+            as semantic visual distractors (e.g., flowers, numbers, etc.).
+            Second, we modify the lighting conditions by adjusting brightness, position, and orientation, which affects
+            most pixels in the scene (e.g., by casting new shadows).
+          </p>
+
+          <h2 id="tetris" class="title is-4">Tabletop Texture</h2>
+          <div class="columns is-multiline is-mobile">
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Assembly</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/texture/assembly-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Coffee Pull</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/texture/coffee-pull-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Button Press</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/texture/button-press-wall-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Pick and Place</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/texture/pick-place-wall-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Bin Picking</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/texture/bin-picking-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Drawer Open</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/texture/drawer-open-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Peg Insert</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/texture/peg-insert-side-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Shelf Place</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/texture/shelf-place-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Disassemble</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/texture/disassemble-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Box Close</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/texture/box-close-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </section>
+        <br>
+        <section>
+          <h3 class="title is-4">Light Brightness, Position, Orientation</h3>
+
+          <div class="columns is-multiline is-mobile">
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Assembly</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/light/assembly-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Coffee Pull</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/light/coffee-pull-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Button Press</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/light/button-press-wall-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Pick and Place</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/light/pick-place-wall-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Bin Picking</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/light/bin-picking-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Drawer Open</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/light/drawer-open-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Peg Insert</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/light/peg-insert-side-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Shelf Place</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/light/shelf-place-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Disassemble</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/light/disassemble-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <h4 class="title is-6 has-text-centered">Box Close</h4>
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/light/box-close-v2.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section>
+          <hr class="divider">
+          <h2 id="sim_eval" class="title is-3">PVR vs PVR+AFA Under Visual Perturbations</h2>
+          <p>
+            Below, we visualise out-of-domain evaluations of trained policies with and without AFA.
+            As is evident, when using AFA the policy becomes much more robust to visual perturbations.
+          </p>
+          <h2 id="tetris" class="title is-4">Evaluation Under Tabletop Texture Changes</h2>
+
+          <h2 class="title is-5 has-text-centered mt-5 mb-3">PVR</h2>
+          <div class="columns is-multiline is-mobile">
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_texture/pick_cls.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_texture/dis_cls.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_texture/coffee_cls.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_texture/box_cls.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_texture/bin_cls.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="title is-5 has-text-centered mt-5 mb-3">PVR + AFA (Ours)</h2>
+          <div class="columns is-multiline is-mobile">
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_texture/pick_afa.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_texture/dis_afa.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_texture/coffee_afa.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_texture/box_afa.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_texture/bin_afa.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <h2 id="tetris" class="title is-4">Evaluation Under Light Brightness, Position, Orientation Changes</h2>
+
+          <h2 class="title is-5 has-text-centered mt-5 mb-3">PVR</h2>
+          <div class="columns is-multiline is-mobile">
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_light/bin_cls.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_light/drawer_cls.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_light/assembly_cls.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_light/peg_cls.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_light/box_cls.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="title is-5 has-text-centered mt-5 mb-3">PVR + AFA (Ours)</h2>
+          <div class="columns is-multiline is-mobile">
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_light/bin_afa.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_light/drawer_afa.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_light/assembly_afa.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_light/peg_afa.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <div class="column is-one-fifth">
+              <div class="video-card">
+                <video autoplay loop muted playsinline>
+                  <source src="assets/videos/failures_light/box_afa.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <hr class="divider">
+        <section>
+          <h2 id="sim_heatmaps" class="title is-3">Interpreting AFA from Attention Heatmaps</h3>
+            <p>
+              The following videos illustrate how the CLS token attends to different patches compared to the trained
+              query token of AFA,
+              offering insight into what each model prioritizes. While this does not imply that trained AFAs are
+              entirely robust to
+              visual changes in the scene (e.g., note that MAE+AFA still allocates some attention to patches containing
+              the robot’s cast
+              shadow), we observe a consistent trend: the attention heatmaps become more focused, particularly on
+              regions relevant to the
+              task.
+            </p>
+            <div class="columns is-multiline is-mobile">
+              <div class="column is-one-third">
+                <h4 class="title is-6 has-text-centered">DINO: objects </h4>
+                <div class="video-card">
+                  <video autoplay loop muted playsinline>
+                    <source src="assets/videos/heatmaps/dino-obj-cls.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+              <div class="column is-one-third">
+                <h4 class="title is-6 has-text-centered">MAE: light</h4>
+                <div class="video-card">
+                  <video autoplay loop muted playsinline>
+                    <source src="assets/videos/heatmaps/mae-light-cls.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+              <div class="column is-one-third">
+                <h4 class="title is-6 has-text-centered">VC-1: texture</h4>
+                <div class="video-card">
+                  <video autoplay loop muted playsinline>
+                    <source src="assets/videos/heatmaps/vc1-tex-cls.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+              <div class="column is-one-third">
+                <h4 class="title is-6 has-text-centered">DINO + AFA: objects</h4>
+                <div class="video-card">
+                  <video autoplay loop muted playsinline>
+                    <source src="assets/videos/heatmaps/dino-obj-afa.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+              <div class="column is-one-third">
+                <h4 class="title is-6 has-text-centered">MAE + AFA: light</h4>
+                <div class="video-card">
+                  <video autoplay loop muted playsinline>
+                    <source src="assets/videos/heatmaps/mae-light-afa.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+              <div class="column is-one-third">
+                <h4 class="title is-6 has-text-centered">VC-1 + AFA: texture</h4>
+                <div class="video-card">
+                  <video autoplay loop muted playsinline>
+                    <source src="assets/videos/heatmaps/vc1-tex-abc.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+            </div>
+        </section>
+
+        <!-- Citation section -->
+        <h3 id="cite" class="title is-3">BibTex</h3>
+        <div class="is-relative">
+          <pre class="textarea is-family-code" readonly id="citation-text">@article{tsagkas2025attentivefeatureaggregationor,
+    title={Attentive Feature Aggregation or: How Policies Learn to Stop Worrying about Robustness and Attend to Task-Relevant Visual Cues},
+    author={Tsagkas, Nikolaos and Sochopoulos, Andreas and Danier, Duolikun and Vijayakumar, Sethu and Kouris, Alexandros and Mac Aodha, Oisin and Lu, Chris Xiaoxuan},
+    journal={arXiv preprint arXiv:2511.10762},
+    year={2025},             
+    }</pre>
+          <button id="citation-copy-button" class="button is-small" onclick="copyCitation()">
+            <span class="icon">
+              <i class="fas fa-copy"></i>
+            </span>
+          </button>
+          <div id="toast" class="notification is-success is-light is-hidden">
+            Copied to clipboard!
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="level">
+          <div class="level-left">
+            <div class="level-item">
+              <a href="https://github.com/cutamp/cutamp.github.io" class="has-text-weight-light">
+                <span class="icon"><i class="fab fa-github"></i></span> Project page template borrowed from here!
+              </a>
+            </div>
+          </div>
+          <div class="level-right">
+            <div class="level-item">
+              <p class="has-text-weight-light">Updated February 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Handle copying citation text
+    const copyCitation = async () => {
+      try {
+        const citationText = document.getElementById('citation-text').innerText;
+        await navigator.clipboard.writeText(citationText);
+
+        const toast = document.getElementById('toast');
+        toast.classList.remove('is-hidden');
+        setTimeout(() => toast.classList.add('is-hidden'), 2000);
+      } catch (err) {
+        console.error('Failed to copy citation:', err);
+      }
+    };
+    document.addEventListener('DOMContentLoaded', () => {
+      // --- 1. SCOREBOARD CONFIGURATION ---
+      // 0 = Failure (❌), 0.5 = Partial (⚠️), 1 = Success (✅)
+      // If you leave a list empty [] or incomplete, no emoji will show for those missing videos.
+      const videoScores = {
+        'cls_id': [0.5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1],
+        'afa_id': [1, 1, 0.5, 1, 1, 0, 1, 1, 1, 0.5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        'cls_ood': [0, 0, 1, 0, 0, 0.5, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0.5, 0.5],
+        'afa_ood': [1, 1, 1, 0.5, 1, 0, 0, 0.5, 1, 1, 1, 1, 1, 0.5, 1, 0, 1, 1, 1, 1, 1]
+      };
+
+      function getStatusIcon(score) {
+        if (score === 1) return ' <span style="margin-left:5px">✅</span>';
+        if (score === 0.5) return ' <span style="margin-left:5px">😐</span>'; // or 🤔
+        if (score === 0) return ' <span style="margin-left:5px">❌</span>';
+        return ''; // No icon if undefined
+      }
+
+      // --- 2. OBSERVER SETUP (Lazy Loading & Autoplay) ---
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: [0.01, 0.6]
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const video = entry.target;
+
+          // Smart Loading
+          if (entry.intersectionRatio > 0) {
+            if (video.preload === 'none') {
+              video.preload = 'metadata';
+            }
+          }
+
+          // Smart Playing
+          if (entry.intersectionRatio > 0.6) {
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+              playPromise.catch(() => { });
+            }
+          } else {
+            video.pause();
+          }
+        });
+      }, observerOptions);
+
+      // --- 3. GENERATE SO-101 VIDEOS ---
+      const so101Tracks = ['track-cls-id', 'track-afa-id', 'track-cls-ood', 'track-afa-ood'];
+
+      so101Tracks.forEach(trackId => {
+        const track = document.getElementById(trackId);
+        if (!track) return;
+
+        const folder = track.getAttribute('data-src'); // e.g., 'cls_id'
+        const scores = videoScores[folder] || []; // Get scores for this folder
+
+        for (let i = 0; i <= 19; i++) {
+          const num = i.toString().padStart(2, '0');
+          const filename = `ep_${num}.mp4`;
+
+          // Get the score for this specific episode (if it exists)
+          const scoreValue = scores[i] !== undefined ? scores[i] : null;
+          const iconHtml = getStatusIcon(scoreValue);
+
+          const item = document.createElement('div');
+          item.className = 'carousel-item';
+          item.innerHTML = `
+                    <div class="video-card">
+                        <video loop muted playsinline preload="none">
+                            <source src="https://tsagkas.github.io/afa/assets/videos/so101/${folder}/${filename}" type="video/mp4">
+                        </video>
+                        <div class="video-card-content p-2 has-text-centered">
+                            <span class="tag is-light">Episode ${num}${iconHtml}</span>
+                        </div>
+                    </div>
+                `;
+
+          track.appendChild(item);
+          const vid = item.querySelector('video');
+          if (vid) observer.observe(vid);
+        }
+      });
+
+      // --- 4. HANDLE MANUAL VIDEOS (KUKA) ---
+      const manualVideos = document.querySelectorAll('.manual-obs');
+      manualVideos.forEach(video => {
+        observer.observe(video);
+      });
+    });
+
+    function moveCarousel(trackId, direction) {
+      const track = document.getElementById(trackId);
+      if (track) {
+        const scrollAmount = track.clientWidth * 0.6;
+        track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+      }
+    }
+  </script>
+
+</body>
+
+</html>
