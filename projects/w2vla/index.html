@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8JK18X15P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-K8JK18X15P');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>w&sup2;VLA: Decoupling Declarative from Procedural</title>
+  <link rel="icon" href="./logos/logo.svg" type="image/svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <style>
+    /* Minor adjustments for GIF compatibility with existing video classes */
+    img.gif-player {
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      display: block;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .model-col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      background: var(--bg-elevated);
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid var(--border-subtle);
+      height: 100%;
+    }
+
+    .model-badge {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    /* EdGEL University Red for Fail */
+    .badge-fail {
+      background: rgba(213, 0, 50, 0.1);
+      color: #D50032;
+    }
+
+    /* EdGEL Dark Green for Success */
+    .badge-success {
+      background: rgba(21, 71, 52, 0.1);
+      color: #154734;
+    }
+
+    /* Scenario Tabs Styles */
+    .scenario-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .scenario-tab {
+      padding: 8px 20px;
+      border-radius: 8px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      cursor: pointer;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text-secondary);
+      transition: all 0.2s ease;
+    }
+
+    .scenario-tab:hover {
+      background: var(--bg-elevated);
+    }
+
+    .scenario-tab.active {
+      background: #007288;
+      color: white;
+      border-color: #007288;
+    }
+
+    /* 2x3 Evaluation Grid Styles */
+    .eval-grid {
+      display: grid;
+      grid-template-columns: 160px repeat(3, minmax(0, 1fr));
+      gap: 20px 16px;
+      align-items: stretch;
+      margin-top: 24px;
+    }
+
+    .eval-empty {
+      border-bottom: 2px solid var(--border-subtle);
+    }
+
+    .eval-header {
+      text-align: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--text-primary);
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border-subtle);
+    }
+
+    .eval-row-label {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: right;
+      padding-right: 16px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.4;
+      color: var(--text-primary);
+      border-right: 2px solid var(--border-subtle);
+    }
+
+    @media (max-width: 768px) {
+      .eval-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .eval-header,
+      .eval-empty {
+        display: none;
+      }
+
+      .eval-row-label {
+        justify-content: center;
+        text-align: center;
+        border-right: none;
+        border-bottom: 2px solid var(--border-subtle);
+        padding: 16px 0;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="progress-sidebar" aria-label="Page progress">
+    <div class="progress-track">
+      <div class="progress-line"></div>
+      <div class="progress-line-fill"></div>
+      <div class="progress-item" data-section="hero">
+        <a href="#">
+          <span class="progress-dot"></span>
+          <span class="progress-label">Intro</span>
+        </a>
+      </div>
+      <div class="progress-item" data-section="indomain">
+        <a href="#indomain">
+          <span class="progress-dot"></span>
+          <span class="progress-label">In-Domain</span>
+        </a>
+      </div>
+      <div class="progress-item" data-section="transfer">
+        <a href="#transfer">
+          <span class="progress-dot"></span>
+          <span class="progress-label">Skill Transfer</span>
+        </a>
+      </div>
+      <div class="progress-item" data-section="robustness">
+        <a href="#robustness">
+          <span class="progress-dot"></span>
+          <span class="progress-label">Robustness</span>
+        </a>
+      </div>
+      <div class="progress-item" data-section="bibtex">
+        <a href="#bibtex">
+          <span class="progress-dot"></span>
+          <span class="progress-label">BibTeX</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <div class="hero-flow" id="hero">
+      <div class="hero-orb" aria-hidden="true"></div>
+      <div class="hero-text">w&sup2;VLA</div>
+      <div class="sub-hero-text">Decoupling the Declarative from the Procedural<br>in Vision-Language-Action Models
+      </div>
+
+      <!-- <div class="hero-pill-row">
+        <span class="hero-pill">Vision-Language-Action Models</span>
+        <span class="hero-pill">Skill Transfer</span>
+        <span class="hero-pill">Imitation Learning</span>
+      </div> -->
+
+      <!-- <div class="authors">
+        <a href="https://tsagkas.github.io/" target="_blank">Nikolaos Tsagkas</a><sup>1</sup>,
+        <a href="https://ansocho.github.io/" target="_blank">Andreas Sochopoulos</a><sup>1</sup>,
+        <a href="https://christopherlu.github.io/" target="_blank">Chris Xiaoxuan Lu</a><sup>2</sup>,
+        <a href="https://homepages.inf.ed.ac.uk/omacaod/" target="_blank">Oisin Mac Aodha</a><sup>1</sup>,
+        <a href="https://www.linkedin.com/in/a-kouris/" target="_blank">Alexandros Kouris</a><sup>3</sup><br>
+        <span class="affiliation">
+          <sup>1</sup>University of Edinburgh, <sup>2</sup>UCL, <sup>3</sup>Samsung AI Center - Cambridge, UK
+        </span>
+      </div> -->
+
+      <div class="authors">
+        <a href="https://tsagkas.github.io/" target="_blank">Nikolaos Tsagkas</a><sup>1</sup>,
+        <a href="https://ansocho.github.io/" target="_blank">Andreas Sochopoulos</a><sup>1</sup>,
+        <a href="https://christopherlu.github.io/" target="_blank">Chris Xiaoxuan Lu</a><sup>2</sup>,
+        <a href="https://homepages.inf.ed.ac.uk/omacaod/" target="_blank">Oisin Mac Aodha</a><sup>1</sup>,
+        <a href="https://www.linkedin.com/in/a-kouris/" target="_blank">Alexandros Kouris</a><sup>3</sup><br>
+
+        <div class="affiliation-logos">
+          <a href="https://www.ed.ac.uk/" target="_blank" title="University of Edinburgh">
+            <sup>1</sup><img src="./logos/uoe_logo.png" alt="University of Edinburgh">
+          </a>
+          <a href="https://www.ucl.ac.uk/" target="_blank" title="UCL">
+            <sup>2</sup><img src="./logos/ucl_logo.png" alt="UCL">
+          </a>
+          <a href="https://research.samsung.com/aicenter_cambridge" target="_blank"
+            title="Samsung AI Center - Cambridge">
+            <sup>3</sup><img src="./logos/samsung_research_logo.png" alt="Samsung AI Center">
+          </a>
+        </div>
+      </div>
+
+
+      <div class="hero-actions">
+        <a class="cta primary" href="#" target="_blank" style="pointer-events: none; opacity: 0.5;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+            style="vertical-align: -2px; margin-right: 6px;">
+            <path
+              d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 2l5 5h-5V4zM6 20V4h5v7h7v9H6zm2-6h8v2H8v-2zm0-4h4v2H8v-2zm0 8h8v2H8v-2z" />
+          </svg>
+          ArXiv
+        </a>
+        <a class="cta neutral" href="#" target="_blank" style="pointer-events: none; opacity: 0.5;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"
+            style="vertical-align: -3px; margin-right: 6px;">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>
+          Code (Comming Soon)
+        </a>
+        <a class="cta dark" href="#bibtex">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -3px; margin-right: 6px;">
+            <path d="M10 11h-4a3 3 0 0 1-3-3v-4a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v6c0 2.2-1.8 4-4 4"></path>
+            <path d="M22 11h-4a3 3 0 0 1-3-3v-4a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v6c0 2.2-1.8 4-4 4"></path>
+          </svg>
+          Cite
+        </a>
+      </div>
+      <!-- center video -->
+      <video src="./videos/w2VLA-720p.mp4" class="teaser-image"
+        style="width: 70%; height: auto; display: block; margin: 0 auto; border-radius: 14px;" autoplay loop muted
+        playsinline></video>
+      <p class="figure-caption" style="text-align: center;">
+        $w^{2}$VLA presentation video.
+      </p>
+
+
+      <div class="hero-waves" aria-hidden="true">
+        <svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+          </defs>
+          <g class="wave-parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(213, 0, 50, 0.15)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0, 114, 136, 0.1)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(131, 0, 101, 0.08)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(4, 30, 66, 0.12)"></use>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- <img src="./figures/teaser.png" alt="w2VLA teaser figure" class="teaser-image" />
+    <p class="figure-caption">
+      <strong>Skill transfer example</strong>. (a) Three VLAs (i.e., $\pi_{0.5}$, OTTER, and $w^{2}$VLA (ours)) are trained on a dataset of two <em>(skill, object)</em> pairs: <em>(rotate 90°, carrot)</em> and <em>(place 5cm back, banana)</em>. (b) We evaluate the three VLAs in a skill transfer scenario <em>(rotate 90°, banana)</em>. Unlike our model, $\pi_{0.5}$ and OTTER fail to transfer the learned skill to the other object. (c) Summary of our main experimental results: all three VLAs obtain almost perfect performance when deployed over seen <em>(skill, object)</em> pairs, however, only our model manages to reliably perform skill transfer.
+    </p> -->
+
+
+
+    <div class="tagline" id="indomain">In-Domain Performance</div>
+    <div class="card-surface video-card">
+      <div class="section-heading">Seen (Skill, Object) Pairs</div>
+      <p class="section-lead">All models, including state-of-the-art baselines $\pi_{0.5}$ and OTTER, perform remarkably
+        well when executing skills on the exact objects they were trained on. Select a scenario below to compare model
+        rollouts.</p>
+
+      <div class="scenario-tabs" id="tabs-indomain">
+        <button class="scenario-tab active" data-scenario="1">Scenario 1</button>
+        <button class="scenario-tab" data-scenario="2">Scenario 2</button>
+        <button class="scenario-tab" data-scenario="3">Scenario 3</button>
+        <button class="scenario-tab" data-scenario="4">Scenario 4</button>
+      </div>
+
+      <div class="eval-grid" id="grid-indomain">
+      </div>
+    </div>
+
+
+    <div class="tagline" id="transfer">Zero-Shot Skill Transfer</div>
+    <div class="card-surface video-card">
+      <div class="section-heading">Unseen (Skill, Object) Pairs</div>
+      <p class="section-lead">When asked to transfer a learned skill to a different object, baseline models fail
+        catastrophically. They recede to imitating the skill that was originally paired with the target object during
+        training. <b>w&sup2;VLA successfully isolates procedural intent to transfer the skill.</b></p>
+
+      <div class="scenario-tabs" id="tabs-transfer">
+        <button class="scenario-tab active" data-scenario="1">Scenario 1</button>
+        <button class="scenario-tab" data-scenario="2">Scenario 2</button>
+        <button class="scenario-tab" data-scenario="3">Scenario 3</button>
+        <button class="scenario-tab" data-scenario="4">Scenario 4</button>
+      </div>
+
+      <div class="eval-grid" id="grid-transfer">
+      </div>
+      <div class="section-heading" style="margin-top: 40px;">Overall Model Performance</div>
+      <p class="section-lead">
+        <strong>Breakdown of average performance scores:</strong> Results from OTTER, $\pi_{0.5}$, and w&sup2;VLA
+        in-domain, i.e., on seen <em>(skill, object)</em> pairs, and on skill transfer. The metrics "object", "skill",
+        and "task" correspond to the success of the models in selecting the correct object, executing the correct skill,
+        and fully completing the task, respectively.
+      </p>
+      <div class="chart-container" style="height: 300px; max-width: 800px; margin: 0 auto;">
+        <canvas id="overallAveragesChart"></canvas>
+      </div>
+    </div>
+
+
+
+    <div class="tagline" id="robustness">Robustness to OOD Scenarios</div>
+
+
+    <div class="card-surface">
+      <div class="section-heading" style="font-size: 22px;">1. Robustness to Distractor Objects</div>
+      <p class="section-lead">We re-evaluated the setup by introducing 3-5 random, visually diverse distractor items to
+        the scene. Thanks to the isolated "where" conditioning powered by VLM localization heatmaps, w&sup2;VLA
+        confidently ignores clutter and correctly executes the requested skill.</p>
+
+      <div class="video-carousel">
+        <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+          <p class="figure-caption"
+            style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Move Back,
+            🍌)</p>
+          <img class="gif-player" src="./videos/3-distractors/back_banana_1.gif" alt="Distractor rollout">
+          <div class="model-badge badge-success" style="align-self: center;">✅ Success</div>
+        </div>
+        <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+          <p class="figure-caption"
+            style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Move Back,
+            🥕)</p>
+          <img class="gif-player" src="./videos/3-distractors/back_carrot_1.gif" alt="Distractor rollout">
+          <div class="model-badge badge-success" style="align-self: center;">✅ Success</div>
+        </div>
+        <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+          <p class="figure-caption"
+            style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Rotate, 🍌)
+          </p>
+          <img class="gif-player" src="./videos/3-distractors/rotate_banana_1.gif" alt="Distractor rollout">
+          <div class="model-badge badge-success" style="align-self: center;">✅ Success</div>
+        </div>
+        <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+          <p class="figure-caption"
+            style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Rotate, 🍌)
+          </p>
+          <img class="gif-player" src="./videos/3-distractors/rotate_banana_fail.gif" alt="Distractor rollout">
+          <div class="model-badge badge-fail" style="align-self: center; text-align: center;">❌ Failure<br><span
+              style="font-size: 12px; font-weight: normal;"><em>Picked mid-air</em></span></div>
+        </div>
+        <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+          <p class="figure-caption"
+            style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Rotate, 🥕)
+          </p>
+          <img class="gif-player" src="./videos/3-distractors/rotate_carrot_1.gif" alt="Distractor failure">
+          <div class="model-badge badge-success" style="align-self: center;">✅ Success</div>
+        </div>
+        <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+          <p class="figure-caption"
+            style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Rotate, 🥕)
+          </p>
+          <img class="gif-player" src="./videos/3-distractors/rotate_carrot_fail.gif" alt="Distractor failure">
+          <div class="model-badge badge-fail" style="align-self: center; text-align: center;">❌ Failure<br><span
+              style="font-size: 12px; font-weight: normal;"><em>Grasping slipped</em></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-surface" style="margin-top: 24px;">
+      <div class="section-heading" style="font-size: 22px;">2. Skill Transfer to Unseen Objects</div>
+      <p class="section-lead">We challenged the policy to interact with completely novel objects (e.g., Coca-Cola cans,
+        strawberries) that were not present in the demonstration dataset. w&sup2;VLA retains high accuracy in object
+        selection and faithfully outputs the commanded behavior.</p>
+
+      <div class="video-carousel">
+        <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+          <p class="figure-caption"
+            style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Place Bowl,
+            🥤)</p>
+          <img class="gif-player" src="./videos/4-unseen/11_bowl_coke.gif" alt="Unseen rollout">
+          <div class="model-badge badge-success" style="align-self: center;">✅ Success</div>
+        </div>
+        <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+          <p class="figure-caption"
+            style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Place Plate,
+            🍋)</p>
+          <img class="gif-player" src="./videos/4-unseen/3_plate_lemon.gif" alt="Unseen rollout">
+          <div class="model-badge badge-success" style="align-self: center;">✅ Success</div>
+        </div>
+        <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+          <p class="figure-caption"
+            style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Place Bowl,
+            🥤)</p>
+          <img class="gif-player" src="./videos/4-unseen/12_bowl_fanta.gif" alt="Unseen rollout">
+          <div class="model-badge badge-success" style="align-self: center;">✅ Success</div>
+        </div>
+        <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+          <p class="figure-caption"
+            style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Place Bowl,
+            🍓)</p>
+          <img class="gif-player" src="./videos/4-unseen/5_bowl_strawberry.gif" alt="Unseen rollout">
+          <div class="model-badge badge-success" style="align-self: center;">✅ Success</div>
+        </div>
+        <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+          <p class="figure-caption"
+            style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Place Plate,
+            🥒)</p>
+          <img class="gif-player" src="./videos/4-unseen/8_plate_cucumber_failure.gif" alt="Unseen failure">
+          <div class="model-badge badge-fail" style="align-self: center; text-align: center;">❌ Failure<br><span
+              style="font-size: 12px; font-weight: normal;"><em>Failed to pick</em></span></div>
+        </div>
+        <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+          <p class="figure-caption"
+            style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Place Plate,
+            🥔)</p>
+          <img class="gif-player" src="./videos/4-unseen/6_plate_potato_failure.gif" alt="Unseen failure">
+          <div class="model-badge badge-fail" style="align-self: center; text-align: center;">❌ Failure<br><span
+              style="font-size: 12px; font-weight: normal;"><em>Missed plate</em></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-surface" style="margin-top: 24px;">
+      <div class="section-heading" style="font-size: 22px;">3. Quantitative Robustness Results</div>
+      <p class="section-lead">
+        <strong>Breakdown of robustness performance scores:</strong> (Left) Comparing Scenario 1 baseline against the
+        introduction of visual distractors. (Right) Comparing Scenario 2 baseline against the introduction of completely
+        unseen objects.
+      </p>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; margin-top: 24px;">
+
+        <div class="chart-container" style="flex: 1; min-width: 300px; height: 350px; padding: 16px;">
+          <canvas id="robustnessS1Chart"></canvas>
+        </div>
+
+        <div class="chart-container" style="flex: 1; min-width: 300px; height: 350px; padding: 16px;">
+          <canvas id="robustnessS2Chart"></canvas>
+        </div>
+
+      </div>
+    </div>
+    <div class="tagline" id="bibtex">BibTeX</div>
+    <div class="bibtex-code">
+      <div class="bibtex-header"
+        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+        <div class="bibtex-title" style="margin: 0;">Reference</div>
+        <button class="copy-bibtex-btn" id="copyBibtexBtn" aria-label="Copy BibTeX">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span>Copy</span>
+        </button>
+      </div>
+      <pre><code id="bibtex-content">@article{TBA,
+    <!-- title={Attentive Feature Aggregation or: How Policies Learn to Stop Worrying about Robustness and Attend to Task-Relevant Visual Cues}, -->
+    <!-- author={Tsagkas, Nikolaos and Sochopoulos, Andreas and Danier, Duolikun and Vijayakumar, Sethu and Kouris, Alexandros and Mac Aodha, Oisin and Lu, Chris Xiaoxuan},
+    journal={arXiv preprint arXiv:2511.10762},
+    year={2025},              -->
+}</code></pre>
+    </div>
+
+
+  </div>
+  <!-- <div class="footer">
+    © PolaRiS team. Source code is available <a href="https://github.com/polaris-evals/polaris-evals.github.io"
+      target="_blank">here</a>.
+  </div> -->
+
+  <script>
+    // -------------------------------------------------------------
+    // DATA CONFIGURATION
+    // Populated dynamically from local .gif directories
+    // -------------------------------------------------------------
+    const evaluationData = {
+      1: {
+        indomain: {
+          task1: '(Rotate, 🥕)',
+          task2: '(Move Back, 🍌)',
+          t1_results: [
+            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/otter/id-rotate-carrot-right.gif" },
+            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/pi05/id-rotate-carrot-left.gif" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/w2vla/id-rotate-carrot-right.gif" }
+          ],
+          t2_results: [
+            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/otter/id-back-banana-right.gif" },
+            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/pi05/id-back-banana-left.gif" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/w2vla/id-back-banana-left.gif" }
+          ]
+        },
+        transfer: {
+          task1: '(Rotate, 🍌)',
+          task2: '(Move Back, 🥕)',
+          t1_results: [
+            { model: "OTTER", success: false, cap: "❌ Executes (Move Back, 🍌)", img: "./videos/1-in-domain/scenario-1/otter/st-rotate-banana-left.gif" },
+            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Move Back, 🍌)", img: "./videos/1-in-domain/scenario-1/pi05/st-rotate-banana-right.gif" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/w2vla/st-rotate-banana-right.gif" }
+          ],
+          t2_results: [
+            { model: "OTTER", success: false, cap: "❌ Executes (Rotate, 🥕)", img: "./videos/1-in-domain/scenario-1/otter/st-back-carrot-right.gif" },
+            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Rotate, 🥕)", img: "./videos/1-in-domain/scenario-1/pi05/st-back-carrot-left.gif" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/w2vla/st-back-carrot-right.gif" }
+          ]
+        }
+      },
+      2: {
+        indomain: {
+          task1: '(Place Plate, 🌽)',
+          task2: '(Place Bowl, 🍆)',
+          t1_results: [
+            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/otter/id-plate-corn-left.gif" },
+            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/pi05/id-plate-corn-right.gif" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/w2vla/id-plate-corn-left.gif" }
+          ],
+          t2_results: [
+            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/otter/id-bowl-eggplant-right.gif" },
+            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/pi05/id-bowl-eggplant-right.gif" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/w2vla/id-bowl-eggplant-left.gif" }
+          ]
+        },
+        transfer: {
+          task1: '(Place Plate, 🍆)',
+          task2: '(Place Bowl, 🌽)',
+          t1_results: [
+            { model: "OTTER", success: false, cap: "❌ Executes (Place Bowl, 🍆)", img: "./videos/1-in-domain/scenario-2/otter/st-plate-eggplant-left.gif" },
+            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Place Bowl, 🍆)", img: "./videos/1-in-domain/scenario-2/pi05/st-plate-eggplant-right.gif" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/w2vla/st-plate-eggplant-left.gif" }
+          ],
+          t2_results: [
+            { model: "OTTER", success: false, cap: "❌ Executes (Place Plate, 🌽)", img: "./videos/1-in-domain/scenario-2/otter/st-bowl-corn-right.gif" },
+            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Place Plate, 🌽)", img: "./videos/1-in-domain/scenario-2/pi05/st-bowl-corn-left.gif" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/w2vla/st-bowl-corn-right.gif" }
+          ]
+        }
+      },
+      3: {
+        indomain: {
+          task1: '(Poke, 🧽)',
+          task2: '(Nudge, 🚗)',
+          t1_results: [
+            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/otter/id-poke-sponge-right.gif" },
+            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/pi05/id-poke-sponge-left.gif" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/w2vla/id-poke-sponge-right.gif" }
+          ],
+          t2_results: [
+            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/otter/id-nudge-car-left.gif" },
+            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/pi05/id-nudge-car-right.gif" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/w2vla/id-nudge-car-left.gif" }
+          ]
+        },
+        transfer: {
+          task1: '(Poke, 🚗)',
+          task2: '(Nudge, 🧽)',
+          t1_results: [
+            { model: "OTTER", success: false, cap: "❌ Executes (Nudge, 🚗)", img: "./videos/1-in-domain/scenario-3/otter/st-poke-car-left.gif" },
+            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Nudge, 🚗)", img: "./videos/1-in-domain/scenario-3/pi05/st-poke-car-right.gif" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/w2vla/st-poke-car-left.gif" }
+          ],
+          t2_results: [
+            { model: "OTTER", success: false, cap: "❌ Executes (Poke, 🧽)", img: "./videos/1-in-domain/scenario-3/otter/st-nudge-sponge-right.gif" },
+            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Poke, 🧽)", img: "./videos/1-in-domain/scenario-3/pi05/st-nudge-sponge-right.gif" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/w2vla/st-nudge-sponge-left.gif" }
+          ]
+        }
+      },
+      4: {
+        indomain: {
+          task1: '(Drop, 🪥)',
+          task2: '(Forward, 🥒)',
+          t1_results: [
+            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/otter/id-drop-toothpaste-left.gif" },
+            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/pi05/id-drop-toothpaste-left.gif" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/w2vla/id-drop-toothpaste-left.gif" }
+          ],
+          t2_results: [
+            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/otter/id-forward-cucumber-right.gif" },
+            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/pi05/id-forward-cucumber-right.gif" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/w2vla/id-forward-cucumber-left.gif" }
+          ]
+        },
+        transfer: {
+          task1: '(Drop, 🥒)',
+          task2: '(Forward, 🪥)',
+          t1_results: [
+            { model: "OTTER", success: false, cap: "❌ Executes (Forward, 🥒)", img: "./videos/1-in-domain/scenario-4/otter/st-drop-cucumber-left.gif" },
+            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Forward, 🥒)", img: "./videos/1-in-domain/scenario-4/pi05/st-rotate-cucumber-left.gif" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/w2vla/st-drop-cucumber-right.gif" }
+          ],
+          t2_results: [
+            { model: "OTTER", success: false, cap: "❌ Executes (Drop, 🪥)", img: "./videos/1-in-domain/scenario-4/otter/st-forward-toothpaste-left.gif" },
+            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Drop, 🪥)", img: "./videos/1-in-domain/scenario-4/pi05/st-forward-toothpaste-right.gif" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/w2vla/st-forward-toothpaste-left.gif" }
+          ]
+        }
+      }
+    };
+
+    function renderGrid(scenarioId, sectionType, containerId) {
+      const container = document.getElementById(containerId);
+      const data = evaluationData[scenarioId][sectionType];
+
+      let html = `
+        <div class="eval-empty"></div>
+        <div class="eval-header">OTTER</div>
+        <div class="eval-header">$\\pi_{0.5}$</div>
+        <div class="eval-header">w&sup2;VLA (Ours)</div>
+
+        <div class="eval-row-label" style="font-size: 16px;">${data.task1}</div>
+      `;
+
+      data.t1_results.forEach(m => {
+        const badgeClass = m.success ? 'badge-success' : 'badge-fail';
+        html += `
+           <div class="model-col" style="justify-content: space-between;">
+             <div class="model-badge" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); color: var(--text-primary);">${m.model}</div>
+             <img class="gif-player" src="${m.img}" alt="${m.model} rollout">
+             <div class="model-badge ${badgeClass}" style="text-align: center; width: 100%; box-sizing: border-box; margin-top: auto;">${m.cap}</div>
+           </div>
+         `;
+      });
+
+      html += `
+        <div class="eval-row-label" style="font-size: 16px;">${data.task2}</div>
+      `;
+
+      data.t2_results.forEach(m => {
+        const badgeClass = m.success ? 'badge-success' : 'badge-fail';
+        html += `
+           <div class="model-col" style="justify-content: space-between;">
+             <div class="model-badge" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); color: var(--text-primary);">${m.model}</div>
+             <img class="gif-player" src="${m.img}" alt="${m.model} rollout">
+             <div class="model-badge ${badgeClass}" style="text-align: center; width: 100%; box-sizing: border-box; margin-top: auto;">${m.cap}</div>
+           </div>
+         `;
+      });
+
+      container.innerHTML = html;
+
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([container]);
+      }
+    }
+    // Attach click listeners to tabs
+    function setupTabs(tabsContainerId, gridContainerId, sectionType) {
+      const tabs = document.querySelectorAll(`#${tabsContainerId} .scenario-tab`);
+      tabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+          // Remove active class from all tabs in this group
+          tabs.forEach(t => t.classList.remove('active'));
+          // Add to clicked tab
+          e.target.classList.add('active');
+          // Re-render grid
+          renderGrid(e.target.dataset.scenario, sectionType, gridContainerId);
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setupTabs('tabs-indomain', 'grid-indomain', 'indomain');
+      setupTabs('tabs-transfer', 'grid-transfer', 'transfer');
+
+      // Initial render for Scenario 1
+      renderGrid('1', 'indomain', 'grid-indomain');
+      renderGrid('1', 'transfer', 'grid-transfer');
+    });
+
+    // Progress Sidebar Scroll Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const progressItems = document.querySelectorAll('.progress-item');
+      const progressLineFill = document.querySelector('.progress-line-fill');
+      const progressTrack = document.querySelector('.progress-track');
+
+      const sections = [];
+      progressItems.forEach(item => {
+        const id = item.dataset.section;
+        const el = document.getElementById(id);
+        if (el) sections.push({ id, el });
+      });
+
+      const updateProgress = () => {
+        if (sections.length === 0) return;
+
+        const viewportHeight = window.innerHeight;
+        const activationThreshold = viewportHeight * 0.4;
+
+        let activeIdx = 0;
+        for (let idx = 0; idx < sections.length; idx++) {
+          const rect = sections[idx].el.getBoundingClientRect();
+          if (rect.top <= activationThreshold) {
+            activeIdx = idx;
+          } else {
+            break;
+          }
+        }
+        if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight - 10) {
+          activeIdx = sections.length - 1;
+        }
+        if (progressLineFill && progressTrack) {
+          const trackHeight = progressTrack.offsetHeight;
+          const maxFillHeight = trackHeight - 44;
+          const fillHeight = (activeIdx / Math.max(sections.length - 1, 1)) * maxFillHeight;
+          progressLineFill.style.height = `${Math.min(Math.max(fillHeight, 0), maxFillHeight)}px`;
+        }
+
+        progressItems.forEach(item => {
+          const sectionId = item.dataset.section;
+          const sectionIdx = sections.findIndex(s => s.id === sectionId);
+
+          item.classList.remove('active', 'passed');
+          if (sectionIdx === activeIdx) {
+            item.classList.add('active');
+          } else if (sectionIdx >= 0 && sectionIdx < activeIdx) {
+            item.classList.add('passed');
+          }
+        });
+      };
+
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      updateProgress();
+    });
+    // Copy BibTeX Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const copyBtn = document.getElementById('copyBibtexBtn');
+      const bibtexContent = document.getElementById('bibtex-content');
+
+      if (copyBtn && bibtexContent) {
+        copyBtn.addEventListener('click', async () => {
+          try {
+            // Write text to clipboard
+            await navigator.clipboard.writeText(bibtexContent.innerText.trim());
+
+            // Visual feedback: Change to checkmark
+            const originalContent = copyBtn.innerHTML;
+            copyBtn.classList.add('copied');
+            copyBtn.innerHTML = `
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Copied!</span>
+            `;
+
+            // Revert back to original state after 2 seconds
+            setTimeout(() => {
+              copyBtn.classList.remove('copied');
+              copyBtn.innerHTML = originalContent;
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy text: ', err);
+          }
+        });
+      }
+    });
+    // Overall Averages Chart
+    const overallCtx = document.getElementById('overallAveragesChart');
+    if (overallCtx) {
+      new Chart(overallCtx, {
+        type: 'bar',
+        data: {
+          labels: ['In-Domain', 'Skill Transfer', 'Object', 'Skill', 'Task'],
+          datasets: [
+            {
+              label: 'OTTER',
+              data: [93.8, 30.6, 89.6, 2.1, 0.0],
+              backgroundColor: '#28a745', // Green
+              borderRadius: 4
+            },
+            {
+              label: 'π0.5',
+              data: [95.8, 38.2, 95.8, 10.4, 8.3],
+              backgroundColor: '#dc3545', // Red
+              borderRadius: 4
+            },
+            {
+              label: 'w²VLA (Ours)',
+              data: [95.1, 91.7, 100.0, 97.9, 77.1],
+              backgroundColor: '#4285F4', // Blue
+              borderRadius: 4
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false, // Allows it to fill your container properly
+          plugins: {
+            legend: {
+              display: true,
+              position: 'top',
+              labels: {
+                font: { family: 'Space Grotesk', size: 15, weight: '600' },
+                padding: 20
+              }
+            },
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  return ` ${context.dataset.label}: ${context.parsed.y.toFixed(1)}%`;
+                }
+              }
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 100, // Gives a little headroom so the 100% bar doesn't hit the ceiling
+              border: { display: false },
+              grid: { color: 'rgba(0,0,0,0.05)' },
+              ticks: {
+                callback: function (value) { return value + '%'; },
+                font: { family: 'Inter', size: 12 }
+              }
+            },
+            x: {
+              grid: { display: false },
+              ticks: {
+                font: { family: 'Space Grotesk', size: 15, weight: '600' },
+                color: '#222'
+              }
+            }
+          }
+        }
+      });
+    }
+    // -------------------------------------------------------------
+    // ROBUSTNESS CHARTS (Side-by-Side)
+    // -------------------------------------------------------------
+
+    // Shared styling options for both charts to keep code clean
+    const sharedOptions = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: { font: { family: 'Space Grotesk', size: 14, weight: '600' } }
+        },
+        tooltip: {
+          callbacks: {
+            label: function (context) { return ` ${context.dataset.label}: ${context.parsed.y.toFixed(1)}%`; }
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 100,
+          border: { display: false },
+          grid: { color: 'rgba(0,0,0,0.05)' },
+          ticks: {
+            callback: function (value) { return value + '%'; },
+            font: { family: 'Inter', size: 12 }
+          }
+        },
+        x: {
+          grid: { display: false },
+          ticks: { font: { family: 'Space Grotesk', size: 14, weight: '600' }, color: '#222' }
+        }
+      }
+    };
+
+    // Left Chart: S1 (Distractors)
+    const robS1Ctx = document.getElementById('robustnessS1Chart');
+    if (robS1Ctx) {
+      new Chart(robS1Ctx, {
+        type: 'bar',
+        data: {
+          labels: ['ID', 'ST', 'Object', 'Skill', 'Task'],
+          datasets: [
+            { label: 'S1', data: [94.4, 91.7, 100.0, 91.7, 83.3], backgroundColor: '#4285F4', borderRadius: 4 },
+            { label: 'S1 w/ distractors', data: [77.8, 77.8, 66.7, 100.0, 66.7], backgroundColor: '#aecbfa', borderRadius: 4 }
+          ]
+        },
+        options: sharedOptions
+      });
+    }
+
+    // Right Chart: S2 (Unseen Objects)
+    const robS2Ctx = document.getElementById('robustnessS2Chart');
+    if (robS2Ctx) {
+      new Chart(robS2Ctx, {
+        type: 'bar',
+        data: {
+          labels: ['ST', 'Object', 'Skill', 'Task'],
+          datasets: [
+            { label: 'S2', data: [94.4, 100.0, 100.0, 83.3], backgroundColor: '#4285F4', borderRadius: 4 },
+            { label: 'S2 w/ Unseen Obj.', data: [86.1, 91.7, 100.0, 66.7], backgroundColor: '#aecbfa', borderRadius: 4 }
+          ]
+        },
+        options: sharedOptions
+      });
+    }
+  </script>
+</body>
+
+</html>

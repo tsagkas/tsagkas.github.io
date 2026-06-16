@@ -1,0 +1,907 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap');
+
+:root {
+  --brand-red: #D50032;         /* rgb(213, 0, 50) */
+  --brand-blue: #041E42;        /* rgb(4, 30, 66) */
+  --brand-bright-blue: #007288; /* rgb(0, 114, 136) */
+  --brand-bright-pink: #D0006F; /* rgb(208, 0, 111) */
+  --brand-purple: #830065;      /* rgb(131, 0, 101) */
+  --brand-burgundy: #A50034;    /* rgb(165, 0, 52) */
+  --brand-dark-green: #154734;  /* rgb(21, 71, 52) */
+  --brand-jade: #487A7B;        /* rgb(72, 122, 123) */
+  --brand-muted-blue: #004F71;  /* rgb(0, 79, 113) */
+  --brand-muted-brown: #6D4F47; /* rgb(109, 79, 71) */
+  --brand-spruce-grey: #333F48; /* rgb(51, 63, 72) */
+  --brand-spruce-grey-light: #52595e; /* rgb(51, 63, 72) */
+
+
+  /* Light mode backgrounds */
+  --bg-deep: #fafafa;
+  --bg-surface: #ffffff;
+  --bg-elevated: #f5f5f5;
+  --bg-card: rgba(255, 255, 255, 0.95);
+
+  /* Text hierarchy */
+  --text-primary: var(--brand-blue);
+  --text-secondary: var(--brand-spruce-grey);
+  --text-muted: rgba(51, 63, 72, 0.7); /* Spruce grey with opacity */
+
+  /* Refined borders */
+  --border-subtle: rgba(4, 30, 66, 0.08); /* Blue tint */
+  --border-light: rgba(4, 30, 66, 0.15);
+
+  /* Elegant gradients */
+  --gradient-warm: linear-gradient(135deg, var(--brand-red) 0%, var(--brand-burgundy) 100%);
+  --gradient-cool: linear-gradient(135deg, var(--brand-bright-blue) 0%, var(--brand-muted-blue) 100%);
+  --gradient-full: linear-gradient(135deg, var(--brand-red) 0%, var(--brand-purple) 40%, var(--brand-blue) 100%);
+
+  /* Light mode shadows for subtle tint */
+  --shadow-sm: 0 2px 8px rgba(4, 30, 66, 0.06);
+  --shadow-md: 0 8px 24px rgba(4, 30, 66, 0.08);
+  --shadow-lg: 0 16px 48px rgba(4, 30, 66, 0.12);
+  --shadow-glow: 0 8px 40px rgba(213, 0, 50, 0.15); /* Red glow */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-deep);
+  background-image:
+    radial-gradient(ellipse 120% 60% at 50% -20%, rgba(213, 0, 50, 0.03) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 50% at 100% 50%, rgba(0, 114, 136, 0.03) 0%, transparent 50%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-primary);
+  padding: 48px 28px 48px 28px;
+  position: relative;
+  min-height: 100vh;
+  line-height: 1.7;
+  font-size: 15px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Clean modern headings */
+h1, h2, h3, h4, h5, h6, .section-heading {
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.hero-text {
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+/* Progress Sidebar */
+.progress-sidebar {
+  position: fixed;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: none;
+}
+
+@media (min-width: 1400px) {
+  .progress-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+.progress-track {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.progress-line {
+  position: absolute;
+  left: 7px;
+  top: 22px;
+  bottom: 22px;
+  width: 2px;
+  background: var(--border-light);
+  z-index: 0;
+}
+
+.progress-line-fill {
+  position: absolute;
+  left: 7px;
+  top: 22px;
+  width: 2px;
+  background: var(--brand-red);
+  z-index: 1;
+  transition: height 0.3s ease;
+  height: 0;
+}
+
+.progress-item {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+}
+
+.progress-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 2px solid var(--border-light);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.progress-item.active .progress-dot {
+  background: var(--brand-red);
+  border-color: var(--brand-red);
+  box-shadow: 0 0 0 5px rgba(213, 0, 50, 0.15);
+}
+
+.progress-item.passed .progress-dot {
+  background: var(--brand-red);
+  border-color: var(--brand-red);
+}
+
+.progress-label {
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.progress-item:hover .progress-label,
+.progress-item.active .progress-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.progress-item.active .progress-label {
+  color: var(--brand-red);
+}
+
+.progress-item a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+/* Main Content */
+.main-content {
+  max-width: 1060px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero Section - Elegant */
+.hero-flow {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 48px 48px 48px;
+  border-radius: 28px;
+  margin-bottom: 40px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Soft flowing gradient orbs */
+.hero-flow::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: -250px;
+  left: -150px;
+  background: radial-gradient(circle, rgba(213, 0, 50, 0.08) 0%, rgba(213, 0, 50, 0) 70%);
+  animation: orbFlow1 25s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-flow::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  bottom: -200px;
+  right: -100px;
+  background: radial-gradient(circle, rgba(0, 114, 136, 0.06) 0%, rgba(0, 114, 136, 0) 70%);
+  animation: orbFlow2 30s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-flow > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Third orb */
+.hero-flow .hero-orb {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  top: 40%;
+  right: 10%;
+  transform: translateY(-50%);
+  background: radial-gradient(circle, rgba(131, 0, 101, 0.05) 0%, rgba(131, 0, 101, 0) 70%);
+  animation: orbFlow3 28s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes orbFlow1 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(80px, 40px); }
+  50% { transform: translate(120px, -20px); }
+  75% { transform: translate(40px, 60px); }
+}
+
+@keyframes orbFlow2 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-60px, -50px); }
+  50% { transform: translate(-100px, 30px); }
+  75% { transform: translate(-30px, -40px); }
+}
+
+@keyframes orbFlow3 {
+  0%, 100% { transform: translateY(-50%) translate(0, 0); }
+  33% { transform: translateY(-50%) translate(-50px, 70px); }
+  66% { transform: translateY(-50%) translate(40px, -50px); }
+}
+
+.hero-text {
+  font-size: 80px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.sub-hero-text {
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 36px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--text-secondary);
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-pill-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.hero-pill {
+  font-family: 'Fira Code', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 100px;
+  background: rgba(213, 0, 50, 0.08);
+  border: 1px solid rgba(213, 0, 50, 0.2);
+  color: var(--brand-red);
+  transition: all 0.25s ease;
+  animation: pillPopIn 0.5s ease both;
+}
+
+.hero-pill:nth-child(1) { animation-delay: 0.1s; }
+.hero-pill:nth-child(2) { animation-delay: 0.2s; }
+.hero-pill:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes pillPopIn {
+  0% { opacity: 0; transform: scale(0.8) translateY(10px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.hero-pill:hover {
+  background: rgba(213, 0, 50, 0.12);
+  border-color: rgba(213, 0, 50, 0.3);
+  transform: translateY(-2px);
+}
+
+.hero-flow .authors {
+  text-align: center;
+}
+
+/* Authors */
+.authors {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 2;
+  margin-top: 0;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.authors span {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.authors .affiliation {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-style: normal;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 12px;
+}
+
+.authors a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.authors a:hover {
+  color: var(--brand-red);
+}
+
+/* Hero Actions */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.cta {
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  color: var(--text-primary);
+  background: transparent;
+  transition: all 0.25s ease;
+}
+
+/* --- Button Colors & Hover Shades --- */
+
+/* Primary Button (ArXiv) - The Awesome Red */
+.cta.primary {
+  background: var(--brand-red);
+  border-color: var(--brand-red);
+  color: #fff;
+}
+
+.cta.primary:hover {
+  background: var(--brand-burgundy);
+  border-color: var(--brand-burgundy);
+  /* Red glowing shade */
+  box-shadow: 0 12px 32px rgba(213, 0, 50, 0.35); 
+}
+
+/* Secondary Button (Code) - Deep Navy */
+.cta.dark {
+  background: var(--brand-blue);
+  border-color: var(--brand-blue);
+  color: #fff;
+}
+
+/* Third Button (Cite) - Crisp Grey */
+.cta.neutrallight {
+  background: var(--brand-spruce-grey-light);
+  border-color: var(--brand-spruce-grey-light);
+  color: var(--brand-spruce-grey-light);
+}
+
+.cta.dark:hover {
+  background: var(--brand-spruce-grey); /* Fades slightly lighter on hover */
+  border-color: var(--brand-spruce-grey);
+  /* Deep blue glowing shade */
+  box-shadow: 0 12px 32px rgba(4, 30, 66, 0.35); 
+}
+
+/* Neutral Button (Cite) - Crisp Grey */
+.cta.neutral {
+  background: var(--bg-surface);
+  border-color: var(--border-light);
+  color: var(--brand-spruce-grey);
+}
+
+.cta.neutral:hover {
+  background: var(--bg-elevated);
+  border-color: var(--text-muted);
+  color: var(--text-primary);
+  /* Soft grey shadow */
+  box-shadow: 0 12px 32px rgba(51, 63, 72, 0.15); 
+}
+
+/* General hover lift for all buttons */
+.cta:hover {
+  transform: translateY(-2px);
+}
+
+/* Hero Waves */
+.hero-waves {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  margin-top: 24px;
+  overflow: hidden;
+  opacity: 0.7;
+}
+
+.waves-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.wave-parallax use {
+  animation: waveShift 16s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.wave-parallax use:nth-child(1) { animation-delay: -2s; animation-duration: 16s; }
+.wave-parallax use:nth-child(2) { animation-delay: -4s; animation-duration: 14s; }
+.wave-parallax use:nth-child(3) { animation-delay: -6s; animation-duration: 20s; }
+.wave-parallax use:nth-child(4) { animation-delay: -8s; animation-duration: 18s; }
+
+@keyframes waveShift {
+  0% { transform: translate3d(-90px, 0, 0); }
+  50% { transform: translate3d(20px, 0, 0); }
+  100% { transform: translate3d(-90px, 0, 0); }
+}
+
+/* Tagline - Section Headers */
+.tagline {
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  background: transparent;
+  color: var(--text-primary);
+  display: block;
+  padding: 48px 0 0 0;
+  margin: 24px 0 20px 0;
+  border: none;
+  position: relative;
+}
+
+.tagline::before {
+  display: none;
+}
+
+.tagline::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-red) 0%, rgba(213, 0, 50, 0.15) 40%, transparent 100%);
+  border-radius: 2px;
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+
+/* Quick Links */
+.quick-links {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.quick-links a {
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin: 0 18px;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.quick-links a:hover {
+  color: var(--brand-red);
+  border-bottom-color: var(--brand-red);
+}
+
+/* Images */
+img {
+  width: 100%;
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  margin: 0;
+  box-sizing: border-box;
+  box-shadow: var(--shadow-md);
+}
+
+.main-content > img {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Figure Caption */
+.figure-caption {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 48px;
+  padding: 0 32px;
+  line-height: 1.7;
+}
+
+/* Card Surface - Refined */
+.card-surface {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.card-surface:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Section styles */
+.section {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 48px;
+  color: var(--text-secondary);
+}
+
+.section-heading {
+  font-size: 28px;
+  margin: 0 0 12px 0;
+  color: var(--text-primary);
+}
+
+.section-lead {
+  color: var(--text-muted);
+  margin: 0 0 24px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Pipeline Grid */
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin: 32px 0 24px 0;
+}
+
+.pipeline-card {
+  background: var(--bg-elevated);
+  border-radius: 24px;
+  border: 1px solid var(--border-subtle);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.pipeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.pipeline-card p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.pipeline-step {
+  font-family: 'Fira Code', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+  color: var(--brand-red);
+}
+
+
+/* Co-training Split Card (Used for Robustness Section) */
+.cotrain-split-card {
+  margin-top: 24px;
+}
+
+.cotrain-split {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.cotrain-left,
+.cotrain-right {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.cotrain-section-title {
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.cotrain-section-lead {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+@media (max-width: 900px) {
+  .cotrain-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* BibTeX */
+.bibtex-code {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 32px;
+  border-radius: 20px;
+  max-width: 1000px;
+  box-sizing: border-box;
+  font-size: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.bibtex-title {
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: var(--text-primary);
+}
+
+.bibtex-code pre {
+  white-space: pre;
+  overflow-x: auto;
+  margin: 0;
+}
+
+.bibtex-code code {
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Footer */
+.footer {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 120px;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.footer a {
+  color: var(--brand-red);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer a:hover {
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 24px 18px;
+    font-size: 14px;
+  }
+  
+  .hero-text {
+    font-size: 48px;
+  }
+  
+  .sub-hero-text {
+    font-size: 20px;
+  }
+  
+  .hero-flow {
+    padding: 40px 28px 32px 28px;
+    border-radius: 24px;
+  }
+  
+  .tagline {
+    font-size: 24px;
+  }
+  
+  .card-surface {
+    padding: 24px;
+    border-radius: 20px;
+  }
+  
+  .section-heading {
+    font-size: 24px;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+  background: rgba(213, 0, 50, 0.25);
+  color: var(--text-primary);
+}
+
+/* Focus */
+:focus-visible {
+  outline: 2px solid var(--brand-red);
+  outline-offset: 3px;
+}
+
+/* --- Horizontal Video Carousel --- */
+.video-carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  margin-top: 24px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-card {
+  flex: 0 0 280px; /* Fixed width for each video card */
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--bg-elevated);
+  padding: 12px;
+  border-radius: 18px;
+  border: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+/* Custom Scrollbar for Carousel */
+.video-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+.video-carousel::-webkit-scrollbar-track {
+  background: var(--bg-elevated);
+  border-radius: 4px;
+}
+.video-carousel::-webkit-scrollbar-thumb {
+  background: rgba(0, 114, 136, 0.3); /* Bright Blue with opacity */
+  border-radius: 4px;
+}
+.video-carousel::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 114, 136, 0.8);
+}
+
+/* Affiliation Logos Styles */
+.affiliation-logos {
+      display: flex !important;
+      flex-direction: row !important; /* Forces horizontal alignment */
+      justify-content: center !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 24px !important;
+      margin-top: 16px !important;
+      width: 100% !important;
+    }
+    
+    .affiliation-logos a {
+      display: flex !important;
+      flex-direction: row !important; /* Keeps the superscript and image side-by-side */
+      align-items: flex-start !important;
+      width: auto !important; /* Prevents the link from stretching full width */
+      text-decoration: none !important;
+      color: inherit !important;
+      transition: opacity 0.2s ease;
+      
+      /* Overrides to remove inherited box styles from links */
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    .affiliation-logos sup {
+      margin-right: 4px;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .affiliation-logos img {
+      height: 35px !important; 
+      width: auto !important;
+      object-fit: contain !important;
+      
+      /* Overrides to remove inherited box/curve styles from images */
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+.affiliation-logos a:hover {
+  opacity: 0.8;
+}
+
+.affiliation-logos sup {
+  margin-right: 4px;
+  font-size: 12px;
+  color: var(--text-secondary); /* Uses your existing CSS variable */
+}
+
+.affiliation-logos img {
+  height: 35px; /* Adjust this value to scale the logos up or down */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Copy BibTeX Button */
+    .copy-bibtex-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .copy-bibtex-btn:hover {
+      background: var(--bg-elevated);
+      color: var(--text-primary);
+    }
+
+    .copy-bibtex-btn.copied {
+      background: rgba(21, 71, 52, 0.1); 
+      color: #154734;
+      border-color: #154734;
+    }
