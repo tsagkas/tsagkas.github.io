@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="light">
 
 <head>
   <!-- Google tag (gtag.js) -->
@@ -11,379 +11,363 @@
 
     gtag('config', 'G-K8JK18X15P');
   </script>
-  <meta charset="utf-8">
+  <base target="_blank">
+  <meta charset="UTF-8">
   <meta name="description" content="Click to Grasp">
   <meta name="keywords" content="Manipulation, Semantic Correspondence">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Click to Grasp</title>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="static/images/dolly-Photoroom.png-Photoroom.png">
+  <title>Click to Grasp</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
 </head>
 
 <body>
-
-  <body onload="updateInteractive();">
-
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div class="navbar-menu">
-        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-          <a class="navbar-item" href="../index.html">
-            <span class="icon">
-              <i class="fas fa-home"></i>
-            </span>
-          </a>
-
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              More Research
-            </a>
-            <div class="navbar-dropdown">
-              <a class="navbar-item" target="_blank" href="../pvrobo/index.html">
-                PVRobo
-              </a>
-              <a class="navbar-item" target="_blank" href="../affgrasp/index.html">
-                AffGrasp
-              </a>
-              <a class="navbar-item" href="../vl-fields/index.html">
-                VL-Fields
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </nav>
-
-
-
-    <section class="hero">
-      <div class="hero-body">
-        <div class="container is-fullhd">
-          <div class="columns is-centered">
-            <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">Click to Grasp: Zero-Shot Precise Manipulation<br>via Visual
-                Diffusion Descriptors</h1>
-              <!-- <h3 class="title is-4 conference-authors"><a target="_blank" href="https://www.corl2023.org/">CoRL 2023 (Oral)</a></h3> -->
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">
-                  <a target="_blank" href="../index.html">Nikolaos Tsagkas</a><sup>1,2</sup>,
-                </span>
-                <span class="author-block">
-                  <a target="_blank" href="https://rad.inf.ed.ac.uk/">Jack Rome</a><sup>1</sup>,
-                </span>
-                <span class="author-block">
-                  <a target="_blank" href="https://rad.inf.ed.ac.uk/">Subramanian Ramamoorthy</a><sup>1,2</sup>,
-                </span>
-                <span class="author-block">
-                  <a target="_blank" href="https://homepages.inf.ed.ac.uk/omacaod/">Oisin Mac Aodha</a><sup>1</sup>,
-                </span>
-                <span class="author-block">
-                  <a target="_blank" href="https://christopherlu.github.io/">Chris Xiaoxuan Lu</a><sup>3</sup>
-                </span>
-              </div>
-
-              <div class="is-size-5 publication-authors">
-                <span class="author-block"><sup>1</sup>University of Edinburgh,</span>
-                <span class="author-block"><sup>2</sup>Edinburgh Centre for Robotics,</span>
-                <span class="author-block"><sup>3</sup>UCL</span>
-              </div>
-
-              <div class="column has-text-centered">
-                <div class="publication-links">
-                  <!-- PDF Link. -->
-                  <span class="link-block">
-                    <a target="_blank" href="click2grasp.pdf" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Paper</span>
-                    </a>
-                  </span>
-
-                  <!-- Arxiv Link. -->
-                  <span class="link-block">
-                    <a target="_blank" href="https://arxiv.org/abs/2403.14526"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file"></i>
-                      </span>
-                      <span>ArXiv</span>
-                    </a>
-                  </span>
-
-                  <!-- Video Link. href="https://tsagkas.github.io/click2grasp/" -->
-                  <span class="link-block">
-                    <a target="_blank" class="external-link button is-normal is-rounded is-dark" disabled>
-                      <span class="icon">
-                        <i class="fab fa-youtube"></i>
-                      </span>
-                      <span>Video</span>
-                    </a>
-                  </span>
-
-                  <!-- Code Link. -->
-                  <span class="link-block">
-                    <a href="https://github.com/tsagkas/click2grasp"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>Code</span>
-                    </a>
-                  </span>
-                </div>
-
-                <div class="is-size-5 publication-authors">
-                  <span class="author-block"> <mark><b>Oral Pitch + Poster</b>:</mark>
-
-                    IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024) [<a
-                      href="https://iros2024-abudhabi.org/">link</a>]</span>
-                  <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
-                </div>
-
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="hero is-light is-small">
-      <!-- <h2 class="title is-3">Real-World Results</h2> -->
-      <div class="hero-body">
-        <div class="container">
-          <!-- <h4 class="title">Left Arm</h4> -->
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item">
-              <video poster="index.html" autoplay muted loop height="100%">
-                <source src="media/videos/robot/toys/left/toys_dolly_18_left_comp.mp4" type="video/mp4">
-              </video>
-            </div>
-
-            <div class="item">
-              <video poster="index.html" autoplay muted loop height="100%">
-                <source src="media/videos/robot/toys/right/toys_brownie_16_right_comp.mp4" type="video/mp4">
-              </video>
-            </div>
-
-            <div class="item">
-              <video poster="index.html" autoplay muted loop height="100%">
-                <source src="media/videos/robot/toys/left/toys_goldie_15_left_comp.mp4" type="video/mp4">
-              </video>
-            </div>
-
-            <div class="item">
-              <video poster="index.html" autoplay muted loop height="100%">
-                <source src="media/videos/robot/toys/right/toys_dolly_16_right_comp.mp4" type="video/mp4">
-              </video>
-            </div>
-
-            <div class="item">
-              <video poster="index.html" autoplay muted loop height="100%">
-                <source src="media/videos/robot/toys/right/toys_brownie_18_right_comp.mp4" type="video/mp4">
-              </video>
-            </div>
-
-            <div class="item">
-              <video poster="index.html" autoplay muted loop height="100%">
-                <source src="media/videos/robot/toys/left/toys_goldie_16_left_comp.mp4" type="video/mp4">
-              </video>
-            </div>
-
-
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Grasping from the <i>left</i> or the <i>right</i> arm of a <u>stuffed toy</u>.
-          </h2>
-        </div>
-      </div>
-
-
-
-
-      <div class="hero-body">
-        <div class="container">
-          <!-- <h4 class="title">Left Arm</h4> -->
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item">
-              <video poster="index.html" autoplay muted loop height="100%">
-                <source src="media/videos/robot/shoes/left/shoes_nf_09_left_comp.mp4" type="video/mp4">
-              </video>
-            </div>
-            <div class="item">
-              <video poster="index.html" autoplay muted loop height="100%">
-                <source src="media/videos/robot/shoes/left/shoes_timbs_08_left_comp.mp4" type="video/mp4">
-              </video>
-            </div>
-
-            <div class="item">
-              <video poster="index.html" autoplay muted loop height="100%">
-                <source src="media/videos/robot/shoes/left/shoes_blundies_09_left_comp.mp4" type="video/mp4">
-              </video>
-            </div>
-
-            <div class="item">
-              <video poster="index.html" autoplay muted loop height="100%">
-                <source src="media/videos/robot/shoes/right/shoes_nf_10_right_comp.mp4" type="video/mp4">
-              </video>
-            </div>
-
-            <div class="item">
-              <video poster="index.html" autoplay muted loop height="100%">
-                <source src="media/videos/robot/shoes/right/shoes_nf_09_right_comp.mp4" type="video/mp4">
-              </video>
-            </div>
-
-
-            <div class="item">
-              <video poster="index.html" autoplay muted loop height="100%">
-                <source src="media/videos/robot/shoes/right/shoes_blunds_08_right_comp.mp4" type="video/mp4">
-              </video>
-            </div>
-
-
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Grasping from the opening of the <i>left</i> or the <i>right</i> <u>shoe</u>.
-          </h2>
-        </div>
-      </div>
-
-
-
-
-
-
-
-
-      <h2 class="subtitle has-text-centered">
-        <br>
-        <span class="dperact">Click to Grasp</span> leverages web-trained text-to-image diffusion-based generative
-        models to extract fine-grained part descriptors, <br> enabling <b>zero-shot</b> synthesis of gripper poses for
-        precise manipulation tasks in diverse tabletop scenarios.
-
-      </h2>
-    </section>
-
-    <section class="section">
-      <div class="container is-max-desktop">
-        <!-- Abstract. -->
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
-            <div class="content has-text-justified">
-              <p>
-                Precise manipulation that is generalizable across scenes and objects remains a persistent challenge in
-                robotics. Current approaches for this task heavily depend on having a significant number of training
-                instances to handle objects with pronounced visual and/or geometric part ambiguities. Our work explores
-                the grounding of fine-grained part descriptors for precise manipulation in a zero-shot setting by
-                utilizing web-trained text-to-image diffusion-based generative models. We tackle the problem by framing
-                it as a dense semantic part correspondence task. Our model returns a gripper pose for manipulating a
-                specific part, using as reference a user-defined click from a source image of a visually different
-                instance of the same object. We require no manual grasping demonstrations as we leverage the intrinsic
-                object geometry and features. Practical experiments in a real-world tabletop scenario validate the
-                efficacy of our approach, demonstrating its potential for advancing semantic-aware robotics
-                manipulation.
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <div class="toc-container">
+          <div class="toc-content">
+            <aside class="menu compact-toc">
+              <p class="menu-label">
+                Table of Contents
               </p>
+              <ul class="menu-list">
+                <li><a href="index.html#abstract" target="_self">Abstract</a></li>
+                <li><a href="index.html#results" target="_self">Real-World Results</a></li>
+                <ul>
+                  <li><a href="index.html#results-toys" target="_self">Grasping Toys</a></li>
+                  <li><a href="index.html#results-shoes" target="_self">Grasping Shoes</a></li>
+                </ul>
+                <li><a href="index.html#cite" target="_self">BibTeX</a></li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+
+        <h1 class="title is-2 is-size-2-mobile mt-0">Click to Grasp: Zero-Shot Precise Manipulation<br>via Visual
+          Diffusion Descriptors</h1>
+
+        <div class="author-info">
+          <p class="subtitle">
+          <div class="is-inline-block is-size-5"><a class="has-text-weight-semibold" href="../index.html">Nikolaos
+              Tsagkas</a><sup>1,2</sup>,</div>
+          <div class="is-inline-block is-size-5"><a class="has-text-weight-semibold"
+              href="https://rad.inf.ed.ac.uk/">Jack Rome</a><sup>1</sup>,</div>
+          <div class="is-inline-block is-size-5"><a class="has-text-weight-semibold"
+              href="https://rad.inf.ed.ac.uk/">Subramanian Ramamoorthy</a><sup>1,2</sup>,</div>
+          <div class="is-inline-block is-size-5"><a class="has-text-weight-semibold"
+              href="https://homepages.inf.ed.ac.uk/omacaod/">Oisin Mac Aodha</a><sup>1</sup>,</div>
+          <div class="is-inline-block is-size-5"><a class="has-text-weight-semibold"
+              href="https://christopherlu.github.io/">Chris Xiaoxuan Lu</a><sup>3</sup></div>
+          </p>
+          <p class="subtitle">
+          <div class="is-inline-block"><sup>1</sup><a href="https://informatics.ed.ac.uk/">University of Edinburgh</a>,
+          </div>
+          <div class="is-inline-block"><sup>2</sup><a href="https://www.edinburgh-robotics.org/">Edinburgh Centre for
+              Robotics</a>,</div>
+          <div class="is-inline-block"><sup>3</sup><a href="https://www.ucl.ac.uk/">UCL</a></div>
+          </p>
+          <p class="is-size-5 mt-4">
+            <mark><strong>Oral Pitch + Poster</strong>:</mark> IEEE/RSJ International Conference on Intelligent Robots
+            and Systems (IROS 2024) [<a href="https://iros2024-abudhabi.org/">link</a>]
+          </p>
+        </div>
+
+        <div class="columns is-vcentered mt-1">
+          <div class="column is-narrow">
+            <a href="click2grasp.pdf" class="button is-size-5 mr-1 mt-2">
+              <span class="icon">
+                <i class="fas fa-file-pdf"></i>
+              </span>
+              <span>Paper</span>
+            </a>
+
+            <a href="https://arxiv.org/abs/2403.14526" class="button is-size-5 mr-1 mt-2">
+              <span class="icon">
+                <i class="ai ai-arxiv"></i>
+              </span>
+              <span>arXiv</span>
+            </a>
+
+            <span class="button is-size-5 mr-1 mt-2" style="opacity: 0.5; cursor: default;" title="Video coming soon">
+              <span class="icon">
+                <i class="fab fa-youtube"></i>
+              </span>
+              <span>Video</span>
+            </span>
+
+            <a href="https://github.com/tsagkas/click2grasp" class="button is-size-5 mr-1 mt-2">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>Code</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="columns is-centered is-multiline">
+          <div class="column is-four-fifths">
+            <div class="video-card box is-paddingless is-clipped">
+
+              <video controls playsinline loop muted autoplay style="width: 100%">
+                <source src="media/videos/c2g_comp.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
             </div>
           </div>
         </div>
-        <!--/ Abstract. -->
 
-      </div>
+        <div class="box"
+          style="background-color: var(--card-background); border-left: 6px solid #3273dc; color: var(--text); margin-bottom: 2rem;">
+          <div class="is-flex is-align-items-center mb-2">
+            <span class="icon is-medium has-text-link mr-2">
+              <i class="fas fa-bolt fa-lg"></i>
+            </span>
+            <h3 class="title is-4 is-marginless has-text-link" style="letter-spacing: 1px;">TL;DR
+            </h3>
+          </div>
+          <div class="content" style="font-size: 1.1em;">
+            <p>
+              <span class="dperact">Click to Grasp</span> leverages web-trained text-to-image diffusion-based
+              generative models to extract fine-grained part descriptors, enabling <strong>zero-shot</strong> synthesis
+              of gripper poses for precise manipulation tasks in diverse tabletop scenarios. It takes calibrated RGB-D
+              images of a tabletop and user-defined part instances in diverse source images as input, and produces
+              gripper poses for interaction, effectively disambiguating between visually similar but semantically
+              different concepts (e.g., left vs right arms).
+            </p>
+          </div>
+        </div>
 
-      <!-- Paper video. -->
-      <!-- <br>
-  <br>
+        <h2 id="abstract" class="title is-2">Abstract</h2>
+        <hr class="divider">
+        <p>
+          Precise manipulation that is generalizable across scenes and objects remains a persistent challenge in
+          robotics. Current approaches for this task heavily depend on having a significant number of training
+          instances to handle objects with pronounced visual and/or geometric part ambiguities. Our work explores the
+          grounding of fine-grained part descriptors for precise manipulation in a zero-shot setting by utilizing
+          web-trained text-to-image diffusion-based generative models. We tackle the problem by framing it as a dense
+          semantic part correspondence task. Our model returns a gripper pose for manipulating a specific part, using
+          as reference a user-defined click from a source image of a visually different instance of the same object.
+          We require no manual grasping demonstrations as we leverage the intrinsic object geometry and features.
+          Practical experiments in a real-world tabletop scenario validate the efficacy of our approach, demonstrating
+          its potential for advancing semantic-aware robotics manipulation.
+        </p>
 
-  <div class="container is-max-widescreen">
+        <h2 id="results" class="title is-2">Real-World Results</h2>
+        <hr class="divider">
 
-    <div class="rows">
-      <h2 class="title is-3">Video</h2>
-      <div class="publication-video">
-        <iframe src="https://www.youtube.com/embed/Yvn4eR05A3M"
-                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <h3 id="results-toys" class="title is-3">Grasping Toys</h3>
+        <p>
+          Grasping from the <em>left</em> or the <em>right</em> arm of a stuffed toy.
+        </p>
+        <div class="carousel-container mb-5">
+          <button class="carousel-btn prev" onclick="moveCarousel('track-toys', -1)"><i
+              class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn next" onclick="moveCarousel('track-toys', 1)"><i
+              class="fas fa-chevron-right"></i></button>
+
+          <div class="carousel-track" id="track-toys">
+            <div class="carousel-item">
+              <div class="video-card">
+                <video loop muted playsinline preload="none" class="manual-obs">
+                  <source src="media/videos/robot/toys/left/toys_dolly_18_left_comp.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="video-card">
+                <video loop muted playsinline preload="none" class="manual-obs">
+                  <source src="media/videos/robot/toys/right/toys_brownie_16_right_comp.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="video-card">
+                <video loop muted playsinline preload="none" class="manual-obs">
+                  <source src="media/videos/robot/toys/left/toys_goldie_15_left_comp.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="video-card">
+                <video loop muted playsinline preload="none" class="manual-obs">
+                  <source src="media/videos/robot/toys/right/toys_dolly_16_right_comp.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="video-card">
+                <video loop muted playsinline preload="none" class="manual-obs">
+                  <source src="media/videos/robot/toys/right/toys_brownie_18_right_comp.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="video-card">
+                <video loop muted playsinline preload="none" class="manual-obs">
+                  <source src="media/videos/robot/toys/left/toys_goldie_16_left_comp.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 id="results-shoes" class="title is-3 mt-6">Grasping Shoes</h3>
+        <p>
+          Grasping from the opening of the <em>left</em> or the <em>right</em> shoe.
+        </p>
+        <div class="carousel-container mb-6">
+          <button class="carousel-btn prev" onclick="moveCarousel('track-shoes', -1)"><i
+              class="fas fa-chevron-left"></i></button>
+          <button class="carousel-btn next" onclick="moveCarousel('track-shoes', 1)"><i
+              class="fas fa-chevron-right"></i></button>
+
+          <div class="carousel-track" id="track-shoes">
+            <div class="carousel-item">
+              <div class="video-card">
+                <video loop muted playsinline preload="none" class="manual-obs">
+                  <source src="media/videos/robot/shoes/left/shoes_nf_09_left_comp.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="video-card">
+                <video loop muted playsinline preload="none" class="manual-obs">
+                  <source src="media/videos/robot/shoes/left/shoes_timbs_08_left_comp.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="video-card">
+                <video loop muted playsinline preload="none" class="manual-obs">
+                  <source src="media/videos/robot/shoes/left/shoes_blundies_09_left_comp.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="video-card">
+                <video loop muted playsinline preload="none" class="manual-obs">
+                  <source src="media/videos/robot/shoes/right/shoes_nf_10_right_comp.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="video-card">
+                <video loop muted playsinline preload="none" class="manual-obs">
+                  <source src="media/videos/robot/shoes/right/shoes_nf_09_right_comp.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="video-card">
+                <video loop muted playsinline preload="none" class="manual-obs">
+                  <source src="media/videos/robot/shoes/right/shoes_blunds_08_right_comp.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Citation section -->
+        <h2 id="cite" class="title is-2">BibTeX</h2>
+        <hr class="divider">
+        <div class="is-relative">
+          <pre class="textarea is-family-code" readonly id="citation-text">@inproceedings{tsagkas2024click,
+    title={Click to Grasp: Zero-Shot Precise Manipulation via Visual Diffusion Descriptors},
+    author={Tsagkas, Nikolaos and Rome, Jack and Ramamoorthy, Subramanian and Mac Aodha, Oisin and Lu, Chris Xiaoxuan},
+    journal={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+    year={2024}
+}</pre>
+          <button id="citation-copy-button" class="button is-small" onclick="copyCitation()">
+            <span class="icon">
+              <i class="fas fa-copy"></i>
+            </span>
+          </button>
+          <div id="toast" class="notification is-success is-light is-hidden">
+            Copied to clipboard!
+          </div>
+        </div>
+
+        <hr class="divider">
+        <div class="level">
+          <div class="level-left">
+            <div class="level-item">
+              <a href="https://github.com/nerfies/nerfies.github.io" class="has-text-weight-light">
+                <span class="icon"><i class="fab fa-github"></i></span> Website template borrowed from NeRFies,
+                PerAct, VoxPoser.
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div> -->
+  </section>
 
-    </section>
+  <script>
+    // Handle copying citation text
+    const copyCitation = async () => {
+      try {
+        const citationText = document.getElementById('citation-text').innerText;
+        await navigator.clipboard.writeText(citationText);
 
+        const toast = document.getElementById('toast');
+        toast.classList.remove('is-hidden');
+        setTimeout(() => toast.classList.add('is-hidden'), 2000);
+      } catch (err) {
+        console.error('Failed to copy citation:', err);
+      }
+    };
 
-    <section class="hero teaser">
-      <div class="container is-fullhd">
-        <div class="hero-body">
-          <div class="container">
-            <div class="columns is-vcentered  is-centered">
-              <video id="teaser" autoplay muted loop height="70%" width="70%">
-                <source src="media/videos/c2g_comp.mp4" type="video/mp4">
-              </video>
-              <br>
-            </div>
-            <br>
-            <h2 class="subtitle has-text-centered">
-              <!-- <span class="dperact">Click to Grasp</span> leverages web-trained text-to-image diffusion-based generative models to extract fine-grained part descriptors, <br> enabling <b>zero-shot</b> synthesis of gripper poses for precise manipulation tasks in diverse tabletop scenarios. -->
-              <span class="dperact">Click to Grasp</span> takes calibrated RGB-D images of a tabletop and user-defined
-              part instances in diverse source images as input, and produces gripper poses for interaction, effectively
-              disambiguating between visually similar but semantically different concepts (e.g., left vs right arms).
-            </h2>
-          </div>
-        </div>
-      </div>
-    </section>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Lazy loading & autoplay for rollout clips: fetch metadata only once a
+      // clip nears the viewport, and only play while it is substantially visible.
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: [0.01, 0.6]
+      };
 
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const video = entry.target;
 
-    <section class="section" id="BibTeX">
-      <div class="container is-max-widescreen content">
-        <h2 class="title">BibTeX</h2>
-        <pre><code>@inproceedings{tsagkas2024click,
-      title={Click to Grasp: Zero-Shot Precise Manipulation via Visual Diffusion Descriptors},
-      author={Tsagkas, Nikolaos and Rome, Jack and Ramamoorthy, Subramanian and Mac Aodha, Oisin and Lu, Chris Xiaoxuan},
-      journal={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-      year={2024}
-    }</code></pre>
-      </div>
-    </section>
+          if (entry.intersectionRatio > 0) {
+            if (video.preload === 'none') {
+              video.preload = 'metadata';
+            }
+          }
 
+          if (entry.intersectionRatio > 0.6) {
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+              playPromise.catch(() => { });
+            }
+          } else {
+            video.pause();
+          }
+        });
+      }, observerOptions);
 
-    <footer class="footer">
-      <div class="container">
-        <div class="columns is-centered">
-          <div class="column">
-            <div class="content has-text-centered">
-              <p>
-                Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>, <a
-                  href="https://peract.github.io/">PerAct</a>, <a href="https://voxposer.github.io/">VoxPoser</a>.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
+      document.querySelectorAll('.manual-obs').forEach(video => {
+        observer.observe(video);
+      });
+    });
+
+    function moveCarousel(trackId, direction) {
+      const track = document.getElementById(trackId);
+      if (track) {
+        const scrollAmount = track.clientWidth * 0.6;
+        track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+      }
+    }
+  </script>
+
+</body>
 
 </html>
