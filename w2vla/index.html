@@ -27,14 +27,15 @@
     };
   </script>
   <style>
-    /* Minor adjustments for GIF compatibility with existing video classes */
-    img.gif-player {
+    /* Looping rollout clips (H.264 instead of GIF, ~18x smaller) */
+    video.gif-player {
       width: 100%;
       height: auto;
       border-radius: 14px;
       display: block;
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border-subtle);
+      background: var(--bg-elevated);
     }
 
     .model-col {
@@ -365,28 +366,28 @@
           <p class="figure-caption"
             style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Move Back,
             🍌)</p>
-          <img class="gif-player" src="./videos/3-distractors/back_banana_1.gif" alt="Distractor rollout">
+          <video class="gif-player" src="./videos/3-distractors/back_banana_1.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Distractor rollout"></video>
           <div class="model-badge badge-success" style="align-self: center;">✅ Success</div>
         </div>
         <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
           <p class="figure-caption"
             style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Move Back,
             🥕)</p>
-          <img class="gif-player" src="./videos/3-distractors/back_carrot_1.gif" alt="Distractor rollout">
+          <video class="gif-player" src="./videos/3-distractors/back_carrot_1.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Distractor rollout"></video>
           <div class="model-badge badge-success" style="align-self: center;">✅ Success</div>
         </div>
         <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
           <p class="figure-caption"
             style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Rotate, 🍌)
           </p>
-          <img class="gif-player" src="./videos/3-distractors/rotate_banana_1.gif" alt="Distractor rollout">
+          <video class="gif-player" src="./videos/3-distractors/rotate_banana_1.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Distractor rollout"></video>
           <div class="model-badge badge-success" style="align-self: center;">✅ Success</div>
         </div>
         <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
           <p class="figure-caption"
             style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Rotate, 🍌)
           </p>
-          <img class="gif-player" src="./videos/3-distractors/rotate_banana_fail.gif" alt="Distractor rollout">
+          <video class="gif-player" src="./videos/3-distractors/rotate_banana_fail.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Distractor rollout"></video>
           <div class="model-badge badge-fail" style="align-self: center; text-align: center;">❌ Failure<br><span
               style="font-size: 12px; font-weight: normal;"><em>Picked mid-air</em></span></div>
         </div>
@@ -394,14 +395,14 @@
           <p class="figure-caption"
             style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Rotate, 🥕)
           </p>
-          <img class="gif-player" src="./videos/3-distractors/rotate_carrot_1.gif" alt="Distractor failure">
+          <video class="gif-player" src="./videos/3-distractors/rotate_carrot_1.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Distractor failure"></video>
           <div class="model-badge badge-success" style="align-self: center;">✅ Success</div>
         </div>
         <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
           <p class="figure-caption"
             style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Rotate, 🥕)
           </p>
-          <img class="gif-player" src="./videos/3-distractors/rotate_carrot_fail.gif" alt="Distractor failure">
+          <video class="gif-player" src="./videos/3-distractors/rotate_carrot_fail.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Distractor failure"></video>
           <div class="model-badge badge-fail" style="align-self: center; text-align: center;">❌ Failure<br><span
               style="font-size: 12px; font-weight: normal;"><em>Grasping slipped</em></span></div>
         </div>
@@ -419,35 +420,35 @@
           <p class="figure-caption"
             style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Place Bowl,
             🥤)</p>
-          <img class="gif-player" src="./videos/4-unseen/11_bowl_coke.gif" alt="Unseen rollout">
+          <video class="gif-player" src="./videos/4-unseen/11_bowl_coke.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Unseen rollout"></video>
           <div class="model-badge badge-success" style="align-self: center;">✅ Success</div>
         </div>
         <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
           <p class="figure-caption"
             style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Place Plate,
             🍋)</p>
-          <img class="gif-player" src="./videos/4-unseen/3_plate_lemon.gif" alt="Unseen rollout">
+          <video class="gif-player" src="./videos/4-unseen/3_plate_lemon.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Unseen rollout"></video>
           <div class="model-badge badge-success" style="align-self: center;">✅ Success</div>
         </div>
         <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
           <p class="figure-caption"
             style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Place Bowl,
             🥤)</p>
-          <img class="gif-player" src="./videos/4-unseen/12_bowl_fanta.gif" alt="Unseen rollout">
+          <video class="gif-player" src="./videos/4-unseen/12_bowl_fanta.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Unseen rollout"></video>
           <div class="model-badge badge-success" style="align-self: center;">✅ Success</div>
         </div>
         <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
           <p class="figure-caption"
             style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Place Bowl,
             🍓)</p>
-          <img class="gif-player" src="./videos/4-unseen/5_bowl_strawberry.gif" alt="Unseen rollout">
+          <video class="gif-player" src="./videos/4-unseen/5_bowl_strawberry.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Unseen rollout"></video>
           <div class="model-badge badge-success" style="align-self: center;">✅ Success</div>
         </div>
         <div class="carousel-card" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
           <p class="figure-caption"
             style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Place Plate,
             🥒)</p>
-          <img class="gif-player" src="./videos/4-unseen/8_plate_cucumber_failure.gif" alt="Unseen failure">
+          <video class="gif-player" src="./videos/4-unseen/8_plate_cucumber_failure.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Unseen failure"></video>
           <div class="model-badge badge-fail" style="align-self: center; text-align: center;">❌ Failure<br><span
               style="font-size: 12px; font-weight: normal;"><em>Failed to pick</em></span></div>
         </div>
@@ -455,7 +456,7 @@
           <p class="figure-caption"
             style="margin: 0; padding: 0; font-size: 15px; font-weight: 600; color: var(--text-primary);">(Place Plate,
             🥔)</p>
-          <img class="gif-player" src="./videos/4-unseen/6_plate_potato_failure.gif" alt="Unseen failure">
+          <video class="gif-player" src="./videos/4-unseen/6_plate_potato_failure.mp4" autoplay loop muted playsinline preload="metadata" aria-label="Unseen failure"></video>
           <div class="model-badge badge-fail" style="align-self: center; text-align: center;">❌ Failure<br><span
               style="font-size: 12px; font-weight: normal;"><em>Missed plate</em></span></div>
         </div>
@@ -514,7 +515,7 @@
   <script>
     // -------------------------------------------------------------
     // DATA CONFIGURATION
-    // Populated dynamically from local .gif directories
+    // Populated dynamically from local rollout clip directories
     // -------------------------------------------------------------
     const evaluationData = {
       1: {
@@ -522,28 +523,28 @@
           task1: '(Rotate, 🥕)',
           task2: '(Move Back, 🍌)',
           t1_results: [
-            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/otter/id-rotate-carrot-right.gif" },
-            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/pi05/id-rotate-carrot-left.gif" },
-            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/w2vla/id-rotate-carrot-right.gif" }
+            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/otter/id-rotate-carrot-right.mp4" },
+            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/pi05/id-rotate-carrot-left.mp4" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/w2vla/id-rotate-carrot-right.mp4" }
           ],
           t2_results: [
-            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/otter/id-back-banana-right.gif" },
-            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/pi05/id-back-banana-left.gif" },
-            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/w2vla/id-back-banana-left.gif" }
+            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/otter/id-back-banana-right.mp4" },
+            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/pi05/id-back-banana-left.mp4" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/w2vla/id-back-banana-left.mp4" }
           ]
         },
         transfer: {
           task1: '(Rotate, 🍌)',
           task2: '(Move Back, 🥕)',
           t1_results: [
-            { model: "OTTER", success: false, cap: "❌ Executes (Move Back, 🍌)", img: "./videos/1-in-domain/scenario-1/otter/st-rotate-banana-left.gif" },
-            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Move Back, 🍌)", img: "./videos/1-in-domain/scenario-1/pi05/st-rotate-banana-right.gif" },
-            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/w2vla/st-rotate-banana-right.gif" }
+            { model: "OTTER", success: false, cap: "❌ Executes (Move Back, 🍌)", img: "./videos/1-in-domain/scenario-1/otter/st-rotate-banana-left.mp4" },
+            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Move Back, 🍌)", img: "./videos/1-in-domain/scenario-1/pi05/st-rotate-banana-right.mp4" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/w2vla/st-rotate-banana-right.mp4" }
           ],
           t2_results: [
-            { model: "OTTER", success: false, cap: "❌ Executes (Rotate, 🥕)", img: "./videos/1-in-domain/scenario-1/otter/st-back-carrot-right.gif" },
-            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Rotate, 🥕)", img: "./videos/1-in-domain/scenario-1/pi05/st-back-carrot-left.gif" },
-            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/w2vla/st-back-carrot-right.gif" }
+            { model: "OTTER", success: false, cap: "❌ Executes (Rotate, 🥕)", img: "./videos/1-in-domain/scenario-1/otter/st-back-carrot-right.mp4" },
+            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Rotate, 🥕)", img: "./videos/1-in-domain/scenario-1/pi05/st-back-carrot-left.mp4" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-1/w2vla/st-back-carrot-right.mp4" }
           ]
         }
       },
@@ -552,28 +553,28 @@
           task1: '(Place Plate, 🌽)',
           task2: '(Place Bowl, 🍆)',
           t1_results: [
-            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/otter/id-plate-corn-left.gif" },
-            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/pi05/id-plate-corn-right.gif" },
-            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/w2vla/id-plate-corn-left.gif" }
+            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/otter/id-plate-corn-left.mp4" },
+            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/pi05/id-plate-corn-right.mp4" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/w2vla/id-plate-corn-left.mp4" }
           ],
           t2_results: [
-            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/otter/id-bowl-eggplant-right.gif" },
-            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/pi05/id-bowl-eggplant-right.gif" },
-            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/w2vla/id-bowl-eggplant-left.gif" }
+            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/otter/id-bowl-eggplant-right.mp4" },
+            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/pi05/id-bowl-eggplant-right.mp4" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/w2vla/id-bowl-eggplant-left.mp4" }
           ]
         },
         transfer: {
           task1: '(Place Plate, 🍆)',
           task2: '(Place Bowl, 🌽)',
           t1_results: [
-            { model: "OTTER", success: false, cap: "❌ Executes (Place Bowl, 🍆)", img: "./videos/1-in-domain/scenario-2/otter/st-plate-eggplant-left.gif" },
-            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Place Bowl, 🍆)", img: "./videos/1-in-domain/scenario-2/pi05/st-plate-eggplant-right.gif" },
-            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/w2vla/st-plate-eggplant-left.gif" }
+            { model: "OTTER", success: false, cap: "❌ Executes (Place Bowl, 🍆)", img: "./videos/1-in-domain/scenario-2/otter/st-plate-eggplant-left.mp4" },
+            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Place Bowl, 🍆)", img: "./videos/1-in-domain/scenario-2/pi05/st-plate-eggplant-right.mp4" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/w2vla/st-plate-eggplant-left.mp4" }
           ],
           t2_results: [
-            { model: "OTTER", success: false, cap: "❌ Executes (Place Plate, 🌽)", img: "./videos/1-in-domain/scenario-2/otter/st-bowl-corn-right.gif" },
-            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Place Plate, 🌽)", img: "./videos/1-in-domain/scenario-2/pi05/st-bowl-corn-left.gif" },
-            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/w2vla/st-bowl-corn-right.gif" }
+            { model: "OTTER", success: false, cap: "❌ Executes (Place Plate, 🌽)", img: "./videos/1-in-domain/scenario-2/otter/st-bowl-corn-right.mp4" },
+            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Place Plate, 🌽)", img: "./videos/1-in-domain/scenario-2/pi05/st-bowl-corn-left.mp4" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-2/w2vla/st-bowl-corn-right.mp4" }
           ]
         }
       },
@@ -582,28 +583,28 @@
           task1: '(Poke, 🧽)',
           task2: '(Nudge, 🚗)',
           t1_results: [
-            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/otter/id-poke-sponge-right.gif" },
-            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/pi05/id-poke-sponge-left.gif" },
-            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/w2vla/id-poke-sponge-right.gif" }
+            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/otter/id-poke-sponge-right.mp4" },
+            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/pi05/id-poke-sponge-left.mp4" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/w2vla/id-poke-sponge-right.mp4" }
           ],
           t2_results: [
-            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/otter/id-nudge-car-left.gif" },
-            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/pi05/id-nudge-car-right.gif" },
-            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/w2vla/id-nudge-car-left.gif" }
+            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/otter/id-nudge-car-left.mp4" },
+            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/pi05/id-nudge-car-right.mp4" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/w2vla/id-nudge-car-left.mp4" }
           ]
         },
         transfer: {
           task1: '(Poke, 🚗)',
           task2: '(Nudge, 🧽)',
           t1_results: [
-            { model: "OTTER", success: false, cap: "❌ Executes (Nudge, 🚗)", img: "./videos/1-in-domain/scenario-3/otter/st-poke-car-left.gif" },
-            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Nudge, 🚗)", img: "./videos/1-in-domain/scenario-3/pi05/st-poke-car-right.gif" },
-            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/w2vla/st-poke-car-left.gif" }
+            { model: "OTTER", success: false, cap: "❌ Executes (Nudge, 🚗)", img: "./videos/1-in-domain/scenario-3/otter/st-poke-car-left.mp4" },
+            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Nudge, 🚗)", img: "./videos/1-in-domain/scenario-3/pi05/st-poke-car-right.mp4" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/w2vla/st-poke-car-left.mp4" }
           ],
           t2_results: [
-            { model: "OTTER", success: false, cap: "❌ Executes (Poke, 🧽)", img: "./videos/1-in-domain/scenario-3/otter/st-nudge-sponge-right.gif" },
-            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Poke, 🧽)", img: "./videos/1-in-domain/scenario-3/pi05/st-nudge-sponge-right.gif" },
-            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/w2vla/st-nudge-sponge-left.gif" }
+            { model: "OTTER", success: false, cap: "❌ Executes (Poke, 🧽)", img: "./videos/1-in-domain/scenario-3/otter/st-nudge-sponge-right.mp4" },
+            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Poke, 🧽)", img: "./videos/1-in-domain/scenario-3/pi05/st-nudge-sponge-right.mp4" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-3/w2vla/st-nudge-sponge-left.mp4" }
           ]
         }
       },
@@ -612,28 +613,28 @@
           task1: '(Drop, 🪥)',
           task2: '(Forward, 🥒)',
           t1_results: [
-            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/otter/id-drop-toothpaste-left.gif" },
-            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/pi05/id-drop-toothpaste-left.gif" },
-            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/w2vla/id-drop-toothpaste-left.gif" }
+            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/otter/id-drop-toothpaste-left.mp4" },
+            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/pi05/id-drop-toothpaste-left.mp4" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/w2vla/id-drop-toothpaste-left.mp4" }
           ],
           t2_results: [
-            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/otter/id-forward-cucumber-right.gif" },
-            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/pi05/id-forward-cucumber-right.gif" },
-            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/w2vla/id-forward-cucumber-left.gif" }
+            { model: "OTTER", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/otter/id-forward-cucumber-right.mp4" },
+            { model: "$\\pi_{0.5}$", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/pi05/id-forward-cucumber-right.mp4" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/w2vla/id-forward-cucumber-left.mp4" }
           ]
         },
         transfer: {
           task1: '(Drop, 🥒)',
           task2: '(Forward, 🪥)',
           t1_results: [
-            { model: "OTTER", success: false, cap: "❌ Executes (Forward, 🥒)", img: "./videos/1-in-domain/scenario-4/otter/st-drop-cucumber-left.gif" },
-            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Forward, 🥒)", img: "./videos/1-in-domain/scenario-4/pi05/st-rotate-cucumber-left.gif" },
-            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/w2vla/st-drop-cucumber-right.gif" }
+            { model: "OTTER", success: false, cap: "❌ Executes (Forward, 🥒)", img: "./videos/1-in-domain/scenario-4/otter/st-drop-cucumber-left.mp4" },
+            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Forward, 🥒)", img: "./videos/1-in-domain/scenario-4/pi05/st-rotate-cucumber-left.mp4" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/w2vla/st-drop-cucumber-right.mp4" }
           ],
           t2_results: [
-            { model: "OTTER", success: false, cap: "❌ Executes (Drop, 🪥)", img: "./videos/1-in-domain/scenario-4/otter/st-forward-toothpaste-left.gif" },
-            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Drop, 🪥)", img: "./videos/1-in-domain/scenario-4/pi05/st-forward-toothpaste-right.gif" },
-            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/w2vla/st-forward-toothpaste-left.gif" }
+            { model: "OTTER", success: false, cap: "❌ Executes (Drop, 🪥)", img: "./videos/1-in-domain/scenario-4/otter/st-forward-toothpaste-left.mp4" },
+            { model: "$\\pi_{0.5}$", success: false, cap: "❌ Executes (Drop, 🪥)", img: "./videos/1-in-domain/scenario-4/pi05/st-forward-toothpaste-right.mp4" },
+            { model: "w&sup2;VLA", success: true, cap: "✅ Success", img: "./videos/1-in-domain/scenario-4/w2vla/st-forward-toothpaste-left.mp4" }
           ]
         }
       }
@@ -657,7 +658,7 @@
         html += `
            <div class="model-col" style="justify-content: space-between;">
              <div class="model-badge" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); color: var(--text-primary);">${m.model}</div>
-             <img class="gif-player" src="${m.img}" alt="${m.model} rollout">
+             <video class="gif-player" src="${m.img}" autoplay loop muted playsinline preload="metadata" aria-label="${m.model} rollout"></video>
              <div class="model-badge ${badgeClass}" style="text-align: center; width: 100%; box-sizing: border-box; margin-top: auto;">${m.cap}</div>
            </div>
          `;
@@ -672,18 +673,44 @@
         html += `
            <div class="model-col" style="justify-content: space-between;">
              <div class="model-badge" style="background: var(--bg-surface); border: 1px solid var(--border-subtle); color: var(--text-primary);">${m.model}</div>
-             <img class="gif-player" src="${m.img}" alt="${m.model} rollout">
+             <video class="gif-player" src="${m.img}" autoplay loop muted playsinline preload="metadata" aria-label="${m.model} rollout"></video>
              <div class="model-badge ${badgeClass}" style="text-align: center; width: 100%; box-sizing: border-box; margin-top: auto;">${m.cap}</div>
            </div>
          `;
       });
 
       container.innerHTML = html;
+      registerClips(container);
 
       if (window.MathJax && window.MathJax.typesetPromise) {
         window.MathJax.typesetPromise([container]);
       }
     }
+
+    // Only decode rollout clips that are actually on screen, and make sure the
+    // ones injected via innerHTML really are muted (some browsers ignore the
+    // parsed attribute) so autoplay is not blocked.
+    const clipObserver = 'IntersectionObserver' in window
+      ? new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          const v = entry.target;
+          if (entry.isIntersecting) {
+            const p = v.play();
+            if (p) p.catch(() => { });
+          } else {
+            v.pause();
+          }
+        });
+      }, { rootMargin: '200px' })
+      : null;
+
+    function registerClips(root) {
+      root.querySelectorAll('video.gif-player').forEach(v => {
+        v.muted = true;
+        if (clipObserver) clipObserver.observe(v);
+      });
+    }
+
     // Attach click listeners to tabs
     function setupTabs(tabsContainerId, gridContainerId, sectionType) {
       const tabs = document.querySelectorAll(`#${tabsContainerId} .scenario-tab`);
@@ -706,6 +733,9 @@
       // Initial render for Scenario 1
       renderGrid('1', 'indomain', 'grid-indomain');
       renderGrid('1', 'transfer', 'grid-transfer');
+
+      // Static carousels below the grids
+      registerClips(document);
     });
 
     // Progress Sidebar Scroll Logic
