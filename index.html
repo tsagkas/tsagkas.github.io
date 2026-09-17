@@ -31,6 +31,10 @@
     <link defer rel="stylesheet" href="assets/css/academicons.min.css%3Ff0b7046b84e425c55f3463ac249818f5.css">
     <link defer rel="stylesheet" type="text/css"
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap">
     <link defer rel="stylesheet"
         href="assets/css/jekyll-pygments-themes-github.css%3F591dab5a4e56573bf4ef7fd332894c99.css" media=""
         id="highlight_theme_light">
@@ -38,6 +42,35 @@
         href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A4%96&lt;/text&gt;&lt;/svg&gt;">
     <link rel="stylesheet" href="assets/css/main.css%3Fd41d8cd98f00b204e9800998ecf8427e.css">
     <link rel="canonical" href="https://tsagkas.github.io/">
+    <style>
+        body {
+            font-family: 'Asap', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            padding-bottom: 0;
+        }
+
+        .post-header {
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid var(--global-divider-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .post-header .desc {
+            color: var(--global-text-color-light);
+            font-size: 1.05rem;
+            font-weight: 400;
+            margin-top: -0.35rem;
+            margin-bottom: 0;
+        }
+
+        .bio-text {
+            text-align: justify;
+        }
+
+        footer.fixed-bottom {
+            position: static;
+            margin-top: 3rem;
+        }
+    </style>
 </head>
 
 <body class="fixed-top-nav ">
@@ -45,7 +78,7 @@
         <div class="post">
             <header class="post-header">
                 <h1 class="post-title"> <span class="hover-name">Nikolaos Tsagkas</span> </h1>
-                <p class="desc"></p>
+                <p class="desc">Postdoctoral Researcher at the University of Amsterdam <br>PhD Candidate at the University of Edinburgh</p>
             </header>
             <article>
                 <div class="profile float-right">
@@ -60,286 +93,39 @@
                         </figure>
                         <div class="hover-image"></div>
                     </div>
-                    <!-- NEW SOCIAL ICONS SECTION -->
-                    <div style="display: flex; justify-content: space-evenly; margin-top: 15px; width: 100%;">
-                        <a href="mailto:n.tsagkas@ed.ac.uk" title="Email" aria-label="Email"><i
-                                class="fas fa-envelope icon"></i></a>
-                        <a href="https://scholar.google.com/citations?user=cZgkD_oAAAAJ"
-                            rel="external nofollow noopener" target="_blank" title="Google Scholar"
-                            aria-label="Google Scholar"><i class="ai ai-google-scholar-square ai-24x icon"></i></a>
-                        <a href="https://www.linkedin.com/in/nikolas-tsagkas/" rel="external nofollow noopener"
-                            target="_blank" title="LinkedIn" aria-label="LinkedIn"><i
-                                class="fab fa-linkedin icon"></i></a>
-                        <a href="https://github.com/tsagkas" rel="external nofollow noopener" target="_blank"
-                            title="GitHub" aria-label="GitHub"><i class="fab fa-github icon"></i></a>
-                        <a href="https://twitter.com/NikolasTsagkas" rel="external nofollow noopener" target="_blank"
-                            title="X (Twitter)" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter icon"></i></a>
-                    </div>
-                    <!-- END NEW SOCIAL ICONS SECTION -->
                 </div>
                 <div class="clearfix">
-                    <p>I am a PhD candidate at the <a href="http://web.inf.ed.ac.uk/ipab"
-                            rel="external nofollow noopener" target="_blank">School of Informatics, University of
-                            Edinburgh</a>, supported by the <a href="https://www.edinburgh-robotics.org/"
-                            rel="external nofollow noopener" target="_blank">Edinburgh Centre for Robotics</a>. I am
-                        fortunate to be advised by <a href="https://christopherlu.github.io/"
-                            rel="external nofollow noopener" target="_blank">Prof. Chris Xiaoxuan Lu</a> (UCL) and <a
-                            href="https://homepages.inf.ed.ac.uk/omacaod/" rel="external nofollow noopener"
-                            target="_blank">Prof. Oisin Mac Aodha</a> (UoE). My research focuses on leveraging
-                        pre-trained visual representations for robot learning. In late 2025, I was fortunate to intern
-                        at the <a href="https://research.samsung.com/aicenter_cambridge"
-                            rel="external nofollow noopener" target="_blank">Samsung Research Artificial Intelligence
-                            Center</a> in Cambridge, UK, where I worked on Vision-Language-Action (VLA) models.</p>
-                    <p>Prior to my PhD, I earned an MSc in Artificial Intelligence with distinction in 2021 at the
-                        University of Edinburgh, under the supervision of <a href="https://homepages.inf.ed.ac.uk/ckiw/"
-                            rel="external nofollow noopener" target="_blank">Prof. Chris Williams</a>, where I worked on
-                        inference and learning for <a href="https://arxiv.org/abs/2209.03115"
-                            rel="external nofollow noopener" target="_blank">generative capsule models</a>. Before that,
-                        I spent a year as a Data Scientist at <em>Ernst &amp; Young</em>. I hold a BSc and MSc in
-                        Electrical &amp; Computer Engineering (2019) from the University of Patras, Greece, where I
-                        researched <a href="https://ieeexplore.ieee.org/document/8900709"
-                            rel="external nofollow noopener" target="_blank">real-time hand-gesture recognition</a>
-                        using sEMG signals under the guidance of <a href="http://www.ece.upatras.gr/skodras/"
-                            rel="external nofollow noopener" target="_blank">Prof. A. Skodras</a>.</p>
-                    <div class="news-section"> 📢 <b>Latest News:</b>
-                        <ul>
-                            <li> <b>June 2026</b>: 📜 New paper published on ArXiv! You can access it here: <a
-                                    href="https://arxiv.org/abs/2606.21496" target="_blank"
-                                    rel="external nofollow noopener">Decoupling the Declarative from the Procedural in
-                                    Vision-Language-Action Models</a>.
-                            </li>
-                            <li> <b>June 2026</b>: 🏆 Our paper, <a href="https://arxiv.org/abs/2511.10762"
-                                    target="_blank" rel="external nofollow noopener">Attentive Feature Aggregation or:
-                                    How Policies Learn to Stop Worrying about Robustness and Attend to Task-Relevant
-                                    Visual Cues</a>, has been accepted at IROS, 2026. See you in Pittsburgh, USA! 🇺🇸👋
-                            </li>
-                        </ul>
+                    <div class="bio-text">
+<p>
+  I am a Postdoctoral Researcher at the <a href="https://www.uva.nl/en">University of Amsterdam</a>, working with <a href="https://www.egavves.com/">Prof. Efstratios Gavves</a> on Physical AI. I am currently completing my PhD at the <a href="https://informatics.ed.ac.uk/">School of Informatics, University of Edinburgh</a>, with my thesis defence on leveraging pre-trained visual representations for robot learning coming up soon. My PhD was funded by the <a href="https://www.edinburgh-robotics.org/">Edinburgh Centre for Robotics</a>, and I was privileged to be advised by <a href="https://christopherlu.github.io/">Prof. Chris Xiaoxuan Lu</a> (UCL) and <a href="https://homepages.inf.ed.ac.uk/omacaod/">Prof. Oisin Mac Aodha</a> (University of Edinburgh). Along the way, I was fortunate to collaborate with Alexandros Kouris from the <a href="https://research.samsung.com/aicenter_cambridge">Samsung AI Center Cambridge</a>, where I also interned in late 2025, working on compositional generalization in Vision-Language-Action models.
+</p>
 
-                        <details>
-                            <summary style="font-weight: normal; "> View older news</summary>
-                            <ul>
-                                <li class="year-divider"
-                                    style="list-style: none; text-align: center; position: relative; padding-bottom: 10px;">
-                                    <span
-                                        style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #000000; color: #ffffff; padding: 0 5px;font-weight: bold;">2026</span>
-                                    <hr style="border: 1px solid #000;">
-                                </li>
-                                <li> <b>Jan 2026</b>: 🏆 Our paper, <a href="https://arxiv.org/abs/2502.03270"
-                                        target="_blank" rel="external nofollow noopener">The Temporal Trap:
-                                        Entanglement in
-                                        Pre-Trained Visual Representations for Visuomotor Policy Learning</a>, has
-                                    been
-                                    accepted at ICRA, 2026. See you in Vienna, Austria! 🇦🇹👋 </li>
-
-                                <li class="year-divider"
-                                    style="list-style: none; text-align: center; position: relative; padding-bottom: 10px;">
-                                    <span
-                                        style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #000000; color: #ffffff; padding: 0 5px;font-weight: bold;">2025</span>
-                                    <hr style="border: 1px solid #000;">
-                                </li>
-                                <li> <b>Sep 2025</b>: 💼 I am thrilled to announce that I have joined the <a
-                                        href="https://research.samsung.com/aicenter_cambridge" target="_blank"
-                                        rel="external nofollow noopener">Samsung Research Artificial Intelligence
-                                        Center</a>
-                                    as a research intern in Cambridge, UK. 🇬🇧 </li>
-                                <li> <b>Aug 2025</b>: 🏆 Our paper, <a href="https://ansocho.github.io/cot-policy/"
-                                        target="_blank" rel="external nofollow noopener">Fast Flow-based Visuomotor
-                                        Policies via Conditional Optimal Transport Couplings</a>, has been accepted at
-                                    the Conference on Robot Learning (CoRL), 2025. See you in Seoul, South Korea! 🇰🇷👋
-                                </li>
-                                <li> <b>June 2025</b>: 🏆 Our paper, <a href="./affgrasp/index.html"
-                                        target="_blank">Learning Precise Affordances from Egocentric Videos for Robotic
-                                        Manipulation</a>, has been accepted at the IEEE/CVF International Conference on
-                                    Computer Vision (ICCV), 2025. See you in Hawaii, USA! 🇺🇸👋 </li>
-                                <li> <b>June 2025</b>: 🏆 A short version of <a href="./pvrobo/index.html"
-                                        target="_blank">When Pre-trained Visual Representations Fall Short: Limitations
-                                        in Visuo-Motor Robot Learning has been accepted</a> <b>for oral and poster
-                                        presentation</b> at the <a href="https://embodied-ai.org/cvpr2025/"
-                                        target="_blank" rel="external nofollow noopener">6th Embodied AI Workshop</a> at
-                                    CVPR 2025. See you in Nashville, Tennessee! 🇺🇸👋 </li>
-                                <li> <b>May 2025</b>: 📜 New paper published on ArXiv! You can access it here: <a
-                                        href="https://arxiv.org/abs/2505.01179" target="_blank"
-                                        rel="external nofollow noopener">Fast Flow-based Visuomotor Policies via
-                                        Conditional Optimal Transport Couplings</a>. </li>
-                                <li> <b>Feb 2025</b>: 📜 New paper published on ArXiv! You can access it here: <a
-                                        href="https://arxiv.org/abs/2502.03270" target="_blank"
-                                        rel="external nofollow noopener">When Pre-trained Visual Representations Fall
-                                        Short: Limitations in Visuo-Motor Robot Learning</a>. </li>
-                                <li class="year-divider"
-                                    style="list-style: none; text-align: center; position: relative; padding-bottom: 10px;">
-                                    <span
-                                        style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #000000; color: #ffffff; padding: 0 5px;font-weight: bold;">2024</span>
-                                    <hr style="border: 1px solid #000;">
-                                </li>
-                                <li> <b>Oct 2024</b>: 🗣️ I will be presenting our paper, <a
-                                        href="./click2grasp/index.html">Click to Grasp</a>, during the Robot
-                                    Vision IV
-                                    session from 09:00 to 10:00 on Fri 18 Oct at Room 4, IROS'24 in Abu Dhabi, UAE.
-                                </li>
-                                <li> <b>Sep 2024</b>: 🗣️ Our paper, <a href="./click2grasp/index.html">Click
-                                        to
-                                        Grasp</a>, will be presented at the <a
-                                        href="https://www.bmva.org/meetings/24-10-30-RobotWorldModels.html"
-                                        target="_blank" rel="external nofollow noopener">BMVA Symposium: Robotics
-                                        Foundation &amp; World Models</a> in London. </li>
-                                <li> <b>Aug 2024</b>: 📜 New paper published on ArXiv! You can access it here: <a
-                                        href="https://arxiv.org/abs/2408.10123" target="_blank"
-                                        rel="external nofollow noopener">Learning Precise Affordances from Egocentric
-                                        Videos for Robotic Manipulation</a>. </li>
-                                <li> <b>Jun 2024</b>: 🏆 Our paper, <a href="./click2grasp/index.html"
-                                        target="_blank">Click to Grasp: Zero-Shot Precise Manipulation via Visual
-                                        Diffusion Descriptors</a>, has been accepted at the IEEE/RSJ International
-                                    Conference on Intelligent Robots and Systems (IROS), 2024. See you in Abu Dhabi,
-                                    UAE! 🇦🇪👋 </li>
-                                <li class="year-divider"
-                                    style="list-style: none; text-align: center; position: relative; padding-bottom: 10px;">
-                                    <span
-                                        style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #000000; color: #ffffff; padding: 0 5px;font-weight: bold;">2023</span>
-                                    <hr style="border: 1px solid #000;">
-                                </li>
-                                <li> <b>May 2023</b>: 🏆 Our paper, <a href="./vl-fields/index.html"
-                                        target="_blank">VL-Fields: Towards Language-Grounded Neural Implicit Spatial
-                                        Representations</a>, has been accepted (spotlight) at the <i>Workshop on
-                                        Effective Representations, Abstractions, and Priors for Robot Learning</i>, ICRA
-                                    2023. See you in London, UK! 🇬🇧👋 </li>
-                                <li> <b>April 2023</b>: 🏆 Our paper, <a
-                                        href="https://direct.mit.edu/neco/article-abstract/35/4/727/114734/Inference-and-Learning-for-Generative-Capsule?redirectedFrom=fulltext"
-                                        target="_blank" rel="external nofollow noopener">Inference and Learning for
-                                        Generative Capsule Models</a>, has been accepted at the <i>Neural
-                                        Computation</i> Journal, Volume 35, Issue 4. </li>
-                                <li class="year-divider"
-                                    style="list-style: none; text-align: center; position: relative; padding-bottom: 10px;">
-                                    <span
-                                        style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #000000; color: #ffffff; padding: 0 5px;font-weight: bold;">2022</span>
-                                    <hr style="border: 1px solid #000;">
-                                </li>
-                                <li> <b>Sep 2022</b>: 🎓 Thrilled to announce that I have been accepted at the <a
-                                        href="https://www.edinburgh-robotics.org/" target="_blank"
-                                        rel="external nofollow noopener">Centre for Doctoral Training in Robotics and
-                                        Autonomous Systems</a> PhD programme 🤖🦾, at the University of Edinburgh, UK!
-                                    🏴󠁧󠁢󠁳󠁣󠁴󠁿 </li>
-                                <li class="year-divider"
-                                    style="list-style: none; text-align: center; position: relative; padding-bottom: 10px;">
-                                    <span
-                                        style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #000000; color: #ffffff; padding: 0 5px;font-weight: bold;">2021</span>
-                                    <hr style="border: 1px solid #000;">
-                                </li>
-                                <li> <b>Sep 2021</b>: 🎓 Thrilled to announce that I have graduated from the University
-                                    of Edinburgh with a MSc in Artificial Intelligence, with Distinction! </li>
-                                <li class="year-divider"
-                                    style="list-style: none; text-align: center; position: relative; padding-bottom: 10px;">
-                                    <span
-                                        style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #000000; color: #ffffff; padding: 0 5px;font-weight: bold;">2020</span>
-                                    <hr style="border: 1px solid #000;">
-                                </li>
-                                <li> <b>Sep 2020</b>: 🎓 Excited to announce that I have been accepted at the Artificial
-                                    Intelligence MSc programme, at the University of Edinburgh, UK! 🏴󠁧󠁢󠁳󠁣󠁴󠁿 </li>
-                                <li class="year-divider"
-                                    style="list-style: none; text-align: center; position: relative; padding-bottom: 10px;">
-                                    <span
-                                        style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background-color: #000000; color: #ffffff; padding: 0 5px;font-weight: bold;">2019</span>
-                                    <hr style="border: 1px solid #000;">
-                                </li>
-                                <li> <b>Nov 2019</b>: 💼 Excited to announce that I have joined <i>Ernst &amp; Young</i>
-                                    as a Data Scientist! </li>
-                                <li> <b>Aug 2019</b>: 🎓 Excited to announce that I have graduated with a Diploma of
-                                    Electrical &amp; Computer Engineering (BSc, MSc), 4th in my class, from the
-                                    University of Patras, Greece! </li>
-                                <li> <b>July 2019</b>: 🏆 Our paper, <a
-                                        href="https://github.com/tsagkas/sEMG-HandGestureRecognition" target="_blank"
-                                        rel="external nofollow noopener">On the Use of Deeper CNNs in Hand Gesture
-                                        Recognition Based on sEMG Signals</a>, has been accepted (oral presentation) at
-                                    the <i>10th International Conference on Information, Intelligence, Systems and
-                                        Applications (IISA)</i>,. See you in Patras, Greece! 🇬🇷👋 </li>
-                                <li> <b>July 2019</b>: 🏆 Honored to receive the "Best Student Innovation Challenge
-                                    Award" at <a href="https://www.worldhaptics2019.org/" target="_blank"
-                                        rel="external nofollow noopener"><i>IEEE Worldhaptics 2019</i></a> in Tokyo,
-                                    Japan, 🇯🇵 for our prototype <a
-                                        href="https://www.vvr.ece.upatras.gr/news/announcements-158-ieee-worldhaptics-2019-tokyo-best-student-innovation-challenge-award/"
-                                        target="_blank" rel="external nofollow noopener"><i>"Gamified haptic UI for
-                                            increasing trust in autonomous vehicles"</i></a>! Thank you Hyundai Motors
-                                    for sponsoring us! 🚗🕹️ </li>
-                            </ul>
-                        </details>
+<p>
+  Before my PhD, I completed an MSc in Artificial Intelligence with distinction at the University of Edinburgh, where I worked on <a href="https://arxiv.org/abs/2209.03115">Generative Capsule Models</a> under the supervision of <a href="https://homepages.inf.ed.ac.uk/ckiw/">Prof. Chris Williams</a>. I also hold a BSc and MSc in Electrical and Computer Engineering from the University of Patras, Greece.
+</p>
                     </div>
-                    <style>
-                        .icon {
-                            color: #000;
-                            font-size: 27px
-                        }
-
-                        .news-section {
-                            background-color: #e6e6e6;
-                            border-left: 4px solid#020202;
-                            padding: 10px 15px;
-                            margin: 20px 0;
-                            border-radius: 5px;
-                            font-size: 16px;
-                            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.35)
-                        }
-
-                        .news-section summary {
-                            font-weight: bold;
-                            cursor: pointer;
-                            color: #111
-                        }
-
-                        .news-section ul {
-                            padding-left: 20px;
-                            margin-top: 10px
-                        }
-
-                        .news-section li {
-                            margin-bottom: 5px
-                        }
-                    </style>
-                    <!-- <p><a href="mailto:n.tsagkas@ed.ac.uk"><i class="fas fa-envelope icon"></i></a> <a
-                            href="https://github.com/tsagkas" rel="external nofollow noopener" target="_blank"><i
-                                class="fab fa-github icon"></i></a> <a
-                            href="https://scholar.google.com/citations?user=cZgkD_oAAAAJ"
-                            rel="external nofollow noopener" target="_blank"><i
-                                class="ai ai-google-scholar-square ai-24x icon"></i></a> <a
-                            href="https://twitter.com/NikolasTsagkas" rel="external nofollow noopener"
-                            target="_blank"><i class="fa-brands fa-x-twitter icon"></i></a> <a
-                            href="https://www.linkedin.com/in/nikolas-tsagkas/" rel="external nofollow noopener"
-                            target="_blank"><i class="fab fa-linkedin icon"></i></a></p> -->
                     <link rel="stylesheet"
                         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
                 </div>
-                <h2> Publications </h2>
-                <div class="publications">
+                <nav class="profile-links" aria-label="Profiles">
+                    <a href="mailto:n.tsagkas@ed.ac.uk"><i class="fas fa-envelope" aria-hidden="true"></i>Email</a>
+                    <a href="https://scholar.google.com/citations?user=cZgkD_oAAAAJ" rel="external nofollow noopener"
+                        target="_blank"><i class="ai ai-google-scholar-square" aria-hidden="true"></i>Google Scholar</a>
+                    <a href="https://github.com/tsagkas" rel="external nofollow noopener" target="_blank"><i
+                            class="fab fa-github" aria-hidden="true"></i>GitHub</a>
+                    <a href="https://www.linkedin.com/in/nikolas-tsagkas/" rel="external nofollow noopener"
+                        target="_blank"><i class="fab fa-linkedin-in" aria-hidden="true"></i>LinkedIn</a>
+                    <a href="https://twitter.com/NikolasTsagkas" rel="external nofollow noopener" target="_blank"><i
+                            class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                </nav>
+                <nav class="main-tabs" aria-label="Sections">
+                    <button class="main-tab" type="button" aria-selected="true" data-panel="publications">Publications</button>
+                    <button class="main-tab" type="button" aria-selected="false" data-panel="news">News</button>
+                </nav>
+                <div class="tab-panel" id="panel-publications">
+                    <div class="publications">
                     <ol class="bibliography">
-                        <li>
-                            <div class="row">
-                                <div class="col-sm-2 preview">
-                                    <figure>
-                                        <picture>
-                                            <source srcset="assets/img/publication_preview/otql_thumbnail.webp"
-                                                type="image/webp">
-                                            <img src="assets/img/publication_preview/otql_thumbnail.gif"
-                                                class="preview z-depth-1 rounded" width="100%" height="auto"
-                                                alt="Optimal Transport Q-Learning for Flow Policy Steering and Acceleration"
-                                                loading="lazy">
-                                        </picture>
-                                    </figure>
-                                </div>
-                                <div id="sochopoulos2026otql" class="col">
-                                    <div class="title"> Optimal Transport Q-Learning for Flow Policy Steering and
-                                        Acceleration</div>
-                                    <div class="author"> Andreas Sochopoulos , Esmeralda S. Whitammer , <b>Nikolaos</b>
-                                        <b>Tsagkas</b> , João Moura , Michael Gienger , and Sethu Vijayakumar
-                                    </div>
-                                    <div class="periodical"> <em>In ArXiv Preprint</em> , 2026 </div>
-                                    <div class="periodical"> </div>
-                                    <div class="links"> <a href="https://arxiv.org/abs/2607.06262"
-                                            class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener"
-                                            target="_blank">arXiv</a> <a href="https://ansocho.github.io/otql-flow/"
-                                            class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener"
-                                            target="_blank">HTML</a> <span class="wacky-badge">New!</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+    
                         <li>
                             <div class="row">
                                 <div class="col-sm-2 preview">
@@ -370,6 +156,39 @@
                                 </div>
                             </div>
                         </li>
+
+                                            <li>
+                            <div class="row">
+                                <div class="col-sm-2 preview">
+                                    <figure>
+                                        <picture>
+                                            <source srcset="assets/img/publication_preview/otql_thumbnail.webp"
+                                                type="image/webp">
+                                            <img src="assets/img/publication_preview/otql_thumbnail.gif"
+                                                class="preview z-depth-1 rounded" width="100%" height="auto"
+                                                alt="Optimal Transport Q-Learning for Flow Policy Steering and Acceleration"
+                                                loading="lazy">
+                                        </picture>
+                                    </figure>
+                                </div>
+                                <div id="sochopoulos2026otql" class="col">
+                                    <div class="title"> Optimal Transport Q-Learning for Flow Policy Steering and
+                                        Acceleration</div>
+                                    <div class="author"> Andreas Sochopoulos , Esmeralda S. Whitammer , <b>Nikolaos</b>
+                                        <b>Tsagkas</b> , João Moura , Michael Gienger , and Sethu Vijayakumar
+                                    </div>
+                                    <div class="periodical"> <em>In Conference on Robot Learning (CoRL), Austin, Texas, USA</em> , 2026 </div>
+                                    <div class="periodical"> </div>
+                                    <div class="links"> <a href="https://arxiv.org/abs/2607.06262"
+                                            class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener"
+                                            target="_blank">arXiv</a> <a href="https://ansocho.github.io/otql-flow/"
+                                            class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener"
+                                            target="_blank">HTML</a> 
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
                         <li>
                             <div class="row">
                                 <div class="col-sm-2 preview">
@@ -651,7 +470,353 @@
                             </div>
                         </li>
                     </ol>
+                    </div>
                 </div>
+                <div class="tab-panel" id="panel-news" hidden>
+                    <div class="news-entries">
+                        <div class="news-year">2026</div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">Oct 2026</span>
+                            <span class="news-entry__text">🎉 Thrilled to share that I have accepted a PostDoc position at the <a
+                                    href="https://www.uva.nl/en" target="_blank"
+                                    rel="external nofollow noopener">University of Amsterdam</a> with <a href="https://www.egavves.com/" target="_blank"
+                                    rel="external nofollow noopener">Prof. Stratis Gavves</a>. Stay tuned for exciting research updates on Physical AI. See
+                                you in Amsterdam! 🇳🇱👋</span>
+                        </div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">Sept 2026</span>
+                            <span class="news-entry__text">🏆 Our paper, <a href="https://arxiv.org/abs/2511.10762"
+                                    target="_blank" rel="external nofollow noopener">Optimal Transport Q-Learning for Flow Policy Steering and Acceleration</a>, has been accepted at CoRL, 2026. See you in
+                                Austin, Texas, USA! 🇺🇸👋</span>
+                        </div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">June 2026</span>
+                            <span class="news-entry__text">📜 New paper published on ArXiv! You can access it here:
+                                <a href="https://arxiv.org/abs/2606.21496" target="_blank"
+                                    rel="external nofollow noopener">Decoupling the Declarative from the Procedural
+                                    in Vision-Language-Action Models</a>.</span>
+                        </div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">June 2026</span>
+                            <span class="news-entry__text">🏆 Our paper, <a href="https://arxiv.org/abs/2511.10762"
+                                    target="_blank" rel="external nofollow noopener">Attentive Feature Aggregation
+                                    or: How Policies Learn to Stop Worrying about Robustness and Attend to
+                                    Task-Relevant Visual Cues</a>, has been accepted at IROS, 2026. See you in
+                                Pittsburgh, USA! 🇺🇸👋</span>
+                        </div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">Jan 2026</span>
+                            <span class="news-entry__text">🏆 Our paper, <a href="https://arxiv.org/abs/2502.03270"
+                                    target="_blank" rel="external nofollow noopener">The Temporal Trap: Entanglement
+                                    in Pre-Trained Visual Representations for Visuomotor Policy Learning</a>, has
+                                been accepted at ICRA, 2026. See you in Vienna, Austria! 🇦🇹👋</span>
+                        </div>
+                        <div class="news-year">2025</div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">Sep 2025</span>
+                            <span class="news-entry__text">💼 I am thrilled to announce that I have joined the <a
+                                    href="https://research.samsung.com/aicenter_cambridge" target="_blank"
+                                    rel="external nofollow noopener">Samsung Research Artificial Intelligence
+                                    Center</a> as a research intern in Cambridge, UK. 🇬🇧</span>
+                        </div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">Aug 2025</span>
+                            <span class="news-entry__text">🏆 Our paper, <a href="https://ansocho.github.io/cot-policy/"
+                                    target="_blank" rel="external nofollow noopener">Fast Flow-based Visuomotor
+                                    Policies via Conditional Optimal Transport Couplings</a>, has been accepted at
+                                the Conference on Robot Learning (CoRL), 2025. See you in Seoul, South Korea!
+                                🇰🇷👋</span>
+                        </div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">June 2025</span>
+                            <span class="news-entry__text">🏆 Our paper, <a href="./affgrasp/index.html"
+                                    target="_blank">Learning Precise Affordances from Egocentric Videos for Robotic
+                                    Manipulation</a>, has been accepted at the IEEE/CVF International Conference on
+                                Computer Vision (ICCV), 2025. See you in Hawaii, USA! 🇺🇸👋</span>
+                        </div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">June 2025</span>
+                            <span class="news-entry__text">🏆 A short version of <a href="./pvrobo/index.html"
+                                    target="_blank">When Pre-trained Visual Representations Fall Short: Limitations
+                                    in Visuo-Motor Robot Learning has been accepted</a> <b>for oral and poster
+                                    presentation</b> at the <a href="https://embodied-ai.org/cvpr2025/"
+                                    target="_blank" rel="external nofollow noopener">6th Embodied AI Workshop</a> at
+                                CVPR 2025. See you in Nashville, Tennessee! 🇺🇸👋</span>
+                        </div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">May 2025</span>
+                            <span class="news-entry__text">📜 New paper published on ArXiv! You can access it here:
+                                <a href="https://arxiv.org/abs/2505.01179" target="_blank"
+                                    rel="external nofollow noopener">Fast Flow-based Visuomotor Policies via
+                                    Conditional Optimal Transport Couplings</a>.</span>
+                        </div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">Feb 2025</span>
+                            <span class="news-entry__text">📜 New paper published on ArXiv! You can access it here:
+                                <a href="https://arxiv.org/abs/2502.03270" target="_blank"
+                                    rel="external nofollow noopener">When Pre-trained Visual Representations Fall
+                                    Short: Limitations in Visuo-Motor Robot Learning</a>.</span>
+                        </div>
+                        <div class="news-year">2024</div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">Oct 2024</span>
+                            <span class="news-entry__text">🗣️ I will be presenting our paper, <a
+                                    href="./click2grasp/index.html">Click to Grasp</a>, during the Robot Vision IV
+                                session from 09:00 to 10:00 on Fri 18 Oct at Room 4, IROS'24 in Abu Dhabi,
+                                UAE.</span>
+                        </div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">Sep 2024</span>
+                            <span class="news-entry__text">🗣️ Our paper, <a
+                                    href="./click2grasp/index.html">Click to Grasp</a>, will be presented at the <a
+                                    href="https://www.bmva.org/meetings/24-10-30-RobotWorldModels.html"
+                                    target="_blank" rel="external nofollow noopener">BMVA Symposium: Robotics
+                                    Foundation &amp; World Models</a> in London.</span>
+                        </div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">Aug 2024</span>
+                            <span class="news-entry__text">📜 New paper published on ArXiv! You can access it here:
+                                <a href="https://arxiv.org/abs/2408.10123" target="_blank"
+                                    rel="external nofollow noopener">Learning Precise Affordances from Egocentric
+                                    Videos for Robotic Manipulation</a>.</span>
+                        </div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">Jun 2024</span>
+                            <span class="news-entry__text">🏆 Our paper, <a href="./click2grasp/index.html"
+                                    target="_blank">Click to Grasp: Zero-Shot Precise Manipulation via Visual
+                                    Diffusion Descriptors</a>, has been accepted at the IEEE/RSJ International
+                                Conference on Intelligent Robots and Systems (IROS), 2024. See you in Abu Dhabi,
+                                UAE! 🇦🇪👋</span>
+                        </div>
+                        <div class="news-year">2023</div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">May 2023</span>
+                            <span class="news-entry__text">🏆 Our paper, <a href="./vl-fields/index.html"
+                                    target="_blank">VL-Fields: Towards Language-Grounded Neural Implicit Spatial
+                                    Representations</a>, has been accepted (spotlight) at the <i>Workshop on
+                                    Effective Representations, Abstractions, and Priors for Robot Learning</i>, ICRA
+                                2023. See you in London, UK! 🇬🇧👋</span>
+                        </div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">April 2023</span>
+                            <span class="news-entry__text">🏆 Our paper, <a
+                                    href="https://direct.mit.edu/neco/article-abstract/35/4/727/114734/Inference-and-Learning-for-Generative-Capsule?redirectedFrom=fulltext"
+                                    target="_blank" rel="external nofollow noopener">Inference and Learning for
+                                    Generative Capsule Models</a>, has been accepted at the <i>Neural
+                                    Computation</i> Journal, Volume 35, Issue 4.</span>
+                        </div>
+                        <div class="news-year">2022</div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">Sep 2022</span>
+                            <span class="news-entry__text">🎓 Thrilled to announce that I have been accepted at the
+                                <a href="https://www.edinburgh-robotics.org/" target="_blank"
+                                    rel="external nofollow noopener">Centre for Doctoral Training in Robotics and
+                                    Autonomous Systems</a> PhD programme 🤖🦾, at the University of Edinburgh, UK!
+                                🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
+                        </div>
+                        <div class="news-year">2021</div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">Sep 2021</span>
+                            <span class="news-entry__text">🎓 Thrilled to announce that I have graduated from the
+                                University of Edinburgh with a MSc in Artificial Intelligence, with
+                                Distinction!</span>
+                        </div>
+                        <div class="news-year">2020</div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">Sep 2020</span>
+                            <span class="news-entry__text">🎓 Excited to announce that I have been accepted at the
+                                Artificial Intelligence MSc programme, at the University of Edinburgh, UK!
+                                🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
+                        </div>
+                        <div class="news-year">2019</div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">Nov 2019</span>
+                            <span class="news-entry__text">💼 Excited to announce that I have joined <i>Ernst
+                                    &amp; Young</i> as a Data Scientist!</span>
+                        </div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">Aug 2019</span>
+                            <span class="news-entry__text">🎓 Excited to announce that I have graduated with a
+                                Diploma of Electrical &amp; Computer Engineering (BSc, MSc), 4th in my class, from
+                                the University of Patras, Greece!</span>
+                        </div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">July 2019</span>
+                            <span class="news-entry__text">🏆 Our paper, <a
+                                    href="https://github.com/tsagkas/sEMG-HandGestureRecognition" target="_blank"
+                                    rel="external nofollow noopener">On the Use of Deeper CNNs in Hand Gesture
+                                    Recognition Based on sEMG Signals</a>, has been accepted (oral presentation) at
+                                the <i>10th International Conference on Information, Intelligence, Systems and
+                                    Applications (IISA)</i>,. See you in Patras, Greece! 🇬🇷👋</span>
+                        </div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">July 2019</span>
+                            <span class="news-entry__text">🏆 Honored to receive the "Best Student Innovation
+                                Challenge Award" at <a href="https://www.worldhaptics2019.org/" target="_blank"
+                                    rel="external nofollow noopener"><i>IEEE Worldhaptics 2019</i></a> in Tokyo,
+                                Japan, 🇯🇵 for our prototype <a
+                                    href="https://www.vvr.ece.upatras.gr/news/announcements-158-ieee-worldhaptics-2019-tokyo-best-student-innovation-challenge-award/"
+                                    target="_blank" rel="external nofollow noopener"><i>"Gamified haptic UI for
+                                        increasing trust in autonomous vehicles"</i></a>! Thank you Hyundai Motors
+                                for sponsoring us! 🚗🕹️</span>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    .profile-links {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: .5rem;
+                        margin-top: .25rem;
+                    }
+
+                    .profile-links a {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: .45rem;
+                        font-size: .85rem;
+                        color: var(--global-text-color);
+                        border: 1px solid var(--global-divider-color);
+                        border-radius: .2rem;
+                        padding: .3rem .85rem;
+                        text-decoration: none;
+                        transition: color .15s ease, border-color .15s ease;
+                    }
+
+                    .profile-links a:hover {
+                        color: var(--global-theme-color);
+                        border-color: var(--global-theme-color);
+                        text-decoration: none;
+                    }
+
+                    .profile-links i {
+                        font-size: 1em;
+                        color: var(--global-text-color-light);
+                        transition: color .15s ease;
+                    }
+
+                    .profile-links a:hover i {
+                        color: var(--global-theme-color);
+                    }
+
+                    .main-tabs {
+                        display: flex;
+                        gap: 1.75rem;
+                        border-bottom: 1px solid var(--global-divider-color);
+                        margin: 1.75rem 0 1.5rem;
+                    }
+
+                    .main-tab {
+                        appearance: none;
+                        border: 0;
+                        background: none;
+                        font: inherit;
+                        font-size: 1.15rem;
+                        color: var(--global-text-color-light);
+                        padding: .5rem 0;
+                        margin-bottom: -1px;
+                        border-bottom: 2px solid transparent;
+                        cursor: pointer;
+                        transition: color .15s ease, border-color .15s ease;
+                    }
+
+                    .main-tab:hover {
+                        color: var(--global-text-color);
+                    }
+
+                    .main-tab[aria-selected="true"] {
+                        color: var(--global-text-color);
+                        border-bottom-color: var(--global-theme-color);
+                        font-weight: 600;
+                    }
+
+                    .tab-panel[hidden] {
+                        display: none;
+                    }
+
+                    .news-entries {
+                        display: flex;
+                        flex-direction: column;
+                        gap: .65rem;
+                        font-size: 16px;
+                    }
+
+                    .news-year {
+                        font-weight: 700;
+                        font-size: .8rem;
+                        letter-spacing: .05em;
+                        text-transform: uppercase;
+                        color: var(--global-text-color-light);
+                        margin-top: 1.5rem;
+                        padding-top: 1.1rem;
+                        border-top: 1px solid var(--global-divider-color);
+                    }
+
+                    .news-year:first-child {
+                        margin-top: 0;
+                        padding-top: 0;
+                        border-top: none;
+                    }
+
+                    .news-entry {
+                        display: flex;
+                        gap: 1.25rem;
+                    }
+
+                    .news-entry__date {
+                        flex: 0 0 5.5rem;
+                        color: var(--global-text-color-light);
+                        font-variant-numeric: tabular-nums;
+                        font-size: .9rem;
+                    }
+
+                    .news-entry__text {
+                        flex: 1 1 auto;
+                        min-width: 0;
+                    }
+
+                    @media (max-width: 576px) {
+                        .main-tabs {
+                            gap: 1.25rem;
+                        }
+
+                        .main-tab {
+                            font-size: 1rem;
+                        }
+
+                        .news-entry {
+                            flex-direction: column;
+                            gap: .2rem;
+                        }
+
+                        .news-entry__date {
+                            flex-basis: auto;
+                            font-weight: bold;
+                        }
+                    }
+                </style>
+                <script>
+                    (function () {
+                        var tabs = document.querySelectorAll('.main-tab');
+                        var panels = {};
+                        tabs.forEach(function (tab) {
+                            panels[tab.dataset.panel] = document.getElementById('panel-' + tab.dataset.panel);
+                        });
+
+                        function showPanel(name) {
+                            if (!panels[name]) { name = 'publications'; }
+                            tabs.forEach(function (tab) {
+                                var on = tab.dataset.panel === name;
+                                tab.setAttribute('aria-selected', on ? 'true' : 'false');
+                                panels[tab.dataset.panel].hidden = !on;
+                            });
+                        }
+
+                        tabs.forEach(function (tab) {
+                            tab.addEventListener('click', function () { showPanel(tab.dataset.panel); });
+                        });
+                    })();
+                </script>
                 <div class="social">
                     <div class="contact-icons"> </div>
                     <div class="contact-note"></div>
