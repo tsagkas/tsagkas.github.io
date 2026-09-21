@@ -128,6 +128,8 @@
                     <div class="publications">
                     <ol class="bibliography">
     
+                        <!-- <li class="pub-year">2026</li> -->
+
                         <li>
                             <div class="row">
                                 <div class="col-sm-2 preview">
@@ -140,6 +142,7 @@
                                                 alt="w2vla_thumbnail_smaller.gif" loading="lazy">
                                         </picture>
                                     </figure>
+                                    <div class="pub-venue pub-venue--arxiv">arXiv</div>
                                 </div>
 
                                 <div id="tsagkas2026w2vla" class="col">
@@ -172,6 +175,7 @@
                                                 loading="lazy">
                                         </picture>
                                     </figure>
+                                    <div class="pub-venue pub-venue--corl">CoRL</div>
                                 </div>
                                 <div id="sochopoulos2026otql" class="col">
                                     <div class="title"> Optimal Transport Q-Learning for Flow Policy Steering and
@@ -203,6 +207,7 @@
                                                 alt="afa_thumbnail_smaller.gif" loading="lazy">
                                         </picture>
                                     </figure>
+                                    <div class="pub-venue pub-venue--iros">IROS</div>
                                 </div>
 
                                 <div id="tsagkas2025afa" class="col">
@@ -236,6 +241,7 @@
                                                 alt="temporal_thumbnail.gif" loading="lazy">
                                         </picture>
                                     </figure>
+                                    <div class="pub-venue pub-venue--icra">ICRA</div>
                                 </div>
                                 <div id="tsagkas2025temporal" class="col">
                                     <div class="title">The Temporal Trap: Entanglement in Pre-Trained Visual
@@ -255,6 +261,8 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="pub-year">2025</li>
+
                         <li>
                             <div class="row">
                                 <div class="col-sm-2 preview">
@@ -267,6 +275,7 @@
                                                 alt="zipper_16fps_240.gif" loading="lazy">
                                         </picture>
                                     </figure>
+                                    <div class="pub-venue pub-venue--corl">CoRL</div>
                                 </div>
                                 <div id="sochopoulos2025fastflowbasedvisuomotorpolicies" class="col">
                                     <div class="title">Fast Flow-based Visuomotor Policies via Conditional Optimal
@@ -300,6 +309,7 @@
                                                 alt="pvrobo_thumbnail_distractors_short.gif" loading="lazy">
                                         </picture>
                                     </figure>
+                                    <div class="pub-venue pub-venue--cvpr">CVPR</div>
                                 </div>
                                 <div id="tsagkas2025pretrainedvisualrepresentationsfall" class="col">
                                     <div class="title">When Pre-trained Visual Representations Fall Short: Limitations
@@ -333,6 +343,7 @@
                                                 alt="affordance_thumbnail_150.gif" loading="lazy">
                                         </picture>
                                     </figure>
+                                    <div class="pub-venue pub-venue--iccv">ICCV</div>
                                 </div>
                                 <div id="li2024learningpreciseaffordancesegocentric" class="col">
                                     <div class="title">Learning Precise Affordances from Egocentric Videos for Robotic
@@ -349,6 +360,8 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="pub-year">2024</li>
+
                         <li>
                             <div class="row">
                                 <div class="col-sm-2 preview">
@@ -361,6 +374,7 @@
                                                 alt="c2g_thumbnail_150.gif" loading="lazy">
                                         </picture>
                                     </figure>
+                                    <div class="pub-venue pub-venue--iros">IROS</div>
                                 </div>
                                 <div id="tsagkas2024click" class="col">
                                     <div class="title">Click to Grasp: Zero-Shot Precise Manipulation via Visual
@@ -381,6 +395,8 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="pub-year">2023</li>
+
                         <li>
                             <div class="row">
                                 <div class="col-sm-2 preview">
@@ -393,6 +409,7 @@
                                                 alt="vl-fields_thumbnail.gif" loading="lazy">
                                         </picture>
                                     </figure>
+                                    <div class="pub-venue pub-venue--icra">ICRA</div>
                                 </div>
                                 <div id="tsagkas2023vlfields" class="col">
                                     <div class="title">VL-Fields: Towards Language-Grounded Neural Implicit Spatial
@@ -423,6 +440,7 @@
                                                 alt="ecgm_thumbnail.gif" loading="lazy">
                                         </picture>
                                     </figure>
+                                    <div class="pub-venue pub-venue--journal">Neural Comp.</div>
                                 </div>
                                 <div id="https://doi.org/10.48550/arxiv.2209.03115" class="col">
                                     <div class="title">Inference and Learning for Generative Capsule Models</div>
@@ -439,6 +457,8 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="pub-year">2019</li>
+
                         <li>
                             <div class="row">
                                 <div class="col-sm-2 preview">
@@ -451,6 +471,7 @@
                                                 alt="semg_thumbnail.gif" loading="lazy">
                                         </picture>
                                     </figure>
+                                    <div class="pub-venue pub-venue--iisa">IISA</div>
                                 </div>
                                 <div id="8900709" class="col">
                                     <div class="title">On the Use of Deeper CNNs in Hand Gesture Recognition Based on
@@ -878,6 +899,93 @@
                         font-size: 16px;
                     }
 
+                    .publications ol.bibliography li.pub-year {
+                        font-weight: 700;
+                        font-size: .8rem;
+                        letter-spacing: .05em;
+                        text-transform: uppercase;
+                        color: var(--global-text-color-light);
+                        margin-top: 2rem;
+                        margin-bottom: 1.5rem;
+                        padding-top: 1.1rem;
+                        border-top: 1px solid var(--global-divider-color);
+                    }
+
+                    .publications ol.bibliography li.pub-year:first-child {
+                        margin-top: 0;
+                        padding-top: 0;
+                        border-top: none;
+                    }
+
+                    /* the preview column's figure carries a 1rem bottom margin, which
+                       left the badge floating between two entries */
+                    .publications ol.bibliography li .col-sm-2.preview figure {
+                        margin-bottom: 0;
+                    }
+
+                    .pub-venue {
+                        display: block;
+                        width: 100%;
+                        min-width: 80px;
+                        max-width: 200px;
+                        margin-top: .25rem;
+                        padding: .12rem .45rem;
+                        border-radius: .2rem;
+                        background: var(--global-divider-color);
+                        color: var(--global-text-color);
+                        font-size: .7rem;
+                        font-weight: 600;
+                        letter-spacing: .02em;
+                        text-align: center;
+                        white-space: nowrap;
+                    }
+
+                    /* the venue hue rides on a dot rather than the whole band */
+                    .pub-venue::before {
+                        content: "";
+                        display: inline-block;
+                        width: .4rem;
+                        height: .4rem;
+                        margin-right: .35rem;
+                        border-radius: 50%;
+                        background: var(--pub-dot, var(--global-text-color-light));
+                        vertical-align: middle;
+                        position: relative;
+                        top: -1px;
+                    }
+
+                    .pub-venue--iros {
+                        --pub-dot: #d07c17;
+                    }
+
+                    .pub-venue--icra {
+                        --pub-dot: #2f6fc7;
+                    }
+
+                    .pub-venue--corl {
+                        --pub-dot: #2f8f56;
+                    }
+
+                    .pub-venue--iccv {
+                        --pub-dot: #7a55c8;
+                    }
+
+                    .pub-venue--cvpr {
+                        --pub-dot: #c0508a;
+                    }
+
+                    .pub-venue--journal {
+                        --pub-dot: #2b8a8a;
+                    }
+
+                    .pub-venue--arxiv {
+                        --pub-dot: #8b949c;
+                    }
+
+                    .pub-venue--iisa {
+                        --pub-dot: #6b7690;
+                    }
+
                     .news-year {
                         font-weight: 700;
                         font-size: .8rem;
@@ -1183,41 +1291,21 @@
             .wacky-badge {
                 display: inline-block;
                 white-space: nowrap;
-                padding: 4px 12px;
+                padding: .25rem .7rem;
                 margin-left: 8px;
-                font-size: 0.8em;
-                font-weight: 700;
-                color: #ffffff;
-                border-radius: 20px;
-                /* Gives it the button/pill look */
-                background: linear-gradient(45deg, #ff00cc, #3333ff, #00cccc, #ff9900);
-                background-size: 300% 300%;
-                animation: gradientShift 4s ease infinite;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-                pointer-events: none;
-                /* Ensures it cannot be clicked */
-                vertical-align: middle;
+                font-size: .7rem;
+                font-weight: 600;
+                letter-spacing: .03em;
                 text-transform: uppercase;
-                letter-spacing: 0.5px;
-            }
-
-            @keyframes gradientShift {
-                0% {
-                    background-position: 0% 50%;
-                }
-
-                50% {
-                    background-position: 100% 50%;
-                }
-
-                100% {
-                    background-position: 0% 50%;
-                }
+                color: #fff;
+                background: var(--global-theme-color);
+                border-radius: 20px;
+                pointer-events: none;
+                vertical-align: middle;
             }
 
             @media (prefers-reduced-motion: reduce) {
 
-                .wacky-badge,
                 .profile-image,
                 .hover-image {
                     animation: none !important;
