@@ -70,6 +70,116 @@
             position: static;
             margin-top: 3rem;
         }
+
+        /* ===== design refinements: type, press feedback, material chrome ===== */
+
+        /* Type: let the face pick its optical size, and set tracking per size —
+           large display text reads too loose, small caps text too tight. */
+        html {
+            font-optical-sizing: auto;
+        }
+
+        .post-title {
+            font-size: clamp(2rem, 6vw, 2.5rem);
+            line-height: 1.05;
+            letter-spacing: -0.021em;
+        }
+
+        .post-header .desc {
+            letter-spacing: -0.004em;
+        }
+
+        .bio-text p {
+            line-height: 1.62;
+        }
+
+        /* Response: feedback lands on press, not on release. */
+        nav.main-tabs .main-tab,
+        nav.profile-links a,
+        button.news-more,
+        .publications ol.bibliography li .links a.btn {
+            transition: color .15s ease, border-color .15s ease, transform .12s ease-out;
+        }
+
+        nav.main-tabs .main-tab:active,
+        nav.profile-links a:active,
+        button.news-more:active,
+        .publications ol.bibliography li .links a.btn:active {
+            transform: scale(.97);
+        }
+
+        /* Material: the section bar floats as a translucent layer and content
+           scrolls beneath it, rather than scrolling the bar off the screen. */
+        nav.main-tabs {
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            background: var(--global-bg-color);
+            background: color-mix(in srgb, var(--global-bg-color) 72%, transparent);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+        }
+
+        @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+            nav.main-tabs {
+                background: var(--global-bg-color);
+            }
+        }
+
+        /* Panels arrive along one consistent path. */
+        .tab-panel {
+            animation: panel-in 260ms cubic-bezier(.22, .61, .36, 1) both;
+        }
+
+        @keyframes panel-in {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* Reduced motion keeps the feedback, drops the travel. */
+        @media (prefers-reduced-motion: reduce) {
+            .tab-panel {
+                animation: none;
+            }
+
+            nav.main-tabs .main-tab:active,
+            nav.profile-links a:active,
+            button.news-more:active,
+            .publications ol.bibliography li .links a.btn:active {
+                transform: none;
+            }
+        }
+
+        @media (prefers-reduced-transparency: reduce) {
+            nav.main-tabs {
+                background: var(--global-bg-color);
+                -webkit-backdrop-filter: none;
+                backdrop-filter: none;
+            }
+        }
+
+        @media (prefers-contrast: more) {
+            nav.main-tabs {
+                background: var(--global-bg-color);
+                -webkit-backdrop-filter: none;
+                backdrop-filter: none;
+            }
+
+            nav.profile-links a,
+            button.news-more,
+            .pub-venue {
+                border: 1px solid var(--global-text-color-light);
+            }
+        }
+
+        /* ===== end design refinements ===== */
     </style>
 </head>
 
@@ -160,7 +270,7 @@
                                                 alt="w2vla_thumbnail_smaller.gif" loading="lazy">
                                         </picture>
                                     </figure>
-                                    <div class="pub-venue pub-venue--arxiv">arXiv</div>
+                                    <div class="pub-venue">arXiv</div>
                                 </div>
 
                                 <div id="tsagkas2026w2vla" class="col">
@@ -193,7 +303,7 @@
                                                 loading="lazy">
                                         </picture>
                                     </figure>
-                                    <div class="pub-venue pub-venue--corl">CoRL</div>
+                                    <div class="pub-venue">CoRL</div>
                                 </div>
                                 <div id="sochopoulos2026otql" class="col">
                                     <div class="title"> Optimal Transport Q-Learning for Flow Policy Steering and
@@ -225,7 +335,7 @@
                                                 alt="afa_thumbnail_smaller.gif" loading="lazy">
                                         </picture>
                                     </figure>
-                                    <div class="pub-venue pub-venue--iros">IROS</div>
+                                    <div class="pub-venue">IROS</div>
                                 </div>
 
                                 <div id="tsagkas2025afa" class="col">
@@ -259,7 +369,7 @@
                                                 alt="temporal_thumbnail.gif" loading="lazy">
                                         </picture>
                                     </figure>
-                                    <div class="pub-venue pub-venue--icra">ICRA</div>
+                                    <div class="pub-venue">ICRA</div>
                                 </div>
                                 <div id="tsagkas2025temporal" class="col">
                                     <div class="title">The Temporal Trap: Entanglement in Pre-Trained Visual
@@ -293,7 +403,7 @@
                                                 alt="zipper_16fps_240.gif" loading="lazy">
                                         </picture>
                                     </figure>
-                                    <div class="pub-venue pub-venue--corl">CoRL</div>
+                                    <div class="pub-venue">CoRL</div>
                                 </div>
                                 <div id="sochopoulos2025fastflowbasedvisuomotorpolicies" class="col">
                                     <div class="title">Fast Flow-based Visuomotor Policies via Conditional Optimal
@@ -327,7 +437,7 @@
                                                 alt="pvrobo_thumbnail_distractors_short.gif" loading="lazy">
                                         </picture>
                                     </figure>
-                                    <div class="pub-venue pub-venue--cvpr">CVPR</div>
+                                    <div class="pub-venue">CVPR</div>
                                 </div>
                                 <div id="tsagkas2025pretrainedvisualrepresentationsfall" class="col">
                                     <div class="title">When Pre-trained Visual Representations Fall Short: Limitations
@@ -361,7 +471,7 @@
                                                 alt="affordance_thumbnail_150.gif" loading="lazy">
                                         </picture>
                                     </figure>
-                                    <div class="pub-venue pub-venue--iccv">ICCV</div>
+                                    <div class="pub-venue">ICCV</div>
                                 </div>
                                 <div id="li2024learningpreciseaffordancesegocentric" class="col">
                                     <div class="title">Learning Precise Affordances from Egocentric Videos for Robotic
@@ -392,7 +502,7 @@
                                                 alt="c2g_thumbnail_150.gif" loading="lazy">
                                         </picture>
                                     </figure>
-                                    <div class="pub-venue pub-venue--iros">IROS</div>
+                                    <div class="pub-venue">IROS</div>
                                 </div>
                                 <div id="tsagkas2024click" class="col">
                                     <div class="title">Click to Grasp: Zero-Shot Precise Manipulation via Visual
@@ -427,7 +537,7 @@
                                                 alt="vl-fields_thumbnail.gif" loading="lazy">
                                         </picture>
                                     </figure>
-                                    <div class="pub-venue pub-venue--icra">ICRA</div>
+                                    <div class="pub-venue">ICRA</div>
                                 </div>
                                 <div id="tsagkas2023vlfields" class="col">
                                     <div class="title">VL-Fields: Towards Language-Grounded Neural Implicit Spatial
@@ -458,7 +568,7 @@
                                                 alt="ecgm_thumbnail.gif" loading="lazy">
                                         </picture>
                                     </figure>
-                                    <div class="pub-venue pub-venue--journal">Neural Comp.</div>
+                                    <div class="pub-venue">Neural Comp.</div>
                                 </div>
                                 <div id="https://doi.org/10.48550/arxiv.2209.03115" class="col">
                                     <div class="title">Inference and Learning for Generative Capsule Models</div>
@@ -489,7 +599,7 @@
                                                 alt="semg_thumbnail.gif" loading="lazy">
                                         </picture>
                                     </figure>
-                                    <div class="pub-venue pub-venue--iisa">IISA</div>
+                                    <div class="pub-venue">IISA</div>
                                 </div>
                                 <div id="8900709" class="col">
                                     <div class="title">On the Use of Deeper CNNs in Hand Gesture Recognition Based on
@@ -955,52 +1065,6 @@
                         letter-spacing: .02em;
                         text-align: center;
                         white-space: nowrap;
-                    }
-
-                    /* the venue hue rides on a dot rather than the whole band */
-                    .pub-venue::before {
-                        content: "";
-                        display: inline-block;
-                        width: .4rem;
-                        height: .4rem;
-                        margin-right: .35rem;
-                        border-radius: 50%;
-                        background: var(--pub-dot, var(--global-text-color-light));
-                        vertical-align: middle;
-                        position: relative;
-                        top: -1px;
-                    }
-
-                    .pub-venue--iros {
-                        --pub-dot: #d07c17;
-                    }
-
-                    .pub-venue--icra {
-                        --pub-dot: #2f6fc7;
-                    }
-
-                    .pub-venue--corl {
-                        --pub-dot: #2f8f56;
-                    }
-
-                    .pub-venue--iccv {
-                        --pub-dot: #7a55c8;
-                    }
-
-                    .pub-venue--cvpr {
-                        --pub-dot: #c0508a;
-                    }
-
-                    .pub-venue--journal {
-                        --pub-dot: #2b8a8a;
-                    }
-
-                    .pub-venue--arxiv {
-                        --pub-dot: #8b949c;
-                    }
-
-                    .pub-venue--iisa {
-                        --pub-dot: #6b7690;
                     }
 
                     .news-year {
