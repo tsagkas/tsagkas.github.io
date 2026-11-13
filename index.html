@@ -237,7 +237,7 @@
                         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
                 </div>
                 <nav class="profile-links" aria-label="Profiles">
-                    <a href="mailto:n.tsagkas@ed.ac.uk"><i class="fas fa-envelope" aria-hidden="true"></i>Email</a>
+                    <a href="mailto:n.tsagkas@uva.nl"><i class="fas fa-envelope" aria-hidden="true"></i>Email</a>
                     <a href="https://scholar.google.com/citations?user=cZgkD_oAAAAJ" rel="external nofollow noopener"
                         target="_blank"><i class="ai ai-google-scholar-square" aria-hidden="true"></i>Google Scholar</a>
                     <a href="https://github.com/tsagkas" rel="external nofollow noopener" target="_blank"><i
@@ -249,6 +249,7 @@
                 </nav>
                 <nav class="main-tabs" aria-label="Sections">
                     <button class="main-tab" type="button" aria-selected="true" data-panel="publications">Publications</button>
+                    <button class="main-tab" type="button" aria-selected="false" data-panel="workshops">Workshops</button>
                     <button class="main-tab" type="button" aria-selected="false" data-panel="news">News</button>
                     <button class="main-tab" type="button" aria-selected="false" data-panel="cv">CV</button>
                 </nav>
@@ -623,9 +624,72 @@
                     </ol>
                     </div>
                 </div>
+                <div class="tab-panel" id="panel-workshops" hidden>
+                    <div class="publications">
+                    <ol class="bibliography">
+
+                        <li>
+                            <div class="row">
+                                <div class="col-sm-2 preview">
+                                    <figure>
+                                        <img src="assets/img/logos/cvpr-2027.webp" class="preview" width="100%"
+                                            height="auto" alt="CVPR 2027, Seattle" loading="lazy">
+                                    </figure>
+                                </div>
+                                <div id="tsagkas2027dalr" class="col">
+                                    <div class="title"> <b>Dream, Act, Learn, Repeat</b>: Closing the Loop Between World Models
+                                        and Agents for Physical AI</div>
+                                    <div class="author"> <b>Nikolaos</b> <b>Tsagkas</b>, Christian Gumbsch, Jenny
+                                        Schmalfuss, Jose M. Alvarez, and Efstratios Gavves</div>
+                                    <div class="periodical"> <em>Workshop at the IEEE/CVF Conference on Computer Vision
+                                            and Pattern Recognition (CVPR), Seattle, USA</em> , 2027 </div>
+                                    <div class="periodical"> </div>
+                                    <div class="links"> <a href="https://dalr2027.github.io/"
+                                            class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener"
+                                            target="_blank">Website</a> <span
+                                            class="wacky-badge wacky-badge--status">Under Review</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="row">
+                                <div class="col-sm-2 preview">
+                                    <figure>
+                                        <img src="assets/img/logos/iclr.svg" class="preview" width="100%"
+                                            height="auto" alt="ICLR 2027" loading="lazy">
+                                    </figure>
+                                </div>
+                                <div id="tsagkas2027rwm" class="col">
+                                    <div class="title"> <b>Twins or Dreams?</b> World Models for Robot Learning</div>
+                                    <div class="author"> <b>Nikolaos</b> <b>Tsagkas</b>, Iman Nematollahi, Christian
+                                        Gumbsch, Alberta Longhini, Sathya Bhethanabhotla, Bahey Tharwat, Abhinav
+                                        Valada, and Efstratios Gavves</div>
+                                    <div class="periodical"> <em>Workshop at the International Conference on Learning
+                                            Representations (ICLR), San Francisco, USA</em> , 2027 </div>
+                                    <div class="periodical"> </div>
+                                    <div class="links"> <a href="https://twins-or-dreams.github.io/"
+                                            class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener"
+                                            target="_blank">Website</a> <span
+                                            class="wacky-badge wacky-badge--status">Under Review</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ol>
+                    </div>
+                </div>
                 <div class="tab-panel" id="panel-news" hidden>
                     <div class="news-entries">
                         <div class="news-year">2026</div>
+                        <div class="news-entry">
+                            <span class="news-entry__date">Nov 2026</span>
+                            <span class="news-entry__text">🏅 Honored to be recognized as an <a
+                                    href="https://lnkd.in/p/evZHwHi8" target="_blank"
+                                    rel="external nofollow noopener">Outstanding Reviewer</a> at CoRL, 2026!</span>
+                        </div>
                         <div class="news-entry">
                             <span class="news-entry__date">Oct 2026</span>
                             <span class="news-entry__text">🎉 Thrilled to share that I have accepted a PostDoc position at the <a
@@ -1368,6 +1432,13 @@
                 display: inline-block;
                 /* Optional: keeps the badge behaves as a single block */
             /* } */
+
+            /* a status, not an honour: same shape as the distinction pills, no fill */
+            .wacky-badge.wacky-badge--status {
+                color: var(--global-text-color-light);
+                background: transparent;
+                border: 1px solid var(--global-divider-color);
+            }
 
             .wacky-badge {
                 display: inline-block;
